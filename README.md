@@ -1,6 +1,5 @@
 # A boilerplate for AngularJS x Backbone.js x Parse apps
 
-------
 
 An opinionated, battle-tested boilerplate for building large, powerful, serverless apps with AngularJS, Backbone and Parse.
 
