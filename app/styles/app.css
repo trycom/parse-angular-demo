@@ -13701,10 +13701,23 @@ a.block {
   border-radius: 3px;
 }
 
+/* line 27, ../../../client/app/styles/app.scss */
+.ani.delay-3 {
+  -webkit-animation-delay: 3s;
+  /* Safari and Chrome */
+  -moz-animation-delay: 3s;
+  /* Firefox */
+  -ms-animation-delay: 3s;
+  /* Steve Ballmer */
+  -o-animation-delay: 3s;
+  /* Opera */
+  animation-delay: 3s;
+}
+
 /**
  * Angular
  */
-/* line 30, ../../../client/app/styles/app.scss */
+/* line 34, ../../../client/app/styles/app.scss */
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none;
 }
