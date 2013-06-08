@@ -1,4 +1,4 @@
-angular.module('app', ['ui.compat' /* this is for ui-router */,  /* states */ 'features', 'demo' , 'ParseServices' /* this is the Parse SDK */, 'ExternalDataServices' /* this is where we define all our models and collections */, 'forms' /* an example directive */])
+angular.module('app', ['ui.compat' /* this is for ui-router */,  /* states */ 'features', 'demo' , 'about', 'ParseServices' /* this is the Parse SDK */, 'ExternalDataServices' /* this is where we define all our models and collections */, 'forms' /* an example directive */])
 
 // hack to disable auto scrolling on hashchange because we're using ui-router to manage states, instead of the core angular router which cannot handle states
 // discussion on this here: https://github.com/angular-ui/ui-router/issues/110

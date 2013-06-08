@@ -24,6 +24,10 @@ a.block {
 	@include border-radius(3px);
 }
 
+.delay-3 {
+	@include ani-delay(3s);
+}
+
 /**
  * Angular
  */

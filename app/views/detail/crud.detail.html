@@ -1,7 +1,7 @@
 <div class="row-fluid" ng-controller="DetailController">
 	<div class="navi-bar-title dark trans">
 
-		<a class="navi-button-prev trans" href="#/crud">
+		<a class="navi-button-prev trans" ng-click="goBackTo('demo.crud')">
 			<i class="icon icon-th-list small-right-margin "></i>List
 		</a>
 
@@ -41,8 +41,9 @@
 		</div>
 	
 		<div class="row-fluid top-margin">
-			<a ng-click="destroyModel(detailCtrl.current)" class="btn btn-block btn-large btn-danger">Delete this model</a>			
+			<a ng-click="destroyMonster(detailCtrl.current)" class="btn btn-block btn-large btn-danger">Delete this model</a>			
 		</div>
 	</div>
 		
 </div>
+<div class="row-fluid ani delay-3 fadeIn" ng-include src="'app/views/footer.html'"></div>

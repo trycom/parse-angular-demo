@@ -18,28 +18,15 @@ angular.module('features', ['ui.compat', 'ParseServices', 'ExternalDataServices'
     			templateUrl: 'app/views/detail/features.list.html'
     		}
 
-    		// this overrides ui-view="tip"
-    		// 'tip@features.list' : {
-    		// 	templateUrl: 'app/views/debug.html'
-    		// }
-
     	}
     })
 
     .state('features.list.facebook', {
     	url: '/facebook',
     	views: {
-    		'panel@features': {
-    			templateUrl: 'app/views/demo.html'	
-    		},
-    		'detail@features.list.facebook' : {
+    		'detail@features.list' : {
     			templateUrl: 'app/views/detail/features.list.facebook.html'
     		}
-
-    		// this overrides ui-view="tip"
-    		// 'tip@features.list.detail' : {
-    		// 	templateUrl: 'app/views/tips/crud-tips.html'
-    		// }
 
     	}
     })
@@ -47,54 +34,27 @@ angular.module('features', ['ui.compat', 'ParseServices', 'ExternalDataServices'
     .state('features.list.parse', {
     	url: '/parse',
     	views: {
-    		'panel@features': {
-    			templateUrl: 'app/views/demo.html'	
-    		},
-    		'detail@features.list.parse' : {
+    		'detail@features.list' : {
     			templateUrl: 'app/views/detail/features.list.parse.html'
     		}
-
-    		// this overrides ui-view="tip"
-    		// 'tip@features.list.detail' : {
-    		// 	templateUrl: 'app/views/tips/crud-tips.html'
-    		// }
-
     	}
     })
 
     .state('features.list.parseSDK', {
     	url: '/parse-sdk',
     	views: {
-    		'panel@features': {
-    			templateUrl: 'app/views/demo.html'	
-    		},
-    		'detail@features.list.parseSDK' : {
+    		'detail@features.list' : {
     			templateUrl: 'app/views/detail/features.list.parse-sdk.html'
     		}
-
-    		// this overrides ui-view="tip"
-    		// 'tip@features.list.detail' : {
-    		// 	templateUrl: 'app/views/tips/crud-tips.html'
-    		// }
-
     	}
     })
 
     .state('features.list.data', {
     	url: '/data',
     	views: {
-    		'panel@features': {
-    			templateUrl: 'app/views/demo.html'	
-    		},
-    		'detail@features.list.data' : {
+    		'detail@features.list' : {
     			templateUrl: 'app/views/detail/features.list.data.html'
     		}
-
-    		// this overrides ui-view="tip"
-    		// 'tip@features.list.detail' : {
-    		// 	templateUrl: 'app/views/tips/crud-tips.html'
-    		// }
-
     	}
     })
 	

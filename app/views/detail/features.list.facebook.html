@@ -31,10 +31,10 @@
 
       </div>
       <div class="row-fluid left-align muted">
-        We all know that we should asynchronously load the Facebook SDK near the closing <strong>body</strong> tag to speed up page loads. We load the Parse SDK here too instead of in the <strong>head </strong>for the same reason. But if you try to<strong> </strong>asynchronously load the <strong>Parse SDK and Facebook SDK</strong> you will run into the problem where Parse will try to call FB.init() at some point, and the FB object does not exist because the Facebook SDK has not yet loaded.
-
-We developed an clever way to get around this. The key thing here is that Facebook calls a function <strong>window.fbAsyncInit</strong> as soon as the SDK is finished loading. We use this to resolve the <strong>window.fbPromise</strong>, which in turn is used to trigger <strong>Parse.FacebookUtils.init()</strong>. This method is flawless, and you never get any out of sync errors. Here's the code to define the <strong>fbPromise</strong>:<br/><br/>
-
+        We all know that we should asynchronously load the Facebook SDK near the closing <span class="bold">body</span> tag to speed up page loads. We load the Parse SDK here too instead of in the <span class="bold">head </span>for the same reason. But if you try to<span class="bold"> </span>asynchronously load the <span class="bold">Parse SDK and Facebook SDK</span> you will run into the problem where Parse will try to call FB.init() at some point, and the FB object does not exist because the Facebook SDK has not yet loaded.
+<br/><br/>
+We developed an clever way to get around this. The key thing here is that Facebook calls a function <span class="bold">window.fbAsyncInit</span> as soon as the SDK is finished loading. We use this to resolve the <span class="bold">window.fbPromise</span>, which in turn is used to trigger <span class="bold">Parse.FacebookUtils.init()</span>. This method is flawless, and you never get any out of sync errors. Here's the code to define the <span class="bold">fbPromise</span>:<br/><br/>
+<strong><a target="_blank" href="https://github.com/brandid/parse-angular-demo/blob/master/index.html">index.html</a></strong>
 <pre>
 
   var fbDeferred = $.Deferred();
@@ -45,8 +45,8 @@ We developed an clever way to get around this. The key thing here is that Facebo
 
 </pre>
 
-<br/><br/>... and here's the code to subsequently trigger the init()<br/><br/>
-
+<br/>... and here's the code to subsequently trigger the init()<br/><br/>
+<strong><a target="_blank" href="https://github.com/brandid/parse-angular-demo/blob/master/app/scripts/services/ParseServices.js">ParseServices.js</a></strong>
 <pre>
 // FACEBOOK init
 window.fbPromise.then(function() {
@@ -73,3 +73,4 @@ Simple, elegant, highly effective.
   </div>
     
 </div>
+<div class="row-fluid ani delay-3 fadeIn" ng-include src="'app/views/footer.html'"></div>
