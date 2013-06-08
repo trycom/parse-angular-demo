@@ -16,12 +16,12 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
     		},
     		'detail@demo.crud' : {
     			templateUrl: 'app/views/detail/crud.list.html'
-    		},
+    		}
 
     		// this overrides ui-view="tip"
-    		'tip@demo.crud' : {
-    			templateUrl: 'app/views/debug.html'
-    		}
+    		// 'tip@demo.crud' : {
+    		// 	templateUrl: 'app/views/debug.html'
+    		// }
 
     	}
     })

@@ -13,8 +13,8 @@ angular.module('app')
     	{
     		name: "Code",
     		state: "code",
-            icon: "icon-info-sign",
-    		href: "#/code" 
+            icon: "icon-github",
+    		href: "http://www.github.com/brandid/parse-angular-demo" 
     	}]
     }
 

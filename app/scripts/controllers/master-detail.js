@@ -12,12 +12,31 @@ angular.module('demo')
 
       },
       {
-        title: "Share",
-        icon: "icon-share",
-        path: "#/demo/share",
-        state: "demo.share"
+        title: "Features",
+        icon: "icon-bolt",
+        path: "#/features/",
+        state: "features.list"
 
       }
+
+    ],
+    features : [
+      {
+        title: "Parse & Facebook SDK",
+        path: "#/features/facebook"
+      },
+      {
+        title: "Angular Wrapper for Parse API calls",
+        path: "#/features/parse"
+      },
+      {
+        title: "Extend Parse SDK for Angular Promises",
+        path: "#/features/parse-sdk"
+      },
+      {
+        title: "Use Backbone for Models & Collections",
+        path: "#/features/data"
+      },
 
     ]
   };
@@ -39,7 +58,7 @@ angular.module('demo')
 
   $scope.isActiveState = function(state) {
 
-    if(state == $state.current.name) {
+    if($state.current.name.indexOf(state) >= 0) {
       return 'light-back';
     } else {
       return
