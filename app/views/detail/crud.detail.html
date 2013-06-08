@@ -1,0 +1,49 @@
+<div class="row-fluid" ng-controller="DetailController">
+	<div class="navi-bar-title dark trans">
+
+		<a class="navi-button-prev trans" ng-click="goBackTo('demo.crud')">
+			<i class="icon icon-th-list small-right-margin "></i>List
+		</a>
+
+		    <h1 class="title trans">Monster Detail</h1>
+
+		<a class="navi-button trans" href="#/crud/{{detailCtrl.current.id}}/edit">
+			Edit
+		</a>
+
+	</div>
+
+	<div class="row-fluid width-padding top-padding bottom-padding">
+
+		<div class="row-fluid center-align">
+			<div class="row-fluid bottom-margin">
+				<h1 class="punchy muted light-text-shadow"><i class="icon icon-user small-right-margin"></i></h1>				
+			</div>
+		</div>
+		<div class="row-fluid white-back withShadow withRadius width-padding top-padding bottom-padding center-align">
+			
+
+			<div class="row-fluid">
+				<div class="row-fluid bottom-margin">
+					<div class="row-fluid center-align">
+						<h4 class="power">Monster's Name</h4>
+						<span class="muted">{{detailCtrl.current.get('name')}}</span>
+					</div>
+
+				</div>
+
+			</div>
+				
+
+			<div class="horizontal-line full-fade top-margin bottom-margin"></div>
+			<h4 class="punchy">Scary Move</h4>
+			<span class="muted">{{detailCtrl.current.get('scaryMove')}}</span>
+		</div>
+	
+		<div class="row-fluid top-margin">
+			<a ng-click="destroyMonster(detailCtrl.current)" class="btn btn-block btn-large btn-danger">Delete this model</a>			
+		</div>
+	</div>
+		
+</div>
+<div class="row-fluid ani delay-3 fadeIn" ng-include src="'app/views/footer.html'"></div>

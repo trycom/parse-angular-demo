@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Parse x AngularJS x Backbone Boilerplate Demo</title>
+
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge,chrome=1">
+    <meta name="viewport"               content="width=device-width, initial-scale=1.0">
+    <meta name="description"            content="AngularJS Parse.com Seed">
+    <meta name="author"                 content="Eric Clemmons">
+
+    <link rel="stylesheet" href="app/styles/app.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="components/html5shiv-dist/html5shiv.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <noscript>
+        Please enable Javascript to experience this site :)
+    </noscript>
+
+    <div class="row-fluid med-grey-back dark-dust">
+
+      <div ng-include src="'app/views/header.html'"></div>
+      <div ui-view></div>
+
+    </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+
+    <script src="//www.parsecdn.com/js/parse-1.2.7.min.js"></script>
+    
+    <!-- Async Social SDKs -->
+    <div id="fb-root"></div>
+
+    <script type="text/javascript">
+      (function(doc, script) {
+        var js, 
+            fjs = doc.getElementsByTagName(script)[0],
+            add = function(url, id) {
+                if (doc.getElementById(id)) {return;}
+                js = doc.createElement(script);
+                js.src = url;
+                id && (js.id = id);
+                fjs.parentNode.insertBefore(js, fjs);
+            };
+        // Facebook SDK
+        add('//connect.facebook.net/en_US/all.js', 'facebook-jssdk');
+        // Twitter SDK
+        add('//platform.twitter.com/widgets.js', 'twitter-wjs');
+      }(document, 'script'));
+    </script>
+
+  
+    <!-- Async resolve promise when FB SDK is loaded, this triggers Parse.FacebookUtils.init() -->
+    <script>
+      var fbDeferred = $.Deferred();
+      window.fbPromise = fbDeferred.promise();
+      window.fbAsyncInit = function() {
+        fbDeferred.resolve();
+      };
+    </script>
+
+
+    <script src="app/scripts/all.min.js"></script>
+
+    <script type="text/javascript">
+      // manual bootstrap
+      angular.element(document).ready(function() {
+        angular.bootstrap(document, ['app']);
+      });
+
+    </script>
+  
+
+  </body>
+</html>
