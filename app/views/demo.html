@@ -1,13 +1,15 @@
 <div ng-controller="MasterDetailController">
 	
-	<div class="one-third light-dark-back shadow-ninja right-light inset" style="height: 900px">
+	<div class="one-third light-dark-back shadow-ninja right-light inset" style="height: 1500px">
+
 		<div class="row-fluid top-padding bottom-padding width-padding light-border-top light-border-bottom">
+			<div ng-include src="'/app/views/debug.html'"></div>
 			<!-- <h3 class="punchy">Your Profile is {{profileCompletion | number:0 }}% Complete</h3> -->
-			<div class="row-fluid">
+			<!-- <div class="row-fluid">
 				<div class="large center-align row-fluid">
 					<h1 class="power muted"><i class="icon icon-user icon-large small-right-margin"></i></h1>					
 				</div>
-			</div>
+			</div> -->
 
 			<!-- <div class="row-fluid tiny-top-margin progress progress-warning progress-striped active withShadow height-tiny"> -->
 			  <!-- <div class="bar bar-success" style="width: {{profileCompletion | number:0 }}%;"></div> -->
@@ -39,13 +41,13 @@
 		</a>
 		
 		<div class="row-fluid width-padding top-margin">
-			<div ui-view="tip"></div>
+			<!-- <div ui-view="tip"></div> -->
 		</div>
 
-	</div> 
+	</div>
 
 	<div class="two-thirds">
-		<div ui-view="detail" class="relative" ng-animate="{ enter: 'waveForward-enter', leave: 'waveForward-leave' }"></div>
+		<div ui-view="detail" class="relative" ng-animate="animate()"></div>
 	</div>
 
 </div>

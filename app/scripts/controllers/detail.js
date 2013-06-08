@@ -12,11 +12,6 @@ angular.module('demo')
       return current.id == $stateParams.monsterId;
     })
   })
-  
-  
-
-  
-
 
 
   $scope.transitionTo = function(state) {
@@ -32,20 +27,6 @@ angular.module('demo')
     }
   }
 
-
-
-  $scope.createComment = function() {
-
-
-    // new up the model
-    $scope.detailCtrl.collection.addComment('Joe', 'exploding feces').then(function() {
-
-      console.log($scope.detailCtrl.collection.last)
-      alert('OMG you created a monster with id: ' + $scope.detailCtrl.collection.last().id);
-
-    });
-
-  }
 
 
 }]);

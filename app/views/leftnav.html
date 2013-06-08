@@ -1,7 +1,7 @@
 <div class="" ng-controller="MenuController">
 	<!-- check out this ng-show condition, shows correct stuff for shoppers and everything in god mode -->
 	<div class="row-fluid top-margin {{menuItem.css}}" ng-repeat="menuItem in menuCtrl.menu">
-		<a href="#{{menuItem.path}}" class="muted line height-btn center-align menuItem" ng-class="isActive(menuItem)">
+		<a href="{{menuItem.href}}" class="muted line height-btn center-align menuItem" ng-class="isActive(menuItem)">
 			<div class="row-fluid center-align dark-text text-shadow">
 				<div class="line height-btn font-size-large">
 					<i class="icon {{menuItem.icon}} icon-large"></i>

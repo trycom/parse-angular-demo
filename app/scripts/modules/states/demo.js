@@ -16,11 +16,6 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
     		},
     		'detail@demo.crud' : {
     			templateUrl: 'app/views/detail/crud.list.html'
-    		},
-
-    		// this overrides ui-view="tip"
-    		'tip@demo.crud' : {
-    			templateUrl: 'app/views/debug.html'
     		}
 
     	}
@@ -29,10 +24,8 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
     .state('demo.crud.detail', {
     	url: 'crud/{monsterId}',
     	views: {
-    		'panel@demo': {
-    			templateUrl: 'app/views/demo.html'	
-    		},
-    		'detail@demo.crud.detail' : {
+    		
+    		'detail@demo.crud' : {
     			templateUrl: 'app/views/detail/crud.detail.html'
     		}
 
@@ -47,17 +40,9 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
     .state('demo.crud.detail.edit', {
         url: '/edit',
         views: {
-            'panel@demo': {
-                templateUrl: 'app/views/demo.html'  
-            },
-            'detail@demo.crud.detail.edit' : {
+            'detail@demo.crud' : {
                 templateUrl: 'app/views/detail/crud.detail.edit.html'
             }
-
-            // this overrides ui-view="tip"
-            // 'tip@demo.crud.detail.edit' : {
-            //     templateUrl: 'app/views/tips/crud-tips.html'
-            // }
 
         }
     })
