@@ -1,0 +1,61 @@
+<div class="row-fluid">
+	<div class="navi-bar-title dark trans">
+
+
+		    <h1 class="punchy title trans">CRUD</h1>
+
+		<a ng-click="createMonster()" class="navi-button trans" href="#/shopper/profile/email">
+			<i class="icon icon-plus"></i>
+		</a>
+
+	</div>
+
+	<div class="row-fluid width-padding top-padding bottom-padding">
+
+		<div class="row-fluid center-align">
+			<div class="row-fluid">
+				<h1 class="punchy muted light-text-shadow"><i class="icon icon-th-list small-right-margin"></i></h1>				
+			</div>
+			<div class="row-fluid bottom-margin">
+				<div class="row-fluid center-align">
+					<h4 class="power">Load Collections</h4>
+					<span class="muted">Click the <i class="icon icon-plus-sign"></i> up top to create a new model!</span>
+				</div>	
+			</div>
+			
+		</div>
+		<div class="row-fluid white-back withShadow withRadius center-align">
+			
+
+			<a href="#/crud/{{item.id}}"
+				class="block row-fluid top-padding bottom-padding relative light-border-bottom white-border-top line height-med"
+				ng-repeat="item in masterDetailCtrl.collection.models"
+				ng-animate="{ enter: 'waveForward-enter', leave: 'waveForward-leave' }"
+			>
+				<div class="span4 muted left-align">
+					<div class="med-width-padding">
+						<div class="pull-left small-right-margin">
+							<span class="punchy bold">Name:</span> 
+						</div>
+						<div class="pull-left small-left-margin">
+							<span class="punchy">{{item.get('name')}}</span>
+						</div>		
+					</div>
+				</div>
+				<div class="span7 muted left-align">
+					<div class="med-width-padding clearfix">
+						<div class="pull-left small-right-margin">
+							<span class="punchy bold">Scary Move:</span> 
+						</div>
+						<div class="pull-left small-left-margin">
+							<span class="punchy">{{item.get('scaryMove')}}</span>
+						</div>		
+					</div>
+				</div>
+				<div class="span1 muted pull-right"><i class="icon icon-chevron-right"></i></div>
+			</a>
+
+		</div>
+	</div>
+		
+</div>

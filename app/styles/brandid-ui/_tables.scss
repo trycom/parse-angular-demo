@@ -1,0 +1,16 @@
+.sort-rollover {
+	.sort-rollover-show {
+		margin-top:-40px;
+	}
+}
+
+.sort-rollover:hover {
+	cursor: pointer;
+	.sort-rollover-hide {
+		@include opacity(0);
+	}
+
+	.sort-rollover-show {
+		margin-top:0;
+	}
+}
