@@ -122,7 +122,7 @@ angular.module('demo')
     // new up the model
     $scope.masterDetailCtrl.collection.addMonster('Joe', 'exploding feces').then(function() {
 
-      alert('OMG you created a monster named: ' + $scope.masterDetailCtrl.collection.last().get('name'));
+      alert('OMG you created a monster named: ' + $scope.masterDetailCtrl.collection.first().get('name'));
 
     });
 
