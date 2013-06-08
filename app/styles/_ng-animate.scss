@@ -6,6 +6,10 @@
 .fade-leave-setup
 {
 	@include trans(300ms);
+
+	.hide-on-animate {
+		display:none;
+	}
 }
 
 .waveForward-leave-setup {
