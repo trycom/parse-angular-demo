@@ -1,15 +1,11 @@
 <div class="row-fluid" ng-controller="DetailController">
 	<div class="navi-bar-title dark trans">
 
-		<a class="navi-button-prev trans" href="#/crud">
-			<i class="icon icon-th-list small-right-margin "></i>List
+		<a class="navi-button-prev trans" href="#/crud/{{detailCtrl.current.id}}">
+			Back
 		</a>
 
 		    <h1 class="title trans">Edit Monster</h1>
-
-		<a class="navi-button trans" href="#/crud/{{detailCtrl.current.id}}/edit">
-			Edit
-		</a>
 
 	</div>
 
@@ -41,7 +37,7 @@
 					  </div>
 					  <div class="control-group">
 					    <div class="controls">
-					      <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-block">Save</button>
+					      <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-block btn-large btn-success">Save To Parse</button>
 					    </div>
 					  </div>
 					</form>

@@ -1,18 +1,5 @@
 angular.module("app").run(["$templateCache", function($templateCache) {
 
-  $templateCache.put("app/test/e2e/runner.html",
-    "<!doctype html>\n" +
-    "<html lang=\"en\">\n" +
-    "  <head>\n" +
-    "    <title>End2end Test Runner</title>\n" +
-    "    <script src=\"../../../../components/angular-scenario/angular-scenario.js\" ng-autotest></script>\n" +
-    "    <script src=\"scenarios.js\"></script>\n" +
-    "  </head>\n" +
-    "  <body>\n" +
-    "  </body>\n" +
-    "</html>\n"
-  );
-
   $templateCache.put("app/views/about.html",
     "<section class=\"jumbotron\">\n" +
     "  <h1>Welcome!</h1>\n" +
@@ -93,6 +80,9 @@ angular.module("app").run(["$templateCache", function($templateCache) {
   );
 
   $templateCache.put("app/views/debug.html",
+    "<div class=\"row-fluid\">\n" +
+    "\t<h5 class=\"power\">State Machine</h5>\n" +
+    "</div>\n" +
     "<pre>\n" +
     "  $state = {{$state.current.name}}\n" +
     "  $stateParams = {{$stateParams}}\n" +
@@ -114,7 +104,6 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "\t\t\t<!-- <div class=\"row-fluid tiny-top-margin progress progress-warning progress-striped active withShadow height-tiny\"> -->\n" +
     "\t\t\t  <!-- <div class=\"bar bar-success\" style=\"width: {{profileCompletion | number:0 }}%;\"></div> -->\n" +
     "\t\t\t<!-- </div> -->\n" +
-    "\t\t\t\n" +
     "\t\t\t\n" +
     "\t\t</div>\n" +
     "\n" +
@@ -158,15 +147,11 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "<div class=\"row-fluid\" ng-controller=\"DetailController\">\n" +
     "\t<div class=\"navi-bar-title dark trans\">\n" +
     "\n" +
-    "\t\t<a class=\"navi-button-prev trans\" href=\"#/crud\">\n" +
-    "\t\t\t<i class=\"icon icon-th-list small-right-margin \"></i>List\n" +
+    "\t\t<a class=\"navi-button-prev trans\" href=\"#/crud/{{detailCtrl.current.id}}\">\n" +
+    "\t\t\tBack\n" +
     "\t\t</a>\n" +
     "\n" +
     "\t\t    <h1 class=\"title trans\">Edit Monster</h1>\n" +
-    "\n" +
-    "\t\t<a class=\"navi-button trans\" href=\"#/crud/{{detailCtrl.current.id}}/edit\">\n" +
-    "\t\t\tEdit\n" +
-    "\t\t</a>\n" +
     "\n" +
     "\t</div>\n" +
     "\n" +
@@ -198,7 +183,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "\t\t\t\t\t  </div>\n" +
     "\t\t\t\t\t  <div class=\"control-group\">\n" +
     "\t\t\t\t\t    <div class=\"controls\">\n" +
-    "\t\t\t\t\t      <button type=\"submit\" ng-disabled=\"editForm.$invalid\" class=\"btn btn-block\">Save</button>\n" +
+    "\t\t\t\t\t      <button type=\"submit\" ng-disabled=\"editForm.$invalid\" class=\"btn btn-block btn-large btn-success\">Save To Parse</button>\n" +
     "\t\t\t\t\t    </div>\n" +
     "\t\t\t\t\t  </div>\n" +
     "\t\t\t\t\t</form>\n" +
@@ -257,6 +242,10 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "\t\t\t<div class=\"horizontal-line full-fade top-margin bottom-margin\"></div>\n" +
     "\t\t\t<h4 class=\"punchy\">Scary Move</h4>\n" +
     "\t\t\t<span class=\"muted\">{{detailCtrl.current.get('scaryMove')}}</span>\n" +
+    "\t\t</div>\n" +
+    "\t\n" +
+    "\t\t<div class=\"row-fluid top-margin\">\n" +
+    "\t\t\t<a ng-click=\"destroyModel()\" class=\"btn btn-block btn-large btn-danger\">Delete this model</a>\t\t\t\n" +
     "\t\t</div>\n" +
     "\t</div>\n" +
     "\t\t\n" +
@@ -328,9 +317,46 @@ angular.module("app").run(["$templateCache", function($templateCache) {
   );
 
   $templateCache.put("app/views/header.html",
-    "<div class=\"row-fluid\">\n" +
-    "\theader\n" +
-    "</div>"
+    "<header class=\"row-fluid center-align\">\n" +
+    "\t<div class=\"row-fluid top-margin\">\n" +
+    "\t\t<h2 class=\"lightest-text text-shadow\" style=\"text-transform:none\">AngularJs x Backbone.js x Parse</h2>\t\n" +
+    "\t</div>\n" +
+    "\n" +
+    "\t<div class=\"row-fluid small-top-margin\">\n" +
+    "\t\t<iframe src=\"http://ghbtns.com/github-btn.html?user=brandid&repo=parse-angular-demo&type=watch&count=true\"\n" +
+    "  allowtransparency=\"true\" frameborder=\"0\" scrolling=\"0\" width=\"110\" height=\"20\"></iframe>\n" +
+    "  \t\t<iframe src=\"http://ghbtns.com/github-btn.html?user=brandid&repo=parse-angular-demo&type=fork&count=true\"\n" +
+    "  allowtransparency=\"true\" frameborder=\"0\" scrolling=\"0\" width=\"95\" height=\"20\"></iframe>\n" +
+    "\n" +
+    "  \t</div>\n" +
+    "\n" +
+    "\t<div class=\"row-fluid top-margin small-bottom-margin max-width-600\">\n" +
+    "\t\t<div class=\"well muted withShadow\">\n" +
+    "\t\t\t<div class=\"row-fluid small-bottom-margin\">\n" +
+    "\t\t\t\tAn opinionated, battle-tested architecture for building powerful serverless apps with AngularJS, Backbone and Parse\n" +
+    "\t\t\t</div>\n" +
+    "\t\t\t<div class=\"row-fluid\">\n" +
+    "\t\t\t\t<a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-text=\"Beautiful demo app using AngularJS x Backbone x @parseit by @BRANDiD\" data-related=\"male\" data-hashtags=\"javascript\">Tweet</a>\n" +
+    "\t<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>\n" +
+    "\t\t\t</div>\n" +
+    "\t\t\t<hr>\n" +
+    "\t\t\t<div class=\"row-fluid\">\n" +
+    "\t\t\t\tIf you found this useful, consider visiting <a href=\"http://www.getbrandid.com\">getbrandid.com</a>\n" +
+    "\t\t\t</div>\n" +
+    "\t\t\t<div class=\"row-fluid small-top-margin\">\n" +
+    "\t\t\t\t<a href=\"https://twitter.com/spacenick\" class=\"twitter-follow-button\" data-show-count=\"false\">Follow @spacenick</a>\n" +
+    "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> <a href=\"https://twitter.com/arush\" class=\"twitter-follow-button\" data-show-count=\"false\">Follow @arush</a>\n" +
+    "<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>\n" +
+    "\t\t\t</div>\n" +
+    "\t\t\t\t\n" +
+    "\t\t\t\n" +
+    "\t\t</div>\n" +
+    "\n" +
+    "\t</div>\n" +
+    "\n" +
+    "\t\n" +
+    "\t<a href=\"https://github.com/brandid/parse-angular-demo\"><img style=\"position: absolute; top: 0; right: 0; border: 0;\" src=\"https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png\" alt=\"Fork me on GitHub\"></a>\n" +
+    "</header>"
   );
 
   $templateCache.put("app/views/leftnav.html",
