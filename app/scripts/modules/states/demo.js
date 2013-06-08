@@ -20,7 +20,7 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
 
     		// this overrides ui-view="tip"
     		'tip@demo.crud' : {
-    			templateUrl: 'app/views/tips/load-collections.html'
+    			templateUrl: 'app/views/debug.html'
     		}
 
     	}
@@ -34,12 +34,12 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
     		},
     		'detail@demo.crud.detail' : {
     			templateUrl: 'app/views/detail/crud.detail.html'
-    		},
+    		}
 
     		// this overrides ui-view="tip"
-    		'tip@demo.crud.detail' : {
-    			templateUrl: 'app/views/tips/crud-tips.html'
-    		}
+    		// 'tip@demo.crud.detail' : {
+    		// 	templateUrl: 'app/views/tips/crud-tips.html'
+    		// }
 
     	}
     })
@@ -52,12 +52,12 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
             },
             'detail@demo.crud.detail.edit' : {
                 templateUrl: 'app/views/detail/crud.detail.edit.html'
-            },
+            }
 
             // this overrides ui-view="tip"
-            'tip@demo.crud.detail.edit' : {
-                templateUrl: 'app/views/tips/crud-tips.html'
-            }
+            // 'tip@demo.crud.detail.edit' : {
+            //     templateUrl: 'app/views/tips/crud-tips.html'
+            // }
 
         }
     })

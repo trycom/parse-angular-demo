@@ -1,6 +1,11 @@
 angular.module('app', ['ui.compat' /* this is for ui-router */, 'demo' /* this essentially a self contained module that our app 'includes' */, 'ParseServices' /* this is the Parse SDK */, 'ExternalDataServices' /* this is where we define all our models and collections */, 'forms' /* an example directive */])
 
-.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+// hack to disable auto scrolling on hashchange because we're using ui-router to manage states, instead of the core angular router which cannot handle states
+// discussion on this here: https://github.com/angular-ui/ui-router/issues/110
+.value('$anchorScroll', angular.noop)
+
+.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$anchorScrollProvider', function($stateProvider, $urlRouterProvider, $locationProvider, $anchorScrollProvider) {
+
 
 	// this is required for the root url to direct to /#/
 	$urlRouterProvider
