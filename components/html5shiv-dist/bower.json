@@ -1,0 +1,8 @@
+{
+  "name": "html5shiv-dist",
+  "version": "3.6.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spekkionu/html5shiv-dist.git"
+  }
+}

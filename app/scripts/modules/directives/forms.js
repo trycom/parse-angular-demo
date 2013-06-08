@@ -1,0 +1,70 @@
+angular.module('forms', [])
+
+.directive('editMonsterForm', ['ParseQueryAngular', '$location', function(ParseQueryAngular, $location) {
+
+  var addLoaderTo = function(element, name, message) {
+    element.append('<div id="'+name+'" class="important-white-back opacity-9 loading absolute top" style="width:100%; height:100%;"><div class="v-outer-container" style="height: 100%"><div class="v-inner-container"><div class="v-aligned-content big-top-margin"><span class="muted">' + message + '</span></div></div></div></div>');
+  }
+
+  return {
+    restrict: 'A',
+    scope: {
+      monsterToSave: "="
+    },
+    link: function(scope, element, attrs) {
+
+      // need to put a watch here because directive is loaded but Parse promise is not finished loading the monsters yet
+
+      scope.editedMonster = {
+        name: null,
+        scaryMove: null
+      }
+
+      scope.$watch('monsterToSave.attributes.name', function(name) {
+        scope.editedMonster.name = name;
+
+      })
+
+      scope.$watch('monsterToSave.attributes.scaryMove', function(scaryMove) {
+        scope.editedMonster.scaryMove = scaryMove;
+
+      })
+      
+
+      scope.saveMonster = function() {
+
+
+
+        // put the form in a loading state
+        var loadingContainer = $('#loadingContainer');
+        addLoaderTo(loadingContainer, 'savingForm', 'Saving Monster');
+        element.find('button').attr('disabled','disabled');
+
+
+        // set the new attributes
+        scope.monsterToSave.setName(scope.editedMonster.name);
+        scope.monsterToSave.setScaryMove(scope.editedMonster.scaryMove);
+
+
+        // perform the save
+
+        scope.monsterToSave.saveParse().then(function(monster) {
+
+          //remove the loader
+          $('#savingForm').remove()
+
+          $location.path('/crud/' + monster.id);
+
+        }, function(err) {
+          // catch any errors
+          alert('Error saving to Parse, check the console and network tab')
+          console.log(err)
+        })
+
+
+      }
+
+      // need to do stuff to the element when it is clicked
+    }
+  }
+}])

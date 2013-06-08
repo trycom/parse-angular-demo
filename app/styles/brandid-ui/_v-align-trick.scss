@@ -1,0 +1,38 @@
+/* vertical align code */
+
+.v-outer-container {
+	display: table;
+	// height: 120px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.v-outer-container .v-inner-container {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.v-outer-container .v-inner-container .v-aligned-element {
+	text-decoration: none;
+	padding: 0px 10px;
+	display: block;
+}
+
+.lte8 .v-outerContainer
+{
+	position: relative;
+}
+
+.lte8 .v-outerContainer .v-innerContainer
+{
+	position: absolute;
+	top: 50%;
+}
+  
+.lte8 .v-outerContainer .v-innerContainer .v-aligned-element
+{
+	position: relative;
+	top: -50%;
+}

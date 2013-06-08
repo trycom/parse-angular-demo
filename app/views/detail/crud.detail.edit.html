@@ -1,0 +1,59 @@
+<div class="row-fluid" ng-controller="DetailController">
+	<div class="navi-bar-title dark trans">
+
+		<a class="navi-button-prev trans" href="#/crud">
+			<i class="icon icon-th-list small-right-margin "></i>List
+		</a>
+
+		    <h1 class="title trans">Edit Monster</h1>
+
+		<a class="navi-button trans" href="#/crud/{{detailCtrl.current.id}}/edit">
+			Edit
+		</a>
+
+	</div>
+
+	<div class="row-fluid width-padding top-padding bottom-padding">
+
+		<div class="row-fluid center-align">
+			<div class="row-fluid bottom-margin">
+				<h1 class="punchy muted light-text-shadow"><i class="icon icon-user small-right-margin"></i></h1>				
+			</div>
+		</div>
+
+		<div id="loadingContainer" class="relative row-fluid">
+			<div class="row-fluid white-back withShadow withRadius width-padding top-padding bottom-padding center-align">
+		
+				<div class="row-fluid left-align">
+
+					<form edit-monster-form monster-to-save="detailCtrl.current" name="editForm" class="form-horizontal" ng-submit="saveMonster()" novalidate>
+					  <div class="control-group">
+					    <label class="control-label" for="inputEmail">Name</label>
+					    <div class="controls">
+					      <input style="width:97%" type="text" ng-model="editedMonster.name" placeholder="Email" required>
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <label class="control-label" for="inputPassword">Special Move</label>
+					    <div class="controls">
+					      <input style="width:97%" type="text" ng-model="editedMonster.scaryMove" required>
+					    </div>
+					  </div>
+					  <div class="control-group">
+					    <div class="controls">
+					      <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-block">Save</button>
+					    </div>
+					  </div>
+					</form>
+
+				</div>
+					
+
+			</div>
+		</div>
+
+		<div class="row-fluid"></div>
+		
+	</div>
+		
+</div>

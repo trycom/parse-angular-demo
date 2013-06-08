@@ -1,0 +1,41 @@
+// shadows
+
+.shadow-ninja.left-dark {
+	@include box-shadow(-20px 0 15px -11px #333);
+}
+
+.shadow-ninja.right-dark {
+	@include box-shadow(20px 0 15px -11px #333);
+}
+
+.shadow-ninja.right-light {
+	@include box-shadow(5px 0 5px -3px rgba(#333, 0.2));
+}
+
+.shadow-ninja.right-light.inset {
+	@include box-shadow(inset -5px 0 5px -3px rgba(#333, 0.2));
+	position: relative;
+	z-index: 1;
+}
+
+
+.shadow-ninja.left-dark.right-light {
+	@include box-shadow(20px 0 15px -11px rgba(#333, 0.2), -20px 0 15px -11px #333);
+}
+
+.shadow-ninja.left-dark.right-dark {
+	@include box-shadow(20px 0 15px -11px #333, -20px 0 15px -11px #333);
+}
+
+.shadow-ninja.top-dark {
+	@include box-shadow(0 -15px 15px -6px #333);
+}
+.shadow-ninja.top-dark.inset {
+	@include box-shadow(inset 0 12px 10px -10px #333);
+}
+.shadow-ninja.top-med {
+	@include box-shadow(0 -10px 10px -6px rgba(#000, 0.8));
+}
+.shadow-ninja.top-light {
+	@include box-shadow(0 -15px 15px -6px rgba(#333, 0.2));
+}

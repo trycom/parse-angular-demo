@@ -1,0 +1,31 @@
+{
+  "name": "angular-strap",
+  "description": "AngularStrap - Twitter Bootstrap directives for AngularJS",
+  "version": "0.7.3",
+  "homepage": "http://mgcrea.github.com/angular-strap",
+  "author": "Olivier Louvignes <olivier@mg-crea.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mgcrea/angular-strap.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-livereload": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-karma": "~0.4.4",
+    "grunt-ngmin": "~0.0.2",
+    "grunt-regarde": "~0.1.1",
+    "matchdep": "~0.1.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}

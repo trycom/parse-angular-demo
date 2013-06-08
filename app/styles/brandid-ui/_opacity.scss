@@ -1,0 +1,21 @@
+.opacity-9 {
+	@include opacity(90);
+}
+.opacity-6 {
+	@include opacity(60);
+}
+.opacity-4 {
+	@include opacity(40);
+}
+.opacity-2 {
+	@include opacity(20);
+}
+.opacity-1 {
+	@include opacity(10);
+}
+.opacity-0 {
+	@include opacity(0);
+}
+.opacity-10 {
+	@include opacity(100);
+}
