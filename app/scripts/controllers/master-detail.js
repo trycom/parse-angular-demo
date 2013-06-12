@@ -3,7 +3,7 @@ angular.module('demo')
 .controller('MasterDetailController', ['$rootScope', '$scope', '$state', 'MonsterService', function($rootScope, $scope, $state, MonsterService) {
   
   $scope.masterDetailCtrl = {
-    animate : { enter: 'waveForward-enter', leave: 'waveForward-leave' },
+    animate : { enter: 'slide-left-enter', leave: 'slide-right-leave' },
     menu : [
       {
         title: "CRUD Example",
@@ -90,12 +90,21 @@ angular.module('demo')
   $scope.fetchMonstersPromise = $scope.masterDetailCtrl.collection.load();
 
 
-  $scope.animate = function() {
+  $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
+    
+    if(from.name.indexOf(to.name) >= 0) {
+      // to contains from
+      $scope.masterDetailCtrl.animate = { enter: 'slide-left-enter', leave: 'slide-right-leave' };
 
-    // TODO: make this go backwards for back buttons
-    return { enter: 'waveForward-enter', leave: 'waveForward-leave' };
+    } else {
+      // going deep into the tree
+      $scope.masterDetailCtrl.animate = { enter: 'slide-right-enter', leave: 'slide-left-leave' };  
+    }
+
+  })
+   
     // return { enter: 'waveBackward-enter', leave: 'waveBackward-leave' };
-  }
+
 
   $scope.goBackTo = function(state) {
     
@@ -110,12 +119,11 @@ angular.module('demo')
   $scope.isActiveState = function(state) {
 
     if($state.current.name.indexOf(state) >= 0) {
-      return 'light-back';
+      return 'white-back shadow-ninja right-light inset';
     } else {
       return
     }
   }
-
 
 
   $scope.createMonster = function() {
