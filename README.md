@@ -27,6 +27,11 @@ This boilerplate is great for launching complex database enabled apps really fas
 ------
 
 
+### License
+parse-angular-demo is licensed under the &#9786; license. (http://licence.visualidiot.com/)
+
+------
+
 ### Got ideas?
 
 
