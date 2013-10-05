@@ -31,8 +31,16 @@
   box-shadow: inset 0 1px 1px -1px #fff;
 }
 
+.navi-bar-title.dark.transparent {
+	background: none;
+
+	@include box-shadow(none);
+
+
+}
+
 .navi-bar-standard.dark {
-  
+
   // box-shadow: inset 0 1px 1px -1px #fff;
 }
 
@@ -76,7 +84,6 @@
   left: 0;
   display: block;
   width: 100%;
-  // font-family: ff-enzo-web;
   font-size: 20px;
   font-weight: bold;
   line-height: 44px;
@@ -178,6 +185,11 @@
   border: 1px solid #191919;
   @include background-image(linear-gradient(top, rgb(65, 64, 65), rgb(19, 19, 19)));
   @include filter-gradient(rgb(65, 64, 65), rgb(19, 19, 19), vertical);
+}
+
+
+.navi-bar-title.dark [class*="navi-button-main"] {
+  @include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
 }
 
 

@@ -1,16 +1,23 @@
 angular.module('demo')
 
-.controller('MasterDetailController', ['$rootScope', '$scope', '$state', 'MonsterService', function($rootScope, $scope, $state, MonsterService) {
+.controller('MasterDetailController', ['$rootScope', '$scope', '$state', 'MonsterService', 'monsters', function($rootScope, $scope, $state, MonsterService, monsters) {
   
   $scope.masterDetailCtrl = {
     animate : { enter: 'slide-left-enter', leave: 'slide-right-leave' },
+    collection: monsters,
     menu : [
       {
-        title: "CRUD Example",
-        icon: "icon-th-list",
+        title: "Parse Angular Demo",
+        icon: "icon-cloud",
         path: "#/",
         state: "demo.crud"
 
+      },
+      {
+        title: "FB Angular Demo",
+        icon: "icon-facebook",
+        path: "#/facebook",
+        state: "facebook.example"
       },
       {
         title: "Features",
@@ -30,14 +37,19 @@ angular.module('demo')
     ],
     features : [
       {
-        title: "Parse & Facebook SDK",
-        icon: "icon-facebook-sign",
+        title: "Parse SDK + Facebook SDK Load Performance",
+        icon: "icon-time",
         path: "#/features/facebook"
       },
       {
-        title: "Angular Wrapper for Parse API calls",
+        title: "Angular Wrapper for Parse SDK",
         icon: "icon-cloud",
         path: "#/features/parse"
+      },
+      {
+        title: "Angular Wrapper for Facebook SDK",
+        icon: "icon-facebook-sign",
+        path: "#/features/facebookSDK"
       },
       {
         title: "Extend Parse SDK for Angular Promises",
@@ -80,26 +92,32 @@ angular.module('demo')
 
   };
 
-  // get the collection from our data definitions
-  var Monsters = MonsterService.collection;
-
-  // new up a collection
-  $scope.masterDetailCtrl.collection = new Monsters;
-
-  // use the extended Parse SDK to load the whole collection
-  $scope.fetchMonstersPromise = $scope.masterDetailCtrl.collection.load();
+  
 
 
   $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
     
-    if(from.name.indexOf(to.name) >= 0) {
-      // to contains from
-      $scope.masterDetailCtrl.animate = { enter: 'slide-left-enter', leave: 'slide-right-leave' };
+    if(from.name == to.name) {
+        // same state
+        // alert('same state')
+        $scope.masterDetailCtrl.animate = {enter: "fade-ani", leave:"fade-ani"};
 
-    } else {
-      // going deep into the tree
-      $scope.masterDetailCtrl.animate = { enter: 'slide-right-enter', leave: 'slide-left-leave' };  
-    }
+      } else if (from.name.indexOf(to.name) >= 0) {
+        // alert('to contains from')
+        // to contains from
+        $scope.masterDetailCtrl.animate = { enter: 'slide-left-enter', leave: 'slide-right-leave' };
+
+      } else if(to.name.indexOf(from.name) >= 0){
+        // alert('going deeper')
+        // going deep into the tree
+        // $rootScope.slideAnimation = { enter: 'slide-right-enter', leave: 'slide-left-leave' };
+        $scope.masterDetailCtrl.animate = { enter: 'slide-right-enter', leave: 'slide-left-leave' };  
+
+      } else {
+        // alert('fade it')
+        // no relation, fade it
+        $scope.masterDetailCtrl.animate = {enter: "fade-ani", leave:"fade-ani"};
+      }
 
   })
    
@@ -112,8 +130,18 @@ angular.module('demo')
     // $scope.masterDetailCtrl.animate = { enter: 'waveForward-enter', leave: 'waveForward-leave' };
   }
 
-  $scope.transitionTo = function(state) {
-    $state.transitionTo(state);
+  $scope.transitionTo = function(stateName) {
+    if ($state.current.name.indexOf(stateName) >= 0) {
+      // same path, booty shake
+      $rootScope.$broadcast('bootyShake');
+
+    } else {
+
+      $rootScope.setLoading();
+
+      $state.transitionTo(stateName);
+    }
+
   }
 
   $scope.isActiveState = function(state) {

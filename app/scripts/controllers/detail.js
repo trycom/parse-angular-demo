@@ -1,17 +1,17 @@
 angular.module('demo')
 
-.controller('DetailController', ['$rootScope', '$scope', '$state', '$stateParams', 'MonsterService', function($rootScope, $scope, $state, $stateParams, CommentService) {
+.controller('DetailController', ['$rootScope', '$scope', '$state', '$stateParams', 'MonsterService', function($rootScope, $scope, $state, $stateParams, MonsterService) {
   
   $scope.detailCtrl = {
     current : null
   };
 
   // inherit the collection from the parent controller and find the current model
-  $scope.fetchMonstersPromise.then(function(col) {
-    $scope.detailCtrl.current = col.find(function(current) {
+  // $scope.fetchMonstersPromise.then(function(col) {
+    $scope.detailCtrl.current = $scope.masterDetailCtrl.collection.find(function(current) {
       return current.id == $stateParams.monsterId;
     })
-  })
+  // })
 
 
   $scope.transitionTo = function(state) {

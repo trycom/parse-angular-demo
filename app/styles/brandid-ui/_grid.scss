@@ -1,6 +1,6 @@
 .row-fluid {
 
-	.half, .one-third, .one-sixth, .two-thirds, .span60-40, .span40-60, .span20-80, .span80-20, .span10-90, .span90-10 {
+	.half, .quarter, .one-third, .one-sixth, .two-thirds, .span60-40, .span40-60, .span20-80, .span80-20, .span10-90, .span90-10, .span25-75, .span75-25 {
 		margin-right:0;
 		margin-left:0;
 		padding-right:0;
@@ -8,7 +8,7 @@
 		border:none;
 		float:left;
 	}
-	
+
 	.half-left-true {
 		margin-left: -100%;
 	}
@@ -16,7 +16,10 @@
 	.half {
 		width: 50%;
 	}
-	
+	.quarter {
+		width: 25%;
+	}
+
 	.one-third {
 		width:33.3333333333333333%;
 	}
@@ -34,7 +37,7 @@
 	.span40-60 {
 		width: 40%;
 	}
-	
+
 	.span20-80 {
 		width: 20%;
 	}
@@ -49,6 +52,14 @@
 
 	.span90-10 {
 		width: 90%;
+	}
+
+	.span25-75 {
+		width: 25%;
+	}
+
+	.span75-25 {
+		width: 75%;
 	}
 
 }
@@ -102,21 +113,42 @@
 }
 
 
+.fullWidth {
+	width: 100%;
+}
 
+.fullHeight {
+	height: 100%;
+}
+
+.min-height-1500 {
+	min-height: 1500px;
+}
+.min-height-750 {
+	min-height: 750px;
+}
 
 /* Large desktop */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
 
 }
- 
+
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
+
+	.expands-tablet {
+		width: 100% !important;
+	}
 
 }
- 
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 
+	.clear-both-phone {
+		clear: both;
+	}
+
 	.hides-phone {
 		display: none;
 	}
@@ -124,27 +156,86 @@
 		width: 100% !important;
 	}
 
-	.span10-90.expands-phone {
-		width: 20% !important;
+	.container {
+		width:100%;
 	}
-	.span90-10.contracts-phone {
-		width: 80% !important;
+	.min-height-1500 {
+		min-height:0;
 	}
-  
+
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) { 
-	.hides-phone {
-		display: none;
+@media (max-width: 480px) {
+
+	.fullWidth-phone {
+		width: 100%;
 	}
-	.expands-phone {
-		width: 100% !important;
+
+	.big-top-margin {
+		margin-top: 30px !important;
 	}
-	.span10-90.expands-phone {
-		width: 20% !important;
+	.big-bottom-padding {
+		padding-bottom: 30px !important;
 	}
-	.span90-10.contracts-phone {
-		width: 80% !important;
+
+	.modal-body.top-padding.bottom-padding {
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
+	#modal-register-form, #modal-login-form {
+		.height-large {
+			height: 45px;
+		}
+		.bottom-margin {
+			margin-bottom:15px;
+		}
+	}
+
+	.med-width-padding.width-padding-phone {
+		width: 95%;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+
+	}
+
+	.feed-answer {
+		float:left !important;
+		width: 48.93617% !important;
+		margin-left:5px !important;
+	}
+	.feed-answer.odd {
+		margin-left: 0 !important;
+	}
+	.feed-answer-block {
+		width:100% !important;
+		margin-left:0 !important;
+	}
+	.feed-answer-block .small-top-padding.small-bottom-padding {
+		padding-top:5px !important;
+		padding-bottom:5px !important;
+	}
+	#hitlistToggle {	
+		.hitlistToggle-elem {
+			margin-left:45px !important;
+			padding-top:15px !important;
+			padding-bottom:15px !important;
+		}
+		.height-large {
+			height: 35px !important;
+		}
+		.reverse-margin-phone {
+			margin-left: -20px;
+		}
+	}
+
+	// .hides-phone {
+	// 	display: none;
+	// }
+	// .expands-phone {
+	// 	width: 100% !important;
+	// }
+	// .span10-90.expands-phone {
+	// 	width: 100% !important;
+	// }
 }

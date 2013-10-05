@@ -12,12 +12,16 @@
     <meta name="description"            content="AngularJS Parse.com Seed">
     <meta name="author"                 content="Eric Clemmons">
 
-    <link rel="stylesheet" href="app/styles/be0d75a5.app.min.css">
+    <!-- build:css app/styles/app.min.css -->
+    <link rel="stylesheet" href="app/styles/app.css">
+    <!-- endbuild -->
 
     <!--[if lt IE 9]>
     <script src="components/html5shiv-dist/html5shiv.js"></script>
     <![endif]-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7370432/708202/css/fonts.css" />
     
   </head>
   <body>
@@ -32,14 +36,18 @@
     <div class="row-fluid med-grey-back dark-dust">
 
       <div ng-include src="'app/views/header.html'"></div>
+      <div view-loading ng-if="isViewLoading"></div>
       <div ui-view></div>
+      <div style="z-index:-1" ng-hide="contentLoaded" class="big-top-padding absolute top left row-fluid black-back fullHeight fullWidth top-padding bottom-padding">
+            <div class="row-fluid big-top-margin line height-large loading-dark"></div>
+        </div>
 
     </div>
 
+    <!-- waiting for ui-router to support angular-1.2 -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-
-    <script src="//www.parsecdn.com/js/parse-1.2.7.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.2.12.min.js"></script>
     
     <!-- Async Social SDKs -->
     <div id="fb-root"></div>
@@ -73,7 +81,38 @@
     </script>
 
 
-    <script src="app/scripts/03bb41c9.all.min.js"></script>
+    <!-- build:js app/scripts/all.min.js -->
+    <script src="components/modernizr/modernizr.js"></script>
+    <script src="components/underscore/underscore.js"></script>
+
+
+    <script src="app/scripts/app.js"></script>
+    <script src="app/scripts/libs/angular-ui-router.js"></script>
+    
+    <script src="app/scripts/modules/states/demo.js"></script>
+    <script src="app/scripts/modules/states/features.js"></script>
+    <script src="app/scripts/modules/states/facebook.js"></script>
+    <script src="app/scripts/modules/states/about.js"></script>
+    
+    <script src="app/scripts/modules/directives/bootyShake.js"></script>
+    <script src="app/scripts/modules/directives/forms.js"></script>
+    <script src="app/scripts/modules/directives/loader.js"></script>
+    
+    <script src="app/scripts/controllers/menu.js"></script>
+    <script src="app/scripts/controllers/master-detail.js"></script>
+    <script src="app/scripts/controllers/detail.js"></script>
+    <script src="app/scripts/controllers/facebook-example.js"></script>
+  
+    <!-- Parse specific -->
+    <script src="app/scripts/services/ParseServices.js"></script>
+    <script src="app/scripts/services/ParseQueryAngular.js"></script>
+    <script src="app/scripts/modules/data/_ParseObjects.js"></script>
+    <script src="app/scripts/modules/data/Monsters.js"></script>
+    
+    <!-- Facebook angular bindings -->
+    <script src="app/scripts/services/FacebookAngularPatch.js"></script>
+
+    <!-- endbuild -->
 
     <script type="text/javascript">
       // manual bootstrap

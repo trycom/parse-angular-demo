@@ -1,6 +1,10 @@
 .opacity-9 {
 	@include opacity(90);
 }
+.opacity-8 {
+	@include opacity(80);
+}
+
 .opacity-6 {
 	@include opacity(60);
 }
@@ -18,4 +22,27 @@
 }
 .opacity-10 {
 	@include opacity(100);
+}
+
+.half-opacity-hover:hover {
+	@include opacity(70);
+}
+
+.full-opacity-hover:hover {
+	@include opacity(100);
+	cursor: pointer;
+
+
+}
+
+.no-selection {
+	::selection {
+	    color: white;
+	    background: none;
+	}
+
+	::-moz-selection {
+		color: white;
+		background: none;
+	}
 }

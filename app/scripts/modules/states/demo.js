@@ -1,4 +1,4 @@
-angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
+angular.module('demo', ['ParseServices', 'ExternalDataServices'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -12,7 +12,20 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
     	url: '/',
     	views: {
     		'panel@demo': {
-    			templateUrl: 'app/views/demo.html'	
+    			templateUrl: 'app/views/demo.html',
+                controller: 'MasterDetailController',
+                resolve: {
+                    'monsters': ['MonsterService', function(MonsterService) {
+
+                        // get the collection from our data definitions
+                        var monsters = new MonsterService.collection;
+
+                        // use the extended Parse SDK to load the whole collection
+                        return monsters.load();
+
+                    }]
+                }
+
     		},
     		'detail@demo.crud' : {
     			templateUrl: 'app/views/detail/crud.list.html'
@@ -26,13 +39,9 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
     	views: {
     		
     		'detail@demo.crud' : {
-    			templateUrl: 'app/views/detail/crud.detail.html'
+    			templateUrl: 'app/views/detail/crud.detail.html',
+                controller: 'DetailController'
     		}
-
-    		// this overrides ui-view="tip"
-    		// 'tip@demo.crud.detail' : {
-    		// 	templateUrl: 'app/views/tips/crud-tips.html'
-    		// }
 
     	}
     })
@@ -41,11 +50,12 @@ angular.module('demo', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
         url: '/edit',
         views: {
             'detail@demo.crud' : {
-                templateUrl: 'app/views/detail/crud.detail.edit.html'
+                templateUrl: 'app/views/detail/crud.detail.edit.html',
+                controller: 'DetailController'
             }
 
         }
     })
-	
+
 
 }])
