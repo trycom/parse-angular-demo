@@ -27,4 +27,26 @@ angular.module('app', ['ui.router.compat' /* this is for ui-router */,  /* state
 	$rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
 
+
+
+    // loading animation
+    $rootScope.setLoading = function() {
+	    $rootScope.isViewLoading = true;
+	};
+	$rootScope.unsetLoading = function() {
+	    $rootScope.isViewLoading = false;
+	};
+
+	$rootScope.isViewLoading = false;
+
+	$rootScope.$on('$stateChangeStart', function(ev, to, toParams, from, fromParams) {
+		// $rootScope.setBigLoading();
+		$rootScope.contentLoaded = false;
+	})
+
+	$rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
+		$rootScope.unsetLoading();
+		$rootScope.contentLoaded = true;
+	});
+
 }]);

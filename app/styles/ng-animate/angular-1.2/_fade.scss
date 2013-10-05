@@ -1,4 +1,4 @@
-.fade-ani-enter, .fade-ani-leave {
+.fade-ani.ng-enter, .fade-ani.ng-leave {
   @extend .trans;
   @include transition-duration(300ms);
   // @include transition-duration(300ms);
@@ -9,21 +9,21 @@
   }
 }
 
-.fade-ani-enter {
+.fade-ani.ng-enter {
 	// transition-delay: 300ms;
 	// -webkit-transition-delay: 300ms; /* Safari */
 	@include opacity(0);
 }
-.fade-ani-enter-active {
+.fade-ani.ng-enter-active {
 	// transition-delay: 300ms;
 	// -webkit-transition-delay: 300ms; /* Safari */
 	@include opacity(100);
 }
 
-.fade-ani-leave  {
+.fade-ani.ng-leave  {
 	@include opacity(100);
 }
-.fade-ani-leave-active  {
+.fade-ani.ng-leave-active  {
 	@include opacity(0);
 }
 

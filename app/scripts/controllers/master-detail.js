@@ -1,9 +1,10 @@
 angular.module('demo')
 
-.controller('MasterDetailController', ['$rootScope', '$scope', '$state', 'MonsterService', function($rootScope, $scope, $state, MonsterService) {
+.controller('MasterDetailController', ['$rootScope', '$scope', '$state', 'MonsterService', 'monsters', function($rootScope, $scope, $state, MonsterService, monsters) {
   
   $scope.masterDetailCtrl = {
     animate : { enter: 'slide-left-enter', leave: 'slide-right-leave' },
+    collection: monsters,
     menu : [
       {
         title: "CRUD Example",
@@ -80,26 +81,32 @@ angular.module('demo')
 
   };
 
-  // get the collection from our data definitions
-  var Monsters = MonsterService.collection;
-
-  // new up a collection
-  $scope.masterDetailCtrl.collection = new Monsters;
-
-  // use the extended Parse SDK to load the whole collection
-  $scope.fetchMonstersPromise = $scope.masterDetailCtrl.collection.load();
+  
 
 
   $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
     
-    if(from.name.indexOf(to.name) >= 0) {
-      // to contains from
-      $scope.masterDetailCtrl.animate = { enter: 'slide-left-enter', leave: 'slide-right-leave' };
+    if(from.name == to.name) {
+        // same state
+        // alert('same state')
+        $scope.masterDetailCtrl.animate = {enter: "fade-ani", leave:"fade-ani"};
 
-    } else {
-      // going deep into the tree
-      $scope.masterDetailCtrl.animate = { enter: 'slide-right-enter', leave: 'slide-left-leave' };  
-    }
+      } else if (from.name.indexOf(to.name) >= 0) {
+        // alert('to contains from')
+        // to contains from
+        $scope.masterDetailCtrl.animate = { enter: 'slide-left-enter', leave: 'slide-right-leave' };
+
+      } else if(to.name.indexOf(from.name) >= 0){
+        // alert('going deeper')
+        // going deep into the tree
+        // $rootScope.slideAnimation = { enter: 'slide-right-enter', leave: 'slide-left-leave' };
+        $scope.masterDetailCtrl.animate = { enter: 'slide-right-enter', leave: 'slide-left-leave' };  
+
+      } else {
+        // alert('fade it')
+        // no relation, fade it
+        $scope.masterDetailCtrl.animate = {enter: "fade-ani", leave:"fade-ani"};
+      }
 
   })
    

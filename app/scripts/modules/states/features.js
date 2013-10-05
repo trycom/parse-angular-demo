@@ -12,7 +12,19 @@ angular.module('features', ['ParseServices', 'ExternalDataServices'])
     	url: '/features',
     	views: {
     		'panel@features': {
-    			templateUrl: 'app/views/demo.html'	
+    			templateUrl: 'app/views/demo.html',
+                controller: 'MasterDetailController',
+                resolve: {
+                    'monsters': ['MonsterService', function(MonsterService) {
+
+                        // get the collection from our data definitions
+                        var monsters = new MonsterService.collection;
+
+                        // use the extended Parse SDK to load the whole collection
+                        return monsters.load();
+
+                    }]
+                }
     		},
     		'detail@features.list' : {
     			templateUrl: 'app/views/detail/features.list.html'
