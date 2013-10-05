@@ -1,4 +1,4 @@
-angular.module('features', ['ui.compat', 'ParseServices', 'ExternalDataServices'])
+angular.module('features', ['ParseServices', 'ExternalDataServices'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 

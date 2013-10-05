@@ -24,17 +24,31 @@
 .small-top-margin {
 	margin-top:10px;
 }
+.very-small-top-margin {
+	margin-top: 5px;
+}
 .med-top-margin {
 	margin-top:20px;
 }
+.medbig-top-margin {
+	margin-top:35px;
+}
+.medbig-bottom-margin {
+	margin-bottom:35px;
+}
 .small-bottom-margin {
 	margin-bottom:10px;
+}
+.small-padding {
+	padding: 10px;
 }
 
 .small-left-margin {
 	margin-left: 10px;
 }
-
+.very-small-left-margin {
+	margin-left: 5px;
+}
 .med-left-margin {
 	margin-left: 20px;
 }
@@ -67,6 +81,10 @@
 	margin-right: 10px;
 }
 
+.right-margin {
+	margin-right: 30px;
+}
+
 .percent-left-margin {
 	margin-left: 5%;
 }
@@ -92,6 +110,12 @@
 .small-bottom-padding {
 	padding-bottom: 10px;
 }
+.very-small-bottom-padding {
+	padding-bottom: 5px;
+}
+.very-small-bottom-padding {
+	padding-bottom: 5px;
+}
 
 .bottom-padding {
 	padding-bottom:30px;
@@ -105,4 +129,40 @@
   width: 94%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.top-padding-15 {
+  padding-top:15px;
+}
+.bottom-padding-15 {
+  padding-bottom:15px;
+}
+.nomargin {
+  margin:0px !important;
+}
+
+
+@media (max-width: 767px) {
+  .top-padding-15 {
+    padding-top:5px;
+  }
+  .bottom-padding-15 {
+    padding-bottom:5px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .top-padding-15 {
+    padding-top:5px;
+  }
+  .bottom-padding-15 {
+    padding-bottom:5px;
+  }
+	.mobile-fullscreen {
+		min-height: 420px;
+	}
+  .big-top-padding.mobile-big-top-padding {
+    padding-top: 30px;
+  }
 }

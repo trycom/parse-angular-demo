@@ -1,0 +1,29 @@
+.fade-ani.ng-enter, .fade-ani.ng-leave {
+  @extend .trans;
+  @include transition-duration(300ms);
+  // @include transition-duration(300ms);
+  // position: absolute;
+
+  .hide-on-animate {
+  	display:none;
+  }
+}
+
+.fade-ani.ng-enter {
+	// transition-delay: 300ms;
+	// -webkit-transition-delay: 300ms; /* Safari */
+	@include opacity(0);
+}
+.fade-ani.ng-enter-active {
+	// transition-delay: 300ms;
+	// -webkit-transition-delay: 300ms; /* Safari */
+	@include opacity(100);
+}
+
+.fade-ani.ng-leave  {
+	@include opacity(100);
+}
+.fade-ani.ng-leave-active  {
+	@include opacity(0);
+}
+

@@ -6,9 +6,13 @@
 	overflow-x: hidden;
 }
 
+.overflow-y {
+	overflow-y: scroll;
+}
+
 .no-radius {
 
-	@include border-radius(0px); 
+	@include border-radius(0px);
 }
 
 .no-max-width {
@@ -37,4 +41,17 @@
 
 .no-bottom-margin {
 	margin-bottom: 0;
+}
+
+.no-text-shadow {
+	text-shadow: none;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+	.overflow-y-phone {
+		overflow-y: scroll;
+	}
+
 }

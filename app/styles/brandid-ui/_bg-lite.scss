@@ -1,0 +1,106 @@
+.dark-red-back {
+	// background-color: #b81814;
+	// @include background-image(radial-gradient(50% 100%, rgb(184, 24, 20), rgb(40, 0, 0)));
+	background-color: #9d1311;
+	@include background-image(radial-gradient(50% 100%, rgb(157, 19, 17), rgb(40, 0, 0)));
+	
+}
+
+.dark-back-fade {
+	background-color: #1f1f1f;
+	@include background-image(linear-gradient(top, rgb(31, 31, 31), rgb(22, 22, 22)));
+	@include filter-gradient(rgb(31, 31, 31), rgb(22, 22, 22), vertical);
+
+}
+
+.trans-black-back {
+	background-color: rgba(0,0,0,0.7);
+}
+.trans-fade-back {
+	@include background-image(linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90)));
+	@include filter-gradient(rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.90), vertical);
+}
+
+.reverse-trans-fade-back {
+	@include background-image(linear-gradient(bottom, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.95)));
+	@include filter-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.95), vertical);
+}
+
+.dark-inset	{
+	@include box-shadow(rgba(0, 0, 0, 0.8) 0 0px 20px inset);
+}
+
+.big-dark-inset	{
+	@include box-shadow(rgba(0, 0, 0, 1) 0 0 200px 20px inset);
+}
+
+.fb-blue-back {
+	background-color: #3b5998;
+}
+
+.fb-light-blue-back {
+	background-color: #D8DEEA;
+}
+
+.fb-grey-back {
+	background-color: #edf0f5;
+}
+
+.radial-back {
+	background-color: #690901;
+	@include background-image(radial-gradient(50% 100%, rgb(105, 9, 1), rgb(0, 0, 0)));
+}
+.repeat-x {
+	background-repeat: repeat-x;
+}
+
+
+.white-back-hover:hover {
+	background-color:#FFF;
+	cursor:pointer;
+}
+
+.light-back-hover:hover {
+	background-color:#f6f6f6;
+	cursor:pointer;
+}
+
+.trans-back {
+	background: transparent !important;
+}
+
+.med-grey-back {
+	background-color: #444;
+}
+
+.white-back {
+  background-color:#FFF;
+}
+
+.really-dark-back {
+	background-color:#1f1f1f;
+}
+
+.important-white-back {
+  background-color:#FFF !important;
+}
+
+.important-dark-back {
+  background-color:#1f1f1f !important;
+}
+
+.success-back {
+	background-color: $successBackground;
+}
+
+.light-back {
+	background-color: #f6f6f6;
+}
+
+.light-dark-back {
+	background-color: #ececec;
+}
+
+.black-back {
+	background-color: #000;
+}

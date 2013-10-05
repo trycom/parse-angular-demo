@@ -19,7 +19,8 @@
     <!--[if lt IE 9]>
     <script src="components/html5shiv-dist/html5shiv.js"></script>
     <![endif]-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7370432/708202/css/fonts.css" />
     
   </head>
   <body>
@@ -39,9 +40,9 @@
     </div>
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
 
-    <script src="//www.parsecdn.com/js/parse-1.2.7.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.2.12.min.js"></script>
     
     <!-- Async Social SDKs -->
     <div id="fb-root"></div>
@@ -78,9 +79,12 @@
     <!-- build:js app/scripts/all.min.js -->
     <script src="components/modernizr/modernizr.js"></script>
     <script src="components/underscore/underscore.js"></script>
-    <script src="components/angular-ui-states/index.js"></script>
+
 
     <script src="app/scripts/app.js"></script>
+    <!-- using angular-1.2 branch of ui-router to support 1.2 animations on ui-view -->
+    <script src="app/scripts/libs/angular-ui-router.js"></script>
+    
     <script src="app/scripts/modules/states/demo.js"></script>
     <script src="app/scripts/modules/states/features.js"></script>
     <script src="app/scripts/modules/directives/forms.js"></script>

@@ -1,0 +1,50 @@
+.moveright.ng-enter,
+.moveright.ng-leave
+{
+    @extend .trans;
+    @include trans(1300ms);
+    position: relative;
+    display: block;
+}
+
+.moveright.ng-enter.ng-enter-active,
+.moveright.ng-leave {
+    // opacity: 1;
+    // opacity: 1;
+    right: 0;
+    // height: 30px;
+}
+
+.moveright.ng-leave.ng-leave-active,
+.moveright.ng-enter {
+    // opacity: 0;
+    right: -100%;
+    // opacity:0;
+    // height: 0px;
+}
+
+
+.moveleft.ng-enter,
+.moveleft.ng-leave
+{
+    @extend .trans;
+		@include trans(800ms);
+    position: relative;
+    display: block;
+}
+
+.moveleft.ng-enter.ng-enter-active,
+.moveleft.ng-leave {
+    // opacity: 1;
+    left: 0;
+    // opacity: 1;
+    // height: 30px;
+}
+
+.moveleft.ng-leave.ng-leave-active,
+.moveleft.ng-enter {
+    // opacity: 0;
+    left: -100%;
+    // opacity: 0;
+    // height: 0px;
+}
