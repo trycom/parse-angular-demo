@@ -7,7 +7,7 @@ angular.module('app')
     	menu: [{
     		name: "Parse Demo",
     		state: "demo",
-            activeFor: ["demo","features","about"],
+            activeFor: ["demo","features","facebook","about"],
             icon: "icon-user",
     		href: "#/" 
     	},

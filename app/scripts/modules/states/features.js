@@ -43,6 +43,16 @@ angular.module('features', ['ParseServices', 'ExternalDataServices'])
     	}
     })
 
+    .state('features.list.facebookSDK', {
+        url: '/facebookSDK',
+        views: {
+            'detail@features.list' : {
+                templateUrl: 'app/views/detail/features.list.facebookSDK.html'
+            }
+
+        }
+    })
+
     .state('features.list.parse', {
     	url: '/parse',
     	views: {

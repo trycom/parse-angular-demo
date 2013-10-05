@@ -1,17 +1,17 @@
-angular.module('demo', ['ParseServices', 'ExternalDataServices'])
+angular.module('facebook', ['ParseServices', 'ExternalDataServices'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 	$stateProvider
 
-	.state('demo', {
+	.state('facebook', {
 		abstract: true,
     	templateUrl: 'app/views/app-layout.html'
     })
-    .state('demo.crud', {
-    	url: '/',
+    .state('facebook.example', {
+    	url: '/facebook',
     	views: {
-    		'panel@demo': {
+    		'panel@facebook': {
     			templateUrl: 'app/views/demo.html',
                 controller: 'MasterDetailController',
                 resolve: {
@@ -25,37 +25,14 @@ angular.module('demo', ['ParseServices', 'ExternalDataServices'])
 
                     }]
                 }
-
     		},
-    		'detail@demo.crud' : {
-    			templateUrl: 'app/views/detail/crud.list.html'
+    		'detail@facebook.example' : {
+    			templateUrl: 'app/views/detail/facebook.example.html',
+                controller: 'FacebookExampleController'
     		}
 
     	}
     })
-
-    .state('demo.crud.detail', {
-    	url: 'crud/{monsterId}',
-    	views: {
-    		
-    		'detail@demo.crud' : {
-    			templateUrl: 'app/views/detail/crud.detail.html',
-                controller: 'DetailController'
-    		}
-
-    	}
-    })
-
-    .state('demo.crud.detail.edit', {
-        url: '/edit',
-        views: {
-            'detail@demo.crud' : {
-                templateUrl: 'app/views/detail/crud.detail.edit.html',
-                controller: 'DetailController'
-            }
-
-        }
-    })
-
+	
 
 }])

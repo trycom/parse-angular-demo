@@ -7,11 +7,17 @@ angular.module('demo')
     collection: monsters,
     menu : [
       {
-        title: "CRUD Example",
-        icon: "icon-th-list",
+        title: "Parse Angular Demo",
+        icon: "icon-cloud",
         path: "#/",
         state: "demo.crud"
 
+      },
+      {
+        title: "FB Angular Demo",
+        icon: "icon-facebook",
+        path: "#/facebook",
+        state: "facebook.example"
       },
       {
         title: "Features",
@@ -31,14 +37,19 @@ angular.module('demo')
     ],
     features : [
       {
-        title: "Parse & Facebook SDK",
-        icon: "icon-facebook-sign",
+        title: "Parse SDK + Facebook SDK Load Performance",
+        icon: "icon-time",
         path: "#/features/facebook"
       },
       {
-        title: "Angular Wrapper for Parse API calls",
+        title: "Angular Wrapper for Parse SDK",
         icon: "icon-cloud",
         path: "#/features/parse"
+      },
+      {
+        title: "Angular Wrapper for Facebook SDK",
+        icon: "icon-facebook-sign",
+        path: "#/features/facebookSDK"
       },
       {
         title: "Extend Parse SDK for Angular Promises",
