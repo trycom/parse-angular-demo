@@ -5,10 +5,12 @@ angular.module('facebook')
 
 
   $scope.facebookCtrl = {
-  	fbAuthData : Parse.User.current().get('authData'),
     response : {}
   };
 
+  if(Parse.User.current()) {
+    $scope.facebookCtrl.fbAuthData = Parse.User.current().get('authData');
+  }
 
 
   $scope.fbConnect = function() {
