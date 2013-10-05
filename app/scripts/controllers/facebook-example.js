@@ -5,6 +5,7 @@ angular.module('facebook')
 
 
   $scope.facebookCtrl = {
+    fbAuthData : {},
     response : {}
   };
 
@@ -22,7 +23,7 @@ angular.module('facebook')
   	ParseQueryAngular(Parse.FacebookUtils,{functionToCall:"logIn", params:[Parse.User.current(), "user_likes"]}).then(function(user) {
   		alert('facebook connected!');
 
-  		// $scope.facebookCtrl.fbAuthData = user.get('authData');
+  		$scope.facebookCtrl.fbAuthData = user.get('authData');
 
   	}, function(error) {
 
