@@ -119,8 +119,18 @@ angular.module('demo')
     // $scope.masterDetailCtrl.animate = { enter: 'waveForward-enter', leave: 'waveForward-leave' };
   }
 
-  $scope.transitionTo = function(state) {
-    $state.transitionTo(state);
+  $scope.transitionTo = function(stateName) {
+    if ($state.current.name.indexOf(stateName) >= 0) {
+      // same path, booty shake
+      $rootScope.$broadcast('bootyShake');
+
+    } else {
+
+      $rootScope.setLoading();
+
+      $state.transitionTo(stateName);
+    }
+
   }
 
   $scope.isActiveState = function(state) {
