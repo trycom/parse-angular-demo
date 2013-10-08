@@ -5,9 +5,10 @@ $blueLight: #0aa4f7 !default;
 @import "compass";
 @import "../../../components/sass-bootstrap/lib/_bootstrap.scss";
 @import "../../../components/sass-bootstrap/lib/_responsive.scss";
+@import "_animate-helpers.scss";
 @import "_animate.scss";
 @import "brandid-ui/_brandid-ui.scss";
-@import "ng-animate/_ng-animate.scss";
+@import "ng-animate/angular-1.2/_ng-animate.scss";
 
 
 
@@ -22,10 +23,6 @@ a.block {
 
 .withRadius {
 	@include border-radius(2px);
-}
-
-.ani.delay-3 {
-	@include ani-delay(3s);
 }
 
 /**

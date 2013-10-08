@@ -6,13 +6,12 @@ angular.module('demo', ['ParseServices', 'ExternalDataServices'])
 
 	.state('demo', {
 		abstract: true,
-    	templateUrl: 'app/views/app-layout.html'
-    })
-    .state('demo.crud', {
-    	url: '/',
-    	views: {
-    		'panel@demo': {
-    			templateUrl: 'app/views/demo.html',
+        views: {
+            '@': {
+                templateUrl: 'app/views/app-layout.html',
+            },
+            'panel@demo': {
+                templateUrl: 'app/views/master-detail.html',
                 controller: 'MasterDetailController',
                 resolve: {
                     'monsters': ['MonsterService', function(MonsterService) {
@@ -26,8 +25,13 @@ angular.module('demo', ['ParseServices', 'ExternalDataServices'])
                     }]
                 }
 
-    		},
-    		'detail@demo.crud' : {
+            }
+        }
+    })
+    .state('demo.crud', {
+    	url: '/',
+    	views: {
+    		'detail@demo' : {
     			templateUrl: 'app/views/detail/crud.list.html'
     		}
 
@@ -38,7 +42,7 @@ angular.module('demo', ['ParseServices', 'ExternalDataServices'])
     	url: 'crud/{monsterId}',
     	views: {
     		
-    		'detail@demo.crud' : {
+    		'detail@demo' : {
     			templateUrl: 'app/views/detail/crud.detail.html',
                 controller: 'DetailController'
     		}
@@ -49,7 +53,7 @@ angular.module('demo', ['ParseServices', 'ExternalDataServices'])
     .state('demo.crud.detail.edit', {
         url: '/edit',
         views: {
-            'detail@demo.crud' : {
+            'detail@demo' : {
                 templateUrl: 'app/views/detail/crud.detail.edit.html',
                 controller: 'DetailController'
             }

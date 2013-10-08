@@ -20,7 +20,6 @@
 		<!-- <div class="horizontal-line full-fade"></div> -->
 
 		<a  ng-click="transitionTo(item.state)"
-			href=""
 			class="block light-back-hover width-padding row-fluid top-padding bottom-padding light-border-top light-border-bottom"
 			ng-class="isActiveState(item.state)"
 			ng-repeat="item in masterDetailCtrl.menu"
@@ -47,8 +46,8 @@
 
 	</div>
 
-	<div class="two-thirds">
-		<div ui-view="detail" booty-shake class="relative" ng-animate="masterDetailCtrl.animate"></div>
+	<div class="two-thirds relative">
+		<div ng-class="masterDetailCtrl.animate" ui-view="detail" booty-shake></div>
 	</div>
 
 </div>

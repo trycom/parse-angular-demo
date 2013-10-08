@@ -8319,8 +8319,10 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     overflow: visible !important;
   }
 }
-/* line 58, ../../../client/app/styles/_animate.scss */
-.trans, textarea, input, .fade-ani-enter, .fade-ani-leave {
+/* line 62, ../../../client/app/styles/_animate-helpers.scss */
+.trans, textarea, input, .moveright.ng-enter,
+.moveright.ng-leave, .moveleft.ng-enter,
+.moveleft.ng-leave {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -8336,7 +8338,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 65, ../../../client/app/styles/_animate.scss */
+/* line 69, ../../../client/app/styles/_animate-helpers.scss */
 .no-trans {
   -webkit-transition-duration: 0s;
   -moz-transition-duration: 0s;
@@ -8344,8 +8346,8 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   transition-duration: 0s;
 }
 
-/* line 69, ../../../client/app/styles/_animate.scss */
-.ani {
+/* line 73, ../../../client/app/styles/_animate-helpers.scss */
+.ani, .crossfade.ng-enter, .crossfade.ng-leave {
   -webkit-animation-fill-mode: both;
   /* Safari and Chrome */
   -moz-animation-fill-mode: both;
@@ -8355,15 +8357,6 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   -o-animation-fill-mode: both;
   /* Opera */
   animation-fill-mode: both;
-  -webkit-animation-duration: 600ms;
-  /* Safari and Chrome */
-  -moz-animation-duration: 600ms;
-  /* Firefox */
-  -ms-animation-duration: 600ms;
-  /* Steve Ballmer */
-  -o-animation-duration: 600ms;
-  /* Opera */
-  animation-duration: 600ms;
   -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -ms-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -8374,7 +8367,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   -webkit-perspective: 1000;
 }
 
-/* line 78, ../../../client/app/styles/_animate.scss */
+/* line 82, ../../../client/app/styles/_animate-helpers.scss */
 .ani-fast {
   -webkit-animation-duration: 300ms;
   /* Safari and Chrome */
@@ -8387,94 +8380,94 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   animation-duration: 300ms;
 }
 
-/* line 82, ../../../client/app/styles/_animate.scss */
-.ani.infinite {
+/* line 86, ../../../client/app/styles/_animate-helpers.scss */
+.ani.infinite, .infinite.crossfade.ng-enter, .infinite.crossfade.ng-leave {
   animation-iteration-count: infinite !important;
   -webkit-animation-iteration-count: infinite !important;
   /*Safari and Chrome*/
 }
 
 @-webkit-keyframes flash {
-  /* line 88, ../../../client/app/styles/_animate.scss */
+  /* line 2, ../../../client/app/styles/_animate.scss */
   0%, 50%, 100% {
     opacity: 1;
   }
 
-  /* line 89, ../../../client/app/styles/_animate.scss */
+  /* line 3, ../../../client/app/styles/_animate.scss */
   25%, 75% {
     opacity: 0;
   }
 }
 
 @-moz-keyframes flash {
-  /* line 93, ../../../client/app/styles/_animate.scss */
+  /* line 7, ../../../client/app/styles/_animate.scss */
   0%, 50%, 100% {
     opacity: 1;
   }
 
-  /* line 94, ../../../client/app/styles/_animate.scss */
+  /* line 8, ../../../client/app/styles/_animate.scss */
   25%, 75% {
     opacity: 0;
   }
 }
 
 @-o-keyframes flash {
-  /* line 98, ../../../client/app/styles/_animate.scss */
+  /* line 12, ../../../client/app/styles/_animate.scss */
   0%, 50%, 100% {
     opacity: 1;
   }
 
-  /* line 99, ../../../client/app/styles/_animate.scss */
+  /* line 13, ../../../client/app/styles/_animate.scss */
   25%, 75% {
     opacity: 0;
   }
 }
 
 @keyframes flash {
-  /* line 103, ../../../client/app/styles/_animate.scss */
+  /* line 17, ../../../client/app/styles/_animate.scss */
   0%, 50%, 100% {
     opacity: 1;
   }
 
-  /* line 104, ../../../client/app/styles/_animate.scss */
+  /* line 18, ../../../client/app/styles/_animate.scss */
   25%, 75% {
     opacity: 0;
   }
 }
 
 @-webkit-keyframes scroll-bg {
-  /* line 109, ../../../client/app/styles/_animate.scss */
+  /* line 23, ../../../client/app/styles/_animate.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 111, ../../../client/app/styles/_animate.scss */
+  /* line 25, ../../../client/app/styles/_animate.scss */
   100% {
     background-position: 0 -497px;
   }
 }
 
 @-moz-keyframes scroll-bg {
-  /* line 115, ../../../client/app/styles/_animate.scss */
+  /* line 29, ../../../client/app/styles/_animate.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 117, ../../../client/app/styles/_animate.scss */
+  /* line 31, ../../../client/app/styles/_animate.scss */
   100% {
     background-position: 0 -497px;
   }
 }
 
 @-webkit-keyframes magic {
-  /* line 122, ../../../client/app/styles/_animate.scss */
+  /* line 36, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -webkit-transform-origin: 100% 200%;
     -webkit-transform: scale(1, 1) rotate(0deg);
   }
 
-  /* line 127, ../../../client/app/styles/_animate.scss */
+  /* line 41, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -webkit-transform-origin: 200% 500%;
@@ -8483,14 +8476,14 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes magic {
-  /* line 135, ../../../client/app/styles/_animate.scss */
+  /* line 49, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -moz-transform-origin: 100% 200%;
     -moz-transform: scale(1, 1) rotate(0deg);
   }
 
-  /* line 140, ../../../client/app/styles/_animate.scss */
+  /* line 54, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -moz-transform-origin: 200% 500%;
@@ -8499,14 +8492,14 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes magic {
-  /* line 148, ../../../client/app/styles/_animate.scss */
+  /* line 62, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -o-transform-origin: 100% 200%;
     -o-transform: scale(1, 1) rotate(0deg);
   }
 
-  /* line 153, ../../../client/app/styles/_animate.scss */
+  /* line 67, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -o-transform-origin: 200% 500%;
@@ -8515,14 +8508,14 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes magic {
-  /* line 161, ../../../client/app/styles/_animate.scss */
+  /* line 75, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     transform-origin: 100% 200%;
     transform: scale(1, 1) rotate(0deg);
   }
 
-  /* line 166, ../../../client/app/styles/_animate.scss */
+  /* line 80, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     transform-origin: 200% 500%;
@@ -8530,7 +8523,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 
-/* line 173, ../../../client/app/styles/_animate.scss */
+/* line 87, ../../../client/app/styles/_animate.scss */
 .magic {
   -webkit-animation-name: magic;
   -moz-animation-name: magic;
@@ -8540,13 +8533,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes rotateUp {
-  /* line 178, ../../../client/app/styles/_animate.scss */
+  /* line 92, ../../../client/app/styles/_animate.scss */
   0% {
     -webkit-transform-origin: 0 0;
     -webkit-transform: perspective(800px) rotateX(0deg) translate3d(0, 0, 0);
   }
 
-  /* line 179, ../../../client/app/styles/_animate.scss */
+  /* line 93, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -webkit-transform-origin: 50% 0;
@@ -8555,13 +8548,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes rotateUp {
-  /* line 183, ../../../client/app/styles/_animate.scss */
+  /* line 97, ../../../client/app/styles/_animate.scss */
   0% {
     -moz-transform-origin: 0 0;
     -moz-transform: perspective(800px) rotateX(0deg) translateZ(0px);
   }
 
-  /* line 184, ../../../client/app/styles/_animate.scss */
+  /* line 98, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -moz-transform-origin: 50% 0;
@@ -8570,13 +8563,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes rotateUp {
-  /* line 188, ../../../client/app/styles/_animate.scss */
+  /* line 102, ../../../client/app/styles/_animate.scss */
   0% {
     -o-transform-origin: 0 0;
     -o-transform: perspective(800px) rotateX(0deg) translateZ(0px);
   }
 
-  /* line 189, ../../../client/app/styles/_animate.scss */
+  /* line 103, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -o-transform-origin: 50% 0;
@@ -8585,13 +8578,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes rotateUp {
-  /* line 193, ../../../client/app/styles/_animate.scss */
+  /* line 107, ../../../client/app/styles/_animate.scss */
   0% {
     transform-origin: 0 0;
     transform: perspective(800px) rotateX(0deg) translateZ(0px);
   }
 
-  /* line 194, ../../../client/app/styles/_animate.scss */
+  /* line 108, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     transform-origin: 50% 0;
@@ -8599,7 +8592,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 
-/* line 197, ../../../client/app/styles/_animate.scss */
+/* line 111, ../../../client/app/styles/_animate.scss */
 .rotateUp {
   -webkit-backface-visibility: visible !important;
   -moz-backface-visibility: visible !important;
@@ -8613,13 +8606,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes rotateDown {
-  /* line 208, ../../../client/app/styles/_animate.scss */
+  /* line 122, ../../../client/app/styles/_animate.scss */
   0% {
     -webkit-transform-origin: 0 0;
     -webkit-transform: perspective(800px) rotateX(0deg) translate3d(0, 0, 0);
   }
 
-  /* line 209, ../../../client/app/styles/_animate.scss */
+  /* line 123, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -webkit-transform-origin: 50% 100%;
@@ -8628,13 +8621,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes rotateDown {
-  /* line 213, ../../../client/app/styles/_animate.scss */
+  /* line 127, ../../../client/app/styles/_animate.scss */
   0% {
     -moz-transform-origin: 0 0;
     -moz-transform: perspective(800px) rotateX(0deg) translateZ(0px);
   }
 
-  /* line 214, ../../../client/app/styles/_animate.scss */
+  /* line 128, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -moz-transform-origin: 50% 100%;
@@ -8643,13 +8636,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes rotateDown {
-  /* line 218, ../../../client/app/styles/_animate.scss */
+  /* line 132, ../../../client/app/styles/_animate.scss */
   0% {
     -o-transform-origin: 0 0;
     -o-transform: perspective(800px) rotateX(0deg) translateZ(0px);
   }
 
-  /* line 219, ../../../client/app/styles/_animate.scss */
+  /* line 133, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -o-transform-origin: 50% 100%;
@@ -8658,13 +8651,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes rotateDown {
-  /* line 223, ../../../client/app/styles/_animate.scss */
+  /* line 137, ../../../client/app/styles/_animate.scss */
   0% {
     transform-origin: 0 0;
     transform: perspective(800px) rotateX(0deg) translateZ(0px);
   }
 
-  /* line 224, ../../../client/app/styles/_animate.scss */
+  /* line 138, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     transform-origin: 50% 100%;
@@ -8672,7 +8665,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 
-/* line 227, ../../../client/app/styles/_animate.scss */
+/* line 141, ../../../client/app/styles/_animate.scss */
 .rotateDown {
   -webkit-backface-visibility: visible !important;
   -moz-backface-visibility: visible !important;
@@ -8686,7 +8679,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes vanishIn {
-  /* line 236, ../../../client/app/styles/_animate.scss */
+  /* line 150, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform-origin: 50% 50%;
@@ -8694,7 +8687,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     -webkit-filter: blur(90px);
   }
 
-  /* line 237, ../../../client/app/styles/_animate.scss */
+  /* line 151, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform-origin: 50% 50%;
@@ -8703,7 +8696,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes vanishIn {
-  /* line 241, ../../../client/app/styles/_animate.scss */
+  /* line 155, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform-origin: 50% 50%;
@@ -8711,7 +8704,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     filter: blur(90px);
   }
 
-  /* line 242, ../../../client/app/styles/_animate.scss */
+  /* line 156, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform-origin: 50% 50%;
@@ -8720,7 +8713,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes vanishIn {
-  /* line 246, ../../../client/app/styles/_animate.scss */
+  /* line 160, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -o-transform-origin: 50% 50%;
@@ -8728,7 +8721,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     -o-filter: blur(90px);
   }
 
-  /* line 247, ../../../client/app/styles/_animate.scss */
+  /* line 161, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -o-transform-origin: 50% 50%;
@@ -8737,7 +8730,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes vanishIn {
-  /* line 251, ../../../client/app/styles/_animate.scss */
+  /* line 165, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform-origin: 50% 50%;
@@ -8745,7 +8738,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     filter: blur(90px);
   }
 
-  /* line 252, ../../../client/app/styles/_animate.scss */
+  /* line 166, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform-origin: 50% 50%;
@@ -8753,7 +8746,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 
-/* line 255, ../../../client/app/styles/_animate.scss */
+/* line 169, ../../../client/app/styles/_animate.scss */
 .vanishIn {
   -webkit-animation-name: vanishIn;
   -moz-animation-name: vanishIn;
@@ -8762,7 +8755,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   animation-name: vanishIn;
 }
 
-/* line 261, ../../../client/app/styles/_animate.scss */
+/* line 175, ../../../client/app/styles/_animate.scss */
 .scroll-bg {
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
@@ -8789,7 +8782,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 271, ../../../client/app/styles/_animate.scss */
+/* line 185, ../../../client/app/styles/_animate.scss */
 .flash {
   -webkit-animation-name: flash;
   -moz-animation-name: flash;
@@ -8799,74 +8792,74 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes shake {
-  /* line 275, ../../../client/app/styles/_animate.scss */
+  /* line 189, ../../../client/app/styles/_animate.scss */
   0%, 100% {
     -webkit-transform: translateX(0);
   }
 
-  /* line 276, ../../../client/app/styles/_animate.scss */
+  /* line 190, ../../../client/app/styles/_animate.scss */
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translateX(-10px);
   }
 
-  /* line 277, ../../../client/app/styles/_animate.scss */
+  /* line 191, ../../../client/app/styles/_animate.scss */
   20%, 40%, 60%, 80% {
     -webkit-transform: translateX(10px);
   }
 }
 
 @-moz-keyframes shake {
-  /* line 281, ../../../client/app/styles/_animate.scss */
+  /* line 195, ../../../client/app/styles/_animate.scss */
   0%, 100% {
     -moz-transform: translateX(0);
   }
 
-  /* line 282, ../../../client/app/styles/_animate.scss */
+  /* line 196, ../../../client/app/styles/_animate.scss */
   10%, 30%, 50%, 70%, 90% {
     -moz-transform: translateX(-10px);
   }
 
-  /* line 283, ../../../client/app/styles/_animate.scss */
+  /* line 197, ../../../client/app/styles/_animate.scss */
   20%, 40%, 60%, 80% {
     -moz-transform: translateX(10px);
   }
 }
 
 @-o-keyframes shake {
-  /* line 287, ../../../client/app/styles/_animate.scss */
+  /* line 201, ../../../client/app/styles/_animate.scss */
   0%, 100% {
     -o-transform: translateX(0);
   }
 
-  /* line 288, ../../../client/app/styles/_animate.scss */
+  /* line 202, ../../../client/app/styles/_animate.scss */
   10%, 30%, 50%, 70%, 90% {
     -o-transform: translateX(-10px);
   }
 
-  /* line 289, ../../../client/app/styles/_animate.scss */
+  /* line 203, ../../../client/app/styles/_animate.scss */
   20%, 40%, 60%, 80% {
     -o-transform: translateX(10px);
   }
 }
 
 @keyframes shake {
-  /* line 293, ../../../client/app/styles/_animate.scss */
+  /* line 207, ../../../client/app/styles/_animate.scss */
   0%, 100% {
     transform: translateX(0);
   }
 
-  /* line 294, ../../../client/app/styles/_animate.scss */
+  /* line 208, ../../../client/app/styles/_animate.scss */
   10%, 30%, 50%, 70%, 90% {
     transform: translateX(-10px);
   }
 
-  /* line 295, ../../../client/app/styles/_animate.scss */
+  /* line 209, ../../../client/app/styles/_animate.scss */
   20%, 40%, 60%, 80% {
     transform: translateX(10px);
   }
 }
 
-/* line 298, ../../../client/app/styles/_animate.scss */
+/* line 212, ../../../client/app/styles/_animate.scss */
 .shake {
   -webkit-animation-name: shake;
   -moz-animation-name: shake;
@@ -8876,54 +8869,54 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeIn {
-  /* line 302, ../../../client/app/styles/_animate.scss */
+  /* line 216, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 305, ../../../client/app/styles/_animate.scss */
+  /* line 219, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
-  /* line 311, ../../../client/app/styles/_animate.scss */
+  /* line 225, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 314, ../../../client/app/styles/_animate.scss */
+  /* line 228, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
   }
 }
 
 @-o-keyframes fadeIn {
-  /* line 320, ../../../client/app/styles/_animate.scss */
+  /* line 234, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 323, ../../../client/app/styles/_animate.scss */
+  /* line 237, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
-  /* line 329, ../../../client/app/styles/_animate.scss */
+  /* line 243, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 332, ../../../client/app/styles/_animate.scss */
+  /* line 246, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
   }
 }
 
-/* line 337, ../../../client/app/styles/_animate.scss */
+/* line 251, ../../../client/app/styles/_animate.scss */
 .fadeIn {
   -webkit-animation-name: fadeIn;
   -moz-animation-name: fadeIn;
@@ -8933,54 +8926,54 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeHalf {
-  /* line 342, ../../../client/app/styles/_animate.scss */
+  /* line 256, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 345, ../../../client/app/styles/_animate.scss */
+  /* line 259, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0.9;
   }
 }
 
 @-moz-keyframes fadeHalf {
-  /* line 351, ../../../client/app/styles/_animate.scss */
+  /* line 265, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 354, ../../../client/app/styles/_animate.scss */
+  /* line 268, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0.9;
   }
 }
 
 @-o-keyframes fadeHalf {
-  /* line 360, ../../../client/app/styles/_animate.scss */
+  /* line 274, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 363, ../../../client/app/styles/_animate.scss */
+  /* line 277, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0.9;
   }
 }
 
 @keyframes fadeHalf {
-  /* line 369, ../../../client/app/styles/_animate.scss */
+  /* line 283, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 372, ../../../client/app/styles/_animate.scss */
+  /* line 286, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0.9;
   }
 }
 
-/* line 377, ../../../client/app/styles/_animate.scss */
+/* line 291, ../../../client/app/styles/_animate.scss */
 .fadeHalf {
   -webkit-animation-name: fadeHalf;
   -moz-animation-name: fadeHalf;
@@ -8990,13 +8983,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeInUp {
-  /* line 384, ../../../client/app/styles/_animate.scss */
+  /* line 298, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(20px);
   }
 
-  /* line 389, ../../../client/app/styles/_animate.scss */
+  /* line 303, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -9004,13 +8997,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeInUp {
-  /* line 396, ../../../client/app/styles/_animate.scss */
+  /* line 310, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateY(20px);
   }
 
-  /* line 401, ../../../client/app/styles/_animate.scss */
+  /* line 315, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateY(0);
@@ -9018,13 +9011,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeInUp {
-  /* line 408, ../../../client/app/styles/_animate.scss */
+  /* line 322, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -o-transform: translateY(20px);
   }
 
-  /* line 413, ../../../client/app/styles/_animate.scss */
+  /* line 327, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -o-transform: translateY(0);
@@ -9032,20 +9025,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeInUp {
-  /* line 420, ../../../client/app/styles/_animate.scss */
+  /* line 334, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform: translateY(20px);
   }
 
-  /* line 425, ../../../client/app/styles/_animate.scss */
+  /* line 339, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* line 431, ../../../client/app/styles/_animate.scss */
+/* line 345, ../../../client/app/styles/_animate.scss */
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   -moz-animation-name: fadeInUp;
@@ -9055,13 +9048,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeInDown {
-  /* line 435, ../../../client/app/styles/_animate.scss */
+  /* line 349, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
   }
 
-  /* line 440, ../../../client/app/styles/_animate.scss */
+  /* line 354, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -9069,13 +9062,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeInDown {
-  /* line 447, ../../../client/app/styles/_animate.scss */
+  /* line 361, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateY(-20px);
   }
 
-  /* line 452, ../../../client/app/styles/_animate.scss */
+  /* line 366, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateY(0);
@@ -9083,13 +9076,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeInDown {
-  /* line 459, ../../../client/app/styles/_animate.scss */
+  /* line 373, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -ms-transform: translateY(-20px);
   }
 
-  /* line 464, ../../../client/app/styles/_animate.scss */
+  /* line 378, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -ms-transform: translateY(0);
@@ -9097,20 +9090,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeInDown {
-  /* line 471, ../../../client/app/styles/_animate.scss */
+  /* line 385, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform: translateY(-20px);
   }
 
-  /* line 476, ../../../client/app/styles/_animate.scss */
+  /* line 390, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* line 482, ../../../client/app/styles/_animate.scss */
+/* line 396, ../../../client/app/styles/_animate.scss */
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
@@ -9120,54 +9113,54 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeOut {
-  /* line 486, ../../../client/app/styles/_animate.scss */
+  /* line 400, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 487, ../../../client/app/styles/_animate.scss */
+  /* line 401, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-moz-keyframes fadeOut {
-  /* line 491, ../../../client/app/styles/_animate.scss */
+  /* line 405, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 492, ../../../client/app/styles/_animate.scss */
+  /* line 406, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-o-keyframes fadeOut {
-  /* line 496, ../../../client/app/styles/_animate.scss */
+  /* line 410, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 497, ../../../client/app/styles/_animate.scss */
+  /* line 411, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
   }
 }
 
 @keyframes fadeOut {
-  /* line 501, ../../../client/app/styles/_animate.scss */
+  /* line 415, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 502, ../../../client/app/styles/_animate.scss */
+  /* line 416, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
   }
 }
 
-/* line 505, ../../../client/app/styles/_animate.scss */
+/* line 419, ../../../client/app/styles/_animate.scss */
 .fadeOut {
   -webkit-animation-name: fadeOut;
   -moz-animation-name: fadeOut;
@@ -9177,54 +9170,54 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeOutHalf {
-  /* line 510, ../../../client/app/styles/_animate.scss */
+  /* line 424, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 511, ../../../client/app/styles/_animate.scss */
+  /* line 425, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0.2;
   }
 }
 
 @-moz-keyframes fadeOutHalf {
-  /* line 515, ../../../client/app/styles/_animate.scss */
+  /* line 429, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 516, ../../../client/app/styles/_animate.scss */
+  /* line 430, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0.2;
   }
 }
 
 @-o-keyframes fadeOutHalf {
-  /* line 520, ../../../client/app/styles/_animate.scss */
+  /* line 434, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 521, ../../../client/app/styles/_animate.scss */
+  /* line 435, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0.2;
   }
 }
 
 @keyframes fadeOutHalf {
-  /* line 525, ../../../client/app/styles/_animate.scss */
+  /* line 439, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 526, ../../../client/app/styles/_animate.scss */
+  /* line 440, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0.2;
   }
 }
 
-/* line 529, ../../../client/app/styles/_animate.scss */
+/* line 443, ../../../client/app/styles/_animate.scss */
 .fadeOutHalf {
   -webkit-animation-name: fadeOutHalf;
   -moz-animation-name: fadeOutHalf;
@@ -9234,13 +9227,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeOutUp {
-  /* line 534, ../../../client/app/styles/_animate.scss */
+  /* line 448, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -webkit-transform: translateY(0);
   }
 
-  /* line 539, ../../../client/app/styles/_animate.scss */
+  /* line 453, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
@@ -9248,13 +9241,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeOutUp {
-  /* line 545, ../../../client/app/styles/_animate.scss */
+  /* line 459, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -moz-transform: translateY(0);
   }
 
-  /* line 550, ../../../client/app/styles/_animate.scss */
+  /* line 464, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -moz-transform: translateY(-20px);
@@ -9262,13 +9255,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeOutUp {
-  /* line 556, ../../../client/app/styles/_animate.scss */
+  /* line 470, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -o-transform: translateY(0);
   }
 
-  /* line 561, ../../../client/app/styles/_animate.scss */
+  /* line 475, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -o-transform: translateY(-20px);
@@ -9276,20 +9269,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeOutUp {
-  /* line 567, ../../../client/app/styles/_animate.scss */
+  /* line 481, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  /* line 572, ../../../client/app/styles/_animate.scss */
+  /* line 486, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     transform: translateY(-20px);
   }
 }
 
-/* line 578, ../../../client/app/styles/_animate.scss */
+/* line 492, ../../../client/app/styles/_animate.scss */
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   -moz-animation-name: fadeOutUp;
@@ -9299,13 +9292,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeOutDown {
-  /* line 582, ../../../client/app/styles/_animate.scss */
+  /* line 496, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -webkit-transform: translateY(0);
   }
 
-  /* line 587, ../../../client/app/styles/_animate.scss */
+  /* line 501, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     display: none;
@@ -9314,13 +9307,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeOutDown {
-  /* line 595, ../../../client/app/styles/_animate.scss */
+  /* line 509, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -moz-transform: translateY(0);
   }
 
-  /* line 600, ../../../client/app/styles/_animate.scss */
+  /* line 514, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     display: none;
@@ -9329,13 +9322,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeOutDown {
-  /* line 608, ../../../client/app/styles/_animate.scss */
+  /* line 522, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -o-transform: translateY(0);
   }
 
-  /* line 613, ../../../client/app/styles/_animate.scss */
+  /* line 527, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     display: none;
@@ -9344,13 +9337,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeOutDown {
-  /* line 621, ../../../client/app/styles/_animate.scss */
+  /* line 535, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  /* line 626, ../../../client/app/styles/_animate.scss */
+  /* line 540, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     display: none;
@@ -9358,7 +9351,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 
-/* line 633, ../../../client/app/styles/_animate.scss */
+/* line 547, ../../../client/app/styles/_animate.scss */
 .fadeOutDown {
   -webkit-animation-name: fadeOutDown;
   -moz-animation-name: fadeOutDown;
@@ -9368,61 +9361,61 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeOutBg {
-  /* line 638, ../../../client/app/styles/_animate.scss */
+  /* line 552, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: white;
   }
 
-  /* line 642, ../../../client/app/styles/_animate.scss */
+  /* line 556, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
 @-moz-keyframes fadeOutBg {
-  /* line 648, ../../../client/app/styles/_animate.scss */
+  /* line 562, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: white;
   }
 
-  /* line 652, ../../../client/app/styles/_animate.scss */
+  /* line 566, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
 @-o-keyframes fadeOutBg {
-  /* line 658, ../../../client/app/styles/_animate.scss */
+  /* line 572, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: white;
   }
 
-  /* line 662, ../../../client/app/styles/_animate.scss */
+  /* line 576, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
 @keyframes fadeOutBg {
-  /* line 668, ../../../client/app/styles/_animate.scss */
+  /* line 582, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: white;
   }
 
-  /* line 672, ../../../client/app/styles/_animate.scss */
+  /* line 586, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
 @-webkit-keyframes fadeOutLeftBig {
-  /* line 678, ../../../client/app/styles/_animate.scss */
+  /* line 592, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
   }
 
-  /* line 683, ../../../client/app/styles/_animate.scss */
+  /* line 597, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -webkit-transform: translateX(-2000px);
@@ -9430,13 +9423,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeOutLeftBig {
-  /* line 690, ../../../client/app/styles/_animate.scss */
+  /* line 604, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -moz-transform: translateX(0);
   }
 
-  /* line 695, ../../../client/app/styles/_animate.scss */
+  /* line 609, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -moz-transform: translateX(-2000px);
@@ -9444,13 +9437,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeOutLeftBig {
-  /* line 702, ../../../client/app/styles/_animate.scss */
+  /* line 616, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     -o-transform: translateX(0);
   }
 
-  /* line 707, ../../../client/app/styles/_animate.scss */
+  /* line 621, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -o-transform: translateX(-2000px);
@@ -9458,20 +9451,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeOutLeftBig {
-  /* line 714, ../../../client/app/styles/_animate.scss */
+  /* line 628, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 1;
     transform: translateX(0);
   }
 
-  /* line 719, ../../../client/app/styles/_animate.scss */
+  /* line 633, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     transform: translateX(-2000px);
   }
 }
 
-/* line 725, ../../../client/app/styles/_animate.scss */
+/* line 639, ../../../client/app/styles/_animate.scss */
 .fadeOutLeftBig {
   -webkit-animation-name: fadeOutLeftBig;
   -moz-animation-name: fadeOutLeftBig;
@@ -9480,7 +9473,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   animation-name: fadeOutLeftBig;
 }
 
-/* line 729, ../../../client/app/styles/_animate.scss */
+/* line 643, ../../../client/app/styles/_animate.scss */
 .fadeOutBg {
   -webkit-animation-name: fadeOutBg;
   -moz-animation-name: fadeOutBg;
@@ -9490,54 +9483,54 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeInBg {
-  /* line 735, ../../../client/app/styles/_animate.scss */
+  /* line 649, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  /* line 739, ../../../client/app/styles/_animate.scss */
+  /* line 653, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: white;
   }
 }
 
 @-moz-keyframes fadeInBg {
-  /* line 746, ../../../client/app/styles/_animate.scss */
+  /* line 660, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  /* line 750, ../../../client/app/styles/_animate.scss */
+  /* line 664, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: white;
   }
 }
 
 @-o-keyframes fadeInBg {
-  /* line 757, ../../../client/app/styles/_animate.scss */
+  /* line 671, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  /* line 761, ../../../client/app/styles/_animate.scss */
+  /* line 675, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: white;
   }
 }
 
 @keyframes fadeInBg {
-  /* line 768, ../../../client/app/styles/_animate.scss */
+  /* line 682, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  /* line 772, ../../../client/app/styles/_animate.scss */
+  /* line 686, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: white;
   }
 }
 
-/* line 778, ../../../client/app/styles/_animate.scss */
+/* line 692, ../../../client/app/styles/_animate.scss */
 .fadeInBg {
   -webkit-animation-name: fadeInBg;
   -moz-animation-name: fadeInBg;
@@ -9547,63 +9540,63 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes rotating {
-  /* line 785, ../../../client/app/styles/_animate.scss */
+  /* line 699, ../../../client/app/styles/_animate.scss */
   from {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 788, ../../../client/app/styles/_animate.scss */
+  /* line 702, ../../../client/app/styles/_animate.scss */
   to {
     -webkit-transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes radar-bg {
-  /* line 794, ../../../client/app/styles/_animate.scss */
+  /* line 708, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: #091c00;
   }
 
-  /* line 795, ../../../client/app/styles/_animate.scss */
+  /* line 709, ../../../client/app/styles/_animate.scss */
   1% {
     background-color: #62fc61;
   }
 
-  /* line 796, ../../../client/app/styles/_animate.scss */
+  /* line 710, ../../../client/app/styles/_animate.scss */
   50% {
     background-color: #091c00;
   }
 
-  /* line 797, ../../../client/app/styles/_animate.scss */
+  /* line 711, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: #091c00;
   }
 }
 
 @-moz-keyframes radar-bg {
-  /* line 801, ../../../client/app/styles/_animate.scss */
+  /* line 715, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: #091c00;
   }
 
-  /* line 802, ../../../client/app/styles/_animate.scss */
+  /* line 716, ../../../client/app/styles/_animate.scss */
   1% {
     background-color: #62fc61;
   }
 
-  /* line 803, ../../../client/app/styles/_animate.scss */
+  /* line 717, ../../../client/app/styles/_animate.scss */
   50% {
     background-color: #091c00;
   }
 
-  /* line 804, ../../../client/app/styles/_animate.scss */
+  /* line 718, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: #091c00;
   }
 }
 
 @-webkit-keyframes blink-on {
-  /* line 808, ../../../client/app/styles/_animate.scss */
+  /* line 722, ../../../client/app/styles/_animate.scss */
   0% {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
@@ -9611,7 +9604,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     background-color: #8de74b;
   }
 
-  /* line 817, ../../../client/app/styles/_animate.scss */
+  /* line 731, ../../../client/app/styles/_animate.scss */
   20% {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white;
@@ -9619,7 +9612,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     background-color: #f2f2f2;
   }
 
-  /* line 825, ../../../client/app/styles/_animate.scss */
+  /* line 739, ../../../client/app/styles/_animate.scss */
   50% {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
@@ -9627,7 +9620,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     background-color: #8de74b;
   }
 
-  /* line 834, ../../../client/app/styles/_animate.scss */
+  /* line 748, ../../../client/app/styles/_animate.scss */
   100% {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
@@ -9637,7 +9630,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes blink-on {
-  /* line 846, ../../../client/app/styles/_animate.scss */
+  /* line 760, ../../../client/app/styles/_animate.scss */
   0% {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
@@ -9645,7 +9638,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     background-color: #8de74b;
   }
 
-  /* line 855, ../../../client/app/styles/_animate.scss */
+  /* line 769, ../../../client/app/styles/_animate.scss */
   20% {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white;
@@ -9653,7 +9646,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     background-color: #f2f2f2;
   }
 
-  /* line 863, ../../../client/app/styles/_animate.scss */
+  /* line 777, ../../../client/app/styles/_animate.scss */
   50% {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
@@ -9661,7 +9654,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     background-color: #8de74b;
   }
 
-  /* line 872, ../../../client/app/styles/_animate.scss */
+  /* line 786, ../../../client/app/styles/_animate.scss */
   100% {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
     -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 0 inset, 0 1px 0 white, rgba(141, 231, 75, 0.5) 0 0 10px 5px;
@@ -9671,120 +9664,120 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes loaded {
-  /* line 885, ../../../client/app/styles/_animate.scss */
+  /* line 799, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: #67c522;
   }
 
-  /* line 886, ../../../client/app/styles/_animate.scss */
+  /* line 800, ../../../client/app/styles/_animate.scss */
   20% {
     background-color: #b9e74b;
   }
 
-  /* line 887, ../../../client/app/styles/_animate.scss */
+  /* line 801, ../../../client/app/styles/_animate.scss */
   50% {
     background-color: #8de74b;
   }
 
-  /* line 888, ../../../client/app/styles/_animate.scss */
+  /* line 802, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: #67c522;
   }
 }
 
 @-moz-keyframes loaded {
-  /* line 892, ../../../client/app/styles/_animate.scss */
+  /* line 806, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: #b9e74b;
   }
 
-  /* line 893, ../../../client/app/styles/_animate.scss */
+  /* line 807, ../../../client/app/styles/_animate.scss */
   50% {
     background-color: #bde74b;
   }
 
-  /* line 894, ../../../client/app/styles/_animate.scss */
+  /* line 808, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: #67c522;
   }
 }
 
 @-webkit-keyframes loading {
-  /* line 898, ../../../client/app/styles/_animate.scss */
+  /* line 812, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: #FFF;
   }
 
-  /* line 899, ../../../client/app/styles/_animate.scss */
+  /* line 813, ../../../client/app/styles/_animate.scss */
   50% {
     background-color: #b9e74b;
   }
 
-  /* line 900, ../../../client/app/styles/_animate.scss */
+  /* line 814, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: #FFF;
   }
 }
 
 @-moz-keyframes loading {
-  /* line 904, ../../../client/app/styles/_animate.scss */
+  /* line 818, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: #FFF;
   }
 
-  /* line 905, ../../../client/app/styles/_animate.scss */
+  /* line 819, ../../../client/app/styles/_animate.scss */
   50% {
     background-color: #b9e74b;
   }
 
-  /* line 906, ../../../client/app/styles/_animate.scss */
+  /* line 820, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: #FFF;
   }
 }
 
 @-webkit-keyframes bg-load {
-  /* line 912, ../../../client/app/styles/_animate.scss */
+  /* line 826, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: #CFCFCF;
   }
 
-  /* line 913, ../../../client/app/styles/_animate.scss */
+  /* line 827, ../../../client/app/styles/_animate.scss */
   50% {
     background-color: #d2f2d2;
   }
 
-  /* line 914, ../../../client/app/styles/_animate.scss */
+  /* line 828, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: #CFCFCF;
   }
 }
 
 @-moz-keyframes bg-load {
-  /* line 918, ../../../client/app/styles/_animate.scss */
+  /* line 832, ../../../client/app/styles/_animate.scss */
   0% {
     background-color: #CFCFCF;
   }
 
-  /* line 919, ../../../client/app/styles/_animate.scss */
+  /* line 833, ../../../client/app/styles/_animate.scss */
   50% {
     background-color: #d2f2d2;
   }
 
-  /* line 920, ../../../client/app/styles/_animate.scss */
+  /* line 834, ../../../client/app/styles/_animate.scss */
   100% {
     background-color: #CFCFCF;
   }
 }
 
 @-webkit-keyframes fadeInLeft {
-  /* line 924, ../../../client/app/styles/_animate.scss */
+  /* line 838, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateX(-20px);
   }
 
-  /* line 929, ../../../client/app/styles/_animate.scss */
+  /* line 843, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -9792,13 +9785,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeInLeft {
-  /* line 936, ../../../client/app/styles/_animate.scss */
+  /* line 850, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateX(-20px);
   }
 
-  /* line 941, ../../../client/app/styles/_animate.scss */
+  /* line 855, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateX(0);
@@ -9806,13 +9799,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeInLeft {
-  /* line 948, ../../../client/app/styles/_animate.scss */
+  /* line 862, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -o-transform: translateX(-20px);
   }
 
-  /* line 953, ../../../client/app/styles/_animate.scss */
+  /* line 867, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -o-transform: translateX(0);
@@ -9820,20 +9813,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeInLeft {
-  /* line 960, ../../../client/app/styles/_animate.scss */
+  /* line 874, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform: translateX(-20px);
   }
 
-  /* line 965, ../../../client/app/styles/_animate.scss */
+  /* line 879, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* line 971, ../../../client/app/styles/_animate.scss */
+/* line 885, ../../../client/app/styles/_animate.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   -moz-animation-name: fadeInLeft;
@@ -9843,13 +9836,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeInRight {
-  /* line 976, ../../../client/app/styles/_animate.scss */
+  /* line 890, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateX(20px);
   }
 
-  /* line 981, ../../../client/app/styles/_animate.scss */
+  /* line 895, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -9857,13 +9850,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeInRight {
-  /* line 988, ../../../client/app/styles/_animate.scss */
+  /* line 902, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateX(20px);
   }
 
-  /* line 993, ../../../client/app/styles/_animate.scss */
+  /* line 907, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateX(0);
@@ -9871,13 +9864,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeInRight {
-  /* line 1000, ../../../client/app/styles/_animate.scss */
+  /* line 914, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -o-transform: translateX(20px);
   }
 
-  /* line 1005, ../../../client/app/styles/_animate.scss */
+  /* line 919, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -o-transform: translateX(0);
@@ -9885,20 +9878,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeInRight {
-  /* line 1012, ../../../client/app/styles/_animate.scss */
+  /* line 926, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform: translateX(20px);
   }
 
-  /* line 1017, ../../../client/app/styles/_animate.scss */
+  /* line 931, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* line 1023, ../../../client/app/styles/_animate.scss */
+/* line 937, ../../../client/app/styles/_animate.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   -moz-animation-name: fadeInRight;
@@ -9908,13 +9901,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeInUpBig {
-  /* line 1028, ../../../client/app/styles/_animate.scss */
+  /* line 942, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(2000px);
   }
 
-  /* line 1033, ../../../client/app/styles/_animate.scss */
+  /* line 947, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -9922,13 +9915,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeInUpBig {
-  /* line 1040, ../../../client/app/styles/_animate.scss */
+  /* line 954, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateY(2000px);
   }
 
-  /* line 1045, ../../../client/app/styles/_animate.scss */
+  /* line 959, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateY(0);
@@ -9936,13 +9929,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeInUpBig {
-  /* line 1052, ../../../client/app/styles/_animate.scss */
+  /* line 966, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -o-transform: translateY(2000px);
   }
 
-  /* line 1057, ../../../client/app/styles/_animate.scss */
+  /* line 971, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -o-transform: translateY(0);
@@ -9950,20 +9943,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeInUpBig {
-  /* line 1064, ../../../client/app/styles/_animate.scss */
+  /* line 978, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform: translateY(2000px);
   }
 
-  /* line 1069, ../../../client/app/styles/_animate.scss */
+  /* line 983, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* line 1075, ../../../client/app/styles/_animate.scss */
+/* line 989, ../../../client/app/styles/_animate.scss */
 .fadeInUpBig {
   -webkit-animation-name: fadeInUpBig;
   -moz-animation-name: fadeInUpBig;
@@ -9973,13 +9966,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeInDownBig {
-  /* line 1079, ../../../client/app/styles/_animate.scss */
+  /* line 993, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(-2000px);
   }
 
-  /* line 1084, ../../../client/app/styles/_animate.scss */
+  /* line 998, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -9987,13 +9980,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeInDownBig {
-  /* line 1091, ../../../client/app/styles/_animate.scss */
+  /* line 1005, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateY(-2000px);
   }
 
-  /* line 1096, ../../../client/app/styles/_animate.scss */
+  /* line 1010, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateY(0);
@@ -10001,13 +9994,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeInDownBig {
-  /* line 1103, ../../../client/app/styles/_animate.scss */
+  /* line 1017, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -o-transform: translateY(-2000px);
   }
 
-  /* line 1108, ../../../client/app/styles/_animate.scss */
+  /* line 1022, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -o-transform: translateY(0);
@@ -10015,20 +10008,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeInDownBig {
-  /* line 1115, ../../../client/app/styles/_animate.scss */
+  /* line 1029, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform: translateY(-2000px);
   }
 
-  /* line 1120, ../../../client/app/styles/_animate.scss */
+  /* line 1034, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* line 1126, ../../../client/app/styles/_animate.scss */
+/* line 1040, ../../../client/app/styles/_animate.scss */
 .fadeInDownBig {
   -webkit-animation-name: fadeInDownBig;
   -moz-animation-name: fadeInDownBig;
@@ -10038,13 +10031,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeInLeftBig {
-  /* line 1130, ../../../client/app/styles/_animate.scss */
+  /* line 1044, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateX(-2000px);
   }
 
-  /* line 1135, ../../../client/app/styles/_animate.scss */
+  /* line 1049, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -10052,13 +10045,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeInLeftBig {
-  /* line 1141, ../../../client/app/styles/_animate.scss */
+  /* line 1055, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateX(-2000px);
   }
 
-  /* line 1146, ../../../client/app/styles/_animate.scss */
+  /* line 1060, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateX(0);
@@ -10066,13 +10059,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeInLeftBig {
-  /* line 1152, ../../../client/app/styles/_animate.scss */
+  /* line 1066, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -o-transform: translateX(-2000px);
   }
 
-  /* line 1157, ../../../client/app/styles/_animate.scss */
+  /* line 1071, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -o-transform: translateX(0);
@@ -10080,20 +10073,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeInLeftBig {
-  /* line 1163, ../../../client/app/styles/_animate.scss */
+  /* line 1077, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform: translateX(-2000px);
   }
 
-  /* line 1168, ../../../client/app/styles/_animate.scss */
+  /* line 1082, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* line 1174, ../../../client/app/styles/_animate.scss */
+/* line 1088, ../../../client/app/styles/_animate.scss */
 .fadeInLeftBig {
   -webkit-animation-name: fadeInLeftBig;
   -moz-animation-name: fadeInLeftBig;
@@ -10103,13 +10096,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes fadeInRightBig {
-  /* line 1178, ../../../client/app/styles/_animate.scss */
+  /* line 1092, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
   }
 
-  /* line 1183, ../../../client/app/styles/_animate.scss */
+  /* line 1097, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -10117,13 +10110,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes fadeInRightBig {
-  /* line 1190, ../../../client/app/styles/_animate.scss */
+  /* line 1104, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateX(2000px);
   }
 
-  /* line 1195, ../../../client/app/styles/_animate.scss */
+  /* line 1109, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateX(0);
@@ -10131,13 +10124,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes fadeInRightBig {
-  /* line 1202, ../../../client/app/styles/_animate.scss */
+  /* line 1116, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -o-transform: translateX(2000px);
   }
 
-  /* line 1207, ../../../client/app/styles/_animate.scss */
+  /* line 1121, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     -o-transform: translateX(0);
@@ -10145,20 +10138,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes fadeInRightBig {
-  /* line 1214, ../../../client/app/styles/_animate.scss */
+  /* line 1128, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     transform: translateX(2000px);
   }
 
-  /* line 1219, ../../../client/app/styles/_animate.scss */
+  /* line 1133, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* line 1225, ../../../client/app/styles/_animate.scss */
+/* line 1139, ../../../client/app/styles/_animate.scss */
 .fadeInRightBig {
   -webkit-animation-name: fadeInRightBig;
   -moz-animation-name: fadeInRightBig;
@@ -10167,7 +10160,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   animation-name: fadeInRightBig;
 }
 
-/* line 1230, ../../../client/app/styles/_animate.scss */
+/* line 1144, ../../../client/app/styles/_animate.scss */
 .rollInLate {
   -webkit-animation-name: rollInLate;
   -moz-animation-name: rollInLate;
@@ -10195,13 +10188,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes rollInLate {
-  /* line 1238, ../../../client/app/styles/_animate.scss */
+  /* line 1152, ../../../client/app/styles/_animate.scss */
   0% {
     -webkit-transform: translateY(-300px);
     height: 0;
   }
 
-  /* line 1242, ../../../client/app/styles/_animate.scss */
+  /* line 1156, ../../../client/app/styles/_animate.scss */
   100% {
     -webkit-transform: translateY(0);
     height: 300px;
@@ -10209,13 +10202,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes rollInLate {
-  /* line 1251, ../../../client/app/styles/_animate.scss */
+  /* line 1165, ../../../client/app/styles/_animate.scss */
   0% {
     -moz-transform: translateY(-300px);
     height: 0;
   }
 
-  /* line 1255, ../../../client/app/styles/_animate.scss */
+  /* line 1169, ../../../client/app/styles/_animate.scss */
   100% {
     -moz-transform: translateY(0);
     height: 300px;
@@ -10223,13 +10216,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes rollInLate {
-  /* line 1264, ../../../client/app/styles/_animate.scss */
+  /* line 1178, ../../../client/app/styles/_animate.scss */
   0% {
     -o-transform: translateY(-300px);
     height: 0;
   }
 
-  /* line 1268, ../../../client/app/styles/_animate.scss */
+  /* line 1182, ../../../client/app/styles/_animate.scss */
   100% {
     -o-transform: translateY(0);
     height: 300px;
@@ -10237,13 +10230,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes rollInLate {
-  /* line 1278, ../../../client/app/styles/_animate.scss */
+  /* line 1192, ../../../client/app/styles/_animate.scss */
   0% {
     transform: translateY(-300px);
     height: 0;
   }
 
-  /* line 1282, ../../../client/app/styles/_animate.scss */
+  /* line 1196, ../../../client/app/styles/_animate.scss */
   100% {
     transform: translateY(0);
     height: 300px;
@@ -10251,19 +10244,19 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes tinUpOut {
-  /* line 1291, ../../../client/app/styles/_animate.scss */
+  /* line 1205, ../../../client/app/styles/_animate.scss */
   0%, 20%, 40%, 50% {
     opacity: 1;
     -webkit-transform: scale(1, 1) translateY(0);
   }
 
-  /* line 1292, ../../../client/app/styles/_animate.scss */
+  /* line 1206, ../../../client/app/styles/_animate.scss */
   10%, 30% {
     opacity: 1;
     -webkit-transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1293, ../../../client/app/styles/_animate.scss */
+  /* line 1207, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -webkit-transform: scale(1, 1) translateY(-900%);
@@ -10271,19 +10264,19 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes tinUpOut {
-  /* line 1297, ../../../client/app/styles/_animate.scss */
+  /* line 1211, ../../../client/app/styles/_animate.scss */
   0%, 20%, 40%, 50% {
     opacity: 1;
     -moz-transform: scale(1, 1) translateY(0);
   }
 
-  /* line 1298, ../../../client/app/styles/_animate.scss */
+  /* line 1212, ../../../client/app/styles/_animate.scss */
   10%, 30% {
     opacity: 1;
     -moz-transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1299, ../../../client/app/styles/_animate.scss */
+  /* line 1213, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -moz-transform: scale(1, 1) translateY(-900%);
@@ -10291,19 +10284,19 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes tinUpOut {
-  /* line 1303, ../../../client/app/styles/_animate.scss */
+  /* line 1217, ../../../client/app/styles/_animate.scss */
   0%, 20%, 40%, 50% {
     opacity: 1;
     -o-transform: scale(1, 1) translateY(0);
   }
 
-  /* line 1304, ../../../client/app/styles/_animate.scss */
+  /* line 1218, ../../../client/app/styles/_animate.scss */
   10%, 30% {
     opacity: 1;
     -o-transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1305, ../../../client/app/styles/_animate.scss */
+  /* line 1219, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     -o-transform: scale(1, 1) translateY(-900%);
@@ -10311,26 +10304,26 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes tinUpOut {
-  /* line 1309, ../../../client/app/styles/_animate.scss */
+  /* line 1223, ../../../client/app/styles/_animate.scss */
   0%, 20%, 40%, 50% {
     opacity: 1;
     transform: scale(1, 1) translateY(0);
   }
 
-  /* line 1310, ../../../client/app/styles/_animate.scss */
+  /* line 1224, ../../../client/app/styles/_animate.scss */
   10%, 30% {
     opacity: 1;
     transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1311, ../../../client/app/styles/_animate.scss */
+  /* line 1225, ../../../client/app/styles/_animate.scss */
   100% {
     opacity: 0;
     transform: scale(1, 1) translateY(-900%);
   }
 }
 
-/* line 1314, ../../../client/app/styles/_animate.scss */
+/* line 1228, ../../../client/app/styles/_animate.scss */
 .tinUpOut {
   -webkit-animation-name: tinUpOut;
   -moz-animation-name: tinUpOut;
@@ -10340,7 +10333,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-moz-keyframes tinUpIn {
-  /* line 1319, ../../../client/app/styles/_animate.scss */
+  /* line 1233, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(1, 1) translateY(-900px);
@@ -10350,7 +10343,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1, 1) translateY(-900px);
   }
 
-  /* line 1328, ../../../client/app/styles/_animate.scss */
+  /* line 1242, ../../../client/app/styles/_animate.scss */
   50%, 85% {
     opacity: 1;
     -webkit-transform: scale(1.1, 1.1) translateY(0);
@@ -10360,7 +10353,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1337, ../../../client/app/styles/_animate.scss */
+  /* line 1251, ../../../client/app/styles/_animate.scss */
   70%, 100% {
     opacity: 1;
     -webkit-transform: scale(1, 1) translateY(0);
@@ -10372,7 +10365,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-webkit-keyframes tinUpIn {
-  /* line 1347, ../../../client/app/styles/_animate.scss */
+  /* line 1261, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(1, 1) translateY(-900px);
@@ -10382,7 +10375,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1, 1) translateY(-900px);
   }
 
-  /* line 1356, ../../../client/app/styles/_animate.scss */
+  /* line 1270, ../../../client/app/styles/_animate.scss */
   50%, 85% {
     opacity: 1;
     -webkit-transform: scale(1.1, 1.1) translateY(0);
@@ -10392,7 +10385,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1365, ../../../client/app/styles/_animate.scss */
+  /* line 1279, ../../../client/app/styles/_animate.scss */
   70%, 100% {
     opacity: 1;
     -webkit-transform: scale(1, 1) translateY(0);
@@ -10404,7 +10397,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-o-keyframes tinUpIn {
-  /* line 1375, ../../../client/app/styles/_animate.scss */
+  /* line 1289, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(1, 1) translateY(-900px);
@@ -10414,7 +10407,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1, 1) translateY(-900px);
   }
 
-  /* line 1384, ../../../client/app/styles/_animate.scss */
+  /* line 1298, ../../../client/app/styles/_animate.scss */
   50%, 85% {
     opacity: 1;
     -webkit-transform: scale(1.1, 1.1) translateY(0);
@@ -10424,7 +10417,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1393, ../../../client/app/styles/_animate.scss */
+  /* line 1307, ../../../client/app/styles/_animate.scss */
   70%, 100% {
     opacity: 1;
     -webkit-transform: scale(1, 1) translateY(0);
@@ -10436,7 +10429,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @-ms-keyframes tinUpIn {
-  /* line 1403, ../../../client/app/styles/_animate.scss */
+  /* line 1317, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(1, 1) translateY(-900px);
@@ -10446,7 +10439,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1, 1) translateY(-900px);
   }
 
-  /* line 1412, ../../../client/app/styles/_animate.scss */
+  /* line 1326, ../../../client/app/styles/_animate.scss */
   50%, 85% {
     opacity: 1;
     -webkit-transform: scale(1.1, 1.1) translateY(0);
@@ -10456,7 +10449,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1421, ../../../client/app/styles/_animate.scss */
+  /* line 1335, ../../../client/app/styles/_animate.scss */
   70%, 100% {
     opacity: 1;
     -webkit-transform: scale(1, 1) translateY(0);
@@ -10468,7 +10461,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 @keyframes tinUpIn {
-  /* line 1431, ../../../client/app/styles/_animate.scss */
+  /* line 1345, ../../../client/app/styles/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: scale(1, 1) translateY(-900px);
@@ -10478,7 +10471,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1, 1) translateY(-900px);
   }
 
-  /* line 1440, ../../../client/app/styles/_animate.scss */
+  /* line 1354, ../../../client/app/styles/_animate.scss */
   50%, 85% {
     opacity: 1;
     -webkit-transform: scale(1.1, 1.1) translateY(0);
@@ -10488,7 +10481,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     transform: scale(1.1, 1.1) translateY(0);
   }
 
-  /* line 1449, ../../../client/app/styles/_animate.scss */
+  /* line 1363, ../../../client/app/styles/_animate.scss */
   70%, 100% {
     opacity: 1;
     -webkit-transform: scale(1, 1) translateY(0);
@@ -10499,7 +10492,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 
-/* line 1459, ../../../client/app/styles/_animate.scss */
+/* line 1373, ../../../client/app/styles/_animate.scss */
 .tinUpIn {
   -webkit-animation-name: tinUpIn;
   -moz-animation-name: tinUpIn;
@@ -13758,158 +13751,306 @@ form .red {
    color: red;
 }
 
-/* line 2, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-left-enter, .slide-left-leave,
-.slide-right-enter, .slide-right-leave {
+/* line 1, ../../../client/app/styles/ng-animate/angular-1.2/_crossfade.scss */
+.crossfade.ng-enter, .crossfade.ng-leave {
+  -webkit-animation-duration: 500ms;
+  /* Safari and Chrome */
+  -moz-animation-duration: 500ms;
+  /* Firefox */
+  -ms-animation-duration: 500ms;
+  /* Steve Ballmer */
+  -o-animation-duration: 500ms;
+  /* Opera */
+  animation-duration: 500ms;
+}
+
+/* line 6, ../../../client/app/styles/ng-animate/angular-1.2/_crossfade.scss */
+.crossfade.ng-enter.ng-enter-active {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* line 10, ../../../client/app/styles/ng-animate/angular-1.2/_crossfade.scss */
+.crossfade.ng-leave.ng-leave-active {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -ms-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+/* line 18, ../../../client/app/styles/ng-animate/angular-1.2/_crossfade.scss */
+.crossfade.ng-enter {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-animation-delay: 500ms;
+  /* Safari and Chrome */
+  -moz-animation-delay: 500ms;
+  /* Firefox */
+  -ms-animation-delay: 500ms;
+  /* Steve Ballmer */
+  -o-animation-delay: 500ms;
+  /* Opera */
+  animation-delay: 500ms;
+}
+
+/* line 3, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.moveright.ng-enter,
+.moveright.ng-leave {
+  -webkit-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  display: block;
+}
+
+/* line 11, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.moveright.ng-enter.ng-enter-active,
+.moveright.ng-leave {
+  right: 0;
+}
+
+/* line 19, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.moveright.ng-leave.ng-leave-active,
+.moveright.ng-enter {
+  right: -100%;
+}
+
+/* line 29, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.moveleft.ng-enter,
+.moveleft.ng-leave {
+  -webkit-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  display: block;
+}
+
+/* line 37, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.moveleft.ng-enter.ng-enter-active,
+.moveleft.ng-leave {
+  left: 0;
+}
+
+/* line 45, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.moveleft.ng-leave.ng-leave-active,
+.moveleft.ng-enter {
+  left: -100%;
+}
+
+/* line 53, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.my-slide-container {
+  position: relative;
+}
+
+/* line 57, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.my-slide-animation.ng-enter, .my-slide-animation.ng-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 600px;
+}
+
+/* line 65, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.my-slide-animation.ng-enter {
+  -webkit-animation: 0.5s slide-animation-enter;
+  -moz-animation: 0.5s slide-animation-enter;
+  -o-animation: 0.5s slide-animation-enter;
+  animation: 0.5s slide-animation-enter;
+}
+
+/* line 72, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+.my-slide-animation.ng-leave {
+  -webkit-animation: 0.5s slide-animation-leave;
+  -moz-animation: 0.5s slide-animation-leave;
+  -o-animation: 0.5s slide-animation-leave;
+  animation: 0.5s slide-animation-leave;
+}
+
+@keyframes slide-animation-enter {
+  /* line 80, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  from {
+    z-index: 100;
+    top: 600px;
+    opacity: 0;
+  }
+
+  /* line 85, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-animation-leave {
+  /* line 92, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  from {
+    z-index: 101;
+    top: 0;
+    opacity: 1;
+  }
+
+  /* line 97, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  to {
+    top: -600px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-animation-enter {
+  /* line 104, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  from {
+    z-index: 100;
+    top: 600px;
+    opacity: 0;
+  }
+
+  /* line 109, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-animation-leave {
+  /* line 116, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  from {
+    z-index: 101;
+    top: 0;
+    opacity: 1;
+  }
+
+  /* line 121, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  to {
+    top: -600px;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes slide-animation-enter {
+  /* line 128, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  from {
+    z-index: 100;
+    top: 600px;
+    opacity: 0;
+  }
+
+  /* line 133, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes slide-animation-leave {
+  /* line 140, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  from {
+    z-index: 101;
+    top: 0;
+    opacity: 1;
+  }
+
+  /* line 145, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  to {
+    top: -600px;
+    opacity: 0;
+  }
+}
+
+@-o-keyframes slide-animation-enter {
+  /* line 152, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  from {
+    z-index: 100;
+    top: 600px;
+    opacity: 0;
+  }
+
+  /* line 157, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes slide-animation-leave {
+  /* line 164, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  from {
+    z-index: 101;
+    top: 0;
+    opacity: 1;
+  }
+
+  /* line 169, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */
+  to {
+    top: -600px;
+    opacity: 0;
+  }
+}
+
+/* line 1, ../../../client/app/styles/ng-animate/angular-1.2/_wave.scss */
+.wave.ng-enter, .wave.ng-leave {
   -webkit-transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -moz-transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -ms-transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* line 6, ../../../client/app/styles/ng-animate/angular-1.2/_wave.scss */
+.wave.ng-enter {
   position: absolute;
-}
-/* line 10, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-left-enter .hide-on-animate, .slide-left-leave .hide-on-animate,
-.slide-right-enter .hide-on-animate, .slide-right-leave .hide-on-animate {
-  display: none;
+  left: 100%;
 }
 
-/* line 15, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-right-enter {
-  margin-left: 100%;
+/* line 11, ../../../client/app/styles/ng-animate/angular-1.2/_wave.scss */
+.wave.ng-enter-active {
+  left: 0;
 }
 
-/* line 18, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-right-enter-active {
-  margin-left: 0;
+/* line 15, ../../../client/app/styles/ng-animate/angular-1.2/_wave.scss */
+.wave.ng-leave {
+  position: absolute;
+  left: 0;
 }
 
-/* line 22, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-right-leave {
-  margin-left: 0;
+/* line 20, ../../../client/app/styles/ng-animate/angular-1.2/_wave.scss */
+.wave.ng-leave-active {
+  left: -100%;
 }
 
-/* line 25, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-right-leave-active {
-  margin-left: 100%;
-}
-
-/* line 30, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-left-enter {
-  margin-left: -100%;
-}
-
-/* line 33, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-left-enter-active {
-  margin-left: 0;
-}
-
-/* line 37, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-left-leave {
-  margin-left: 0;
-}
-
-/* line 40, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-left-leave-active {
-  margin-left: -100%;
-}
-
-/* line 50, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-right-enter [class*="navi-button"], .slide-right-enter h1.title {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-/* line 55, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-right-enter-active [class*="navi-button"], .slide-right-enter-active h1.title {
-  opacity: 0.01;
-  filter: alpha(opacity=1);
-}
-
-/* line 62, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-left-enter [class*="navi-button"], .slide-left-enter h1.title {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-/* line 67, ../../../client/app/styles/ng-animate/_slide.scss */
-.slide-left-enter-active [class*="navi-button"], .slide-left-enter-active h1.title {
-  opacity: 0.01;
-  filter: alpha(opacity=1);
-}
-
-/* line 1, ../../../client/app/styles/ng-animate/_fade.scss */
-.fade-ani-enter, .fade-ani-leave {
-  -webkit-transition-duration: 300ms;
-  -moz-transition-duration: 300ms;
-  -o-transition-duration: 300ms;
-  transition-duration: 300ms;
-}
-/* line 7, ../../../client/app/styles/ng-animate/_fade.scss */
-.fade-ani-enter .hide-on-animate, .fade-ani-leave .hide-on-animate {
-  display: none;
-}
-
-/* line 12, ../../../client/app/styles/ng-animate/_fade.scss */
-.fade-ani-enter {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-/* line 17, ../../../client/app/styles/ng-animate/_fade.scss */
-.fade-ani-enter-active {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
-/* line 23, ../../../client/app/styles/ng-animate/_fade.scss */
-.fade-ani-leave {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
-/* line 26, ../../../client/app/styles/ng-animate/_fade.scss */
-.fade-ani-leave-active {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-/* line 15, ../../../client/app/styles/app.scss */
+/* line 16, ../../../client/app/styles/app.scss */
 a.block {
   display: block;
 }
 
-/* line 19, ../../../client/app/styles/app.scss */
+/* line 20, ../../../client/app/styles/app.scss */
 .withShadow {
   -webkit-box-shadow: rgba(100, 100, 100, 0.3) 0 1px 3px;
   -moz-box-shadow: rgba(100, 100, 100, 0.3) 0 1px 3px;
   box-shadow: rgba(100, 100, 100, 0.3) 0 1px 3px;
 }
 
-/* line 23, ../../../client/app/styles/app.scss */
+/* line 24, ../../../client/app/styles/app.scss */
 .withRadius, .btn-fb, .btn-tw {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
 
-/* line 27, ../../../client/app/styles/app.scss */
-.ani.delay-3 {
-  -webkit-animation-delay: 3s;
-  /* Safari and Chrome */
-  -moz-animation-delay: 3s;
-  /* Firefox */
-  -ms-animation-delay: 3s;
-  /* Steve Ballmer */
-  -o-animation-delay: 3s;
-  /* Opera */
-  animation-delay: 3s;
-}
-
 /**
  * Angular
  */
-/* line 34, ../../../client/app/styles/app.scss */
+/* line 31, ../../../client/app/styles/app.scss */
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none;
 }

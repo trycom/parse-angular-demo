@@ -1,45 +1,51 @@
 angular.module('demo')
 
-.controller('MasterDetailController', ['$rootScope', '$scope', '$state', 'MonsterService', 'monsters', function($rootScope, $scope, $state, MonsterService, monsters) {
-  
+.controller('MasterDetailController', ['$rootScope', '$location', '$scope', '$state', 'MonsterService', 'monsters', function($rootScope, $location, $scope, $state, MonsterService, monsters) {
+    
+  // this controller controls navigation, navigation animations, menu and master-detail layout
+
+
   $scope.masterDetailCtrl = {
-    animate : { enter: 'slide-left-enter', leave: 'slide-right-leave' },
+    // waiting on ui-router to support angular 1.2 dynamic animations properly, for now everything is 'crossfade'
+    // https://github.com/angular-ui/ui-router/issues/320
+
+    animate : "crossfade",
     collection: monsters,
     menu : [
       {
-        title: "Parse Angular Demo",
+        title: "Angular Parse CRUD",
         icon: "icon-cloud",
         path: "#/",
         state: "demo.crud"
 
       },
       {
-        title: "FB Angular Demo",
+        title: "Angular Facebook API",
         icon: "icon-facebook",
         path: "#/facebook",
-        state: "facebook.example"
+        state: "demo.facebook.example"
       },
       {
-        title: "Features",
+        title: "Parse Features",
         icon: "icon-bolt",
         path: "#/features/",
-        state: "features.list"
+        state: "demo.features.list"
 
       },
       {
-        title: "About",
+        title: "Other Features",
         icon: "icon-info-sign",
         path: "#/about/",
-        state: "about.list"
+        state: "demo.about.list"
 
       }
 
     ],
     features : [
       {
-        title: "Parse SDK + Facebook SDK Load Performance",
-        icon: "icon-time",
-        path: "#/features/facebook"
+        title: "Parse SDK for data, AngularJS for UI",
+        icon: "icon-code",
+        path: "#/features/data"
       },
       {
         title: "Angular Wrapper for Parse SDK",
@@ -47,20 +53,25 @@ angular.module('demo')
         path: "#/features/parse"
       },
       {
+        title: "Angular Wrapper for Parse Cloud Code",
+        icon: "icon-cloud",
+        path: "#/features/cloud-code"
+      },
+      {
         title: "Angular Wrapper for Facebook SDK",
         icon: "icon-facebook-sign",
         path: "#/features/facebookSDK"
       },
       {
-        title: "Extend Parse SDK for Angular Promises",
-        icon: "icon-cogs",
+        title: "Extend Parse.Object & Parse.Collection",
+        icon: "icon-terminal",
         path: "#/features/parse-sdk"
       },
       {
-        title: "Use Backbone for Models & Collections",
-        icon: "icon-heart",
-        path: "#/features/data"
-      },
+        title: "Parse SDK + Facebook SDK Load Performance",
+        icon: "icon-time",
+        path: "#/features/facebook"
+      }
 
     ],
 
@@ -70,6 +81,11 @@ angular.module('demo')
         title: "Angular State Manager",
         icon: "icon-sitemap",
         path: "#/about/state"
+      },
+      {
+        title: "Angular Animations",
+        icon: "icon-magic",
+        path: "#/about/animations"
       },
       {
         title: "BRANDiD UI Kit",
@@ -95,31 +111,30 @@ angular.module('demo')
   
 
 
-  $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
+
+  // $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
     
-    if(from.name == to.name) {
-        // same state
-        // alert('same state')
-        $scope.masterDetailCtrl.animate = {enter: "fade-ani", leave:"fade-ani"};
+  //   if(from.name == to.name) {
+  //       // same state
+  //       $scope.masterDetailCtrl.animate = "crossfade";
 
-      } else if (from.name.indexOf(to.name) >= 0) {
-        // alert('to contains from')
-        // to contains from
-        $scope.masterDetailCtrl.animate = { enter: 'slide-left-enter', leave: 'slide-right-leave' };
+  //     } else if (from.name.indexOf(to.name) >= 0) {
 
-      } else if(to.name.indexOf(from.name) >= 0){
-        // alert('going deeper')
-        // going deep into the tree
-        // $rootScope.slideAnimation = { enter: 'slide-right-enter', leave: 'slide-left-leave' };
-        $scope.masterDetailCtrl.animate = { enter: 'slide-right-enter', leave: 'slide-left-leave' };  
+  //       // going up the tree
+  //       $scope.masterDetailCtrl.animate = "moveleft";
 
-      } else {
-        // alert('fade it')
-        // no relation, fade it
-        $scope.masterDetailCtrl.animate = {enter: "fade-ani", leave:"fade-ani"};
-      }
+  //     } else if(to.name.indexOf(from.name) >= 0){
 
-  })
+  //       // going deep into the tree
+  //       $scope.masterDetailCtrl.animate = "moveright";  
+
+  //     } else {
+
+  //       // no relation, fade it
+  //       $scope.masterDetailCtrl.animate = "crossfade";
+  //     }
+
+  // })
    
     // return { enter: 'waveBackward-enter', leave: 'waveBackward-leave' };
 
@@ -130,6 +145,30 @@ angular.module('demo')
     // $scope.masterDetailCtrl.animate = { enter: 'waveForward-enter', leave: 'waveForward-leave' };
   }
 
+  
+  $scope.transitionBack = function() {
+    // $scope.masterDetailCtrl.animate = "moveleft";
+
+    var stateName = $state.current.name.split('.');
+    stateName.pop(); // pop the current state
+    var to = stateName.join('.')
+
+    $state.transitionTo(to);
+  }
+
+  $scope.goForwardToPath = function(path) {
+
+    // $scope.masterDetailCtrl.animate = "moveright";
+    
+    if(path.charAt(0) == '#') {
+      // remove #
+      path = path.substring(1);
+    }
+
+    $location.path(path);
+
+  }
+
   $scope.transitionTo = function(stateName) {
     if ($state.current.name.indexOf(stateName) >= 0) {
       // same path, booty shake
@@ -138,6 +177,14 @@ angular.module('demo')
     } else {
 
       $rootScope.setLoading();
+
+      // set view animation
+      if(stateName.indexOf($state.current.name) >= 0) {
+        // $scope.masterDetailCtrl.animate = "moveright";
+        $scope.masterDetailCtrl.animate = "crossfade";
+      } else {
+        $scope.masterDetailCtrl.animate = "crossfade";
+      }
 
       $state.transitionTo(stateName);
     }
