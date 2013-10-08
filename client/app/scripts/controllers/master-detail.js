@@ -1,0 +1,222 @@
+angular.module('demo')
+
+.controller('MasterDetailController', ['$rootScope', '$location', '$scope', '$state', 'MonsterService', 'monsters', function($rootScope, $location, $scope, $state, MonsterService, monsters) {
+    
+  // this controller controls navigation, navigation animations, menu and master-detail layout
+
+
+  $scope.masterDetailCtrl = {
+    // waiting on ui-router to support angular 1.2 dynamic animations properly, for now everything is 'crossfade'
+    // https://github.com/angular-ui/ui-router/issues/320
+
+    animate : "crossfade",
+    collection: monsters,
+    menu : [
+      {
+        title: "Angular Parse CRUD",
+        icon: "icon-cloud",
+        path: "#/",
+        state: "demo.crud"
+
+      },
+      {
+        title: "Angular Facebook API",
+        icon: "icon-facebook",
+        path: "#/facebook",
+        state: "demo.facebook.example"
+      },
+      {
+        title: "Parse Features",
+        icon: "icon-bolt",
+        path: "#/features/",
+        state: "demo.features.list"
+
+      },
+      {
+        title: "Other Features",
+        icon: "icon-info-sign",
+        path: "#/about/",
+        state: "demo.about.list"
+
+      }
+
+    ],
+    features : [
+      {
+        title: "Parse SDK for data, AngularJS for UI",
+        icon: "icon-code",
+        path: "#/features/data"
+      },
+      {
+        title: "Angular Wrapper for Parse SDK",
+        icon: "icon-cloud",
+        path: "#/features/parse"
+      },
+      {
+        title: "Angular Wrapper for Parse Cloud Code",
+        icon: "icon-cloud",
+        path: "#/features/cloud-code"
+      },
+      {
+        title: "Angular Wrapper for Facebook SDK",
+        icon: "icon-facebook-sign",
+        path: "#/features/facebookSDK"
+      },
+      {
+        title: "Extend Parse.Object & Parse.Collection",
+        icon: "icon-terminal",
+        path: "#/features/parse-sdk"
+      },
+      {
+        title: "Parse SDK + Facebook SDK Load Performance",
+        icon: "icon-time",
+        path: "#/features/facebook"
+      }
+
+    ],
+
+    about : [
+      
+      {
+        title: "Angular State Manager",
+        icon: "icon-sitemap",
+        path: "#/about/state"
+      },
+      {
+        title: "Angular Animations",
+        icon: "icon-magic",
+        path: "#/about/animations"
+      },
+      {
+        title: "BRANDiD UI Kit",
+        icon: "icon-tint",
+        path: "#/about/theme"
+      },
+      {
+        title: "SASS Bootstrap",
+        icon: "icon-twitter",
+        path: "#/about/bootstrap"
+      },
+      {
+        title: "Font Awesome",
+        icon: "icon-flag",
+        path: "#/about/font-awesome"
+      }
+
+    ]
+
+
+  };
+
+  
+
+
+
+  // $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
+    
+  //   if(from.name == to.name) {
+  //       // same state
+  //       $scope.masterDetailCtrl.animate = "crossfade";
+
+  //     } else if (from.name.indexOf(to.name) >= 0) {
+
+  //       // going up the tree
+  //       $scope.masterDetailCtrl.animate = "moveleft";
+
+  //     } else if(to.name.indexOf(from.name) >= 0){
+
+  //       // going deep into the tree
+  //       $scope.masterDetailCtrl.animate = "moveright";  
+
+  //     } else {
+
+  //       // no relation, fade it
+  //       $scope.masterDetailCtrl.animate = "crossfade";
+  //     }
+
+  // })
+   
+    // return { enter: 'waveBackward-enter', leave: 'waveBackward-leave' };
+
+
+  $scope.goBackTo = function(state) {
+    
+    $state.transitionTo(state);
+    // $scope.masterDetailCtrl.animate = { enter: 'waveForward-enter', leave: 'waveForward-leave' };
+  }
+
+  
+  $scope.transitionBack = function() {
+    // $scope.masterDetailCtrl.animate = "moveleft";
+
+    var stateName = $state.current.name.split('.');
+    stateName.pop(); // pop the current state
+    var to = stateName.join('.')
+
+    $state.transitionTo(to);
+  }
+
+  $scope.goForwardToPath = function(path) {
+
+    // $scope.masterDetailCtrl.animate = "moveright";
+    
+    if(path.charAt(0) == '#') {
+      // remove #
+      path = path.substring(1);
+    }
+
+    $location.path(path);
+
+  }
+
+  $scope.transitionTo = function(stateName) {
+    if ($state.current.name.indexOf(stateName) >= 0) {
+      // same path, booty shake
+      $rootScope.$broadcast('bootyShake');
+
+    } else {
+
+      $rootScope.setLoading();
+
+      // set view animation
+      if(stateName.indexOf($state.current.name) >= 0) {
+        // $scope.masterDetailCtrl.animate = "moveright";
+        $scope.masterDetailCtrl.animate = "crossfade";
+      } else {
+        $scope.masterDetailCtrl.animate = "crossfade";
+      }
+
+      $state.transitionTo(stateName);
+    }
+
+  }
+
+  $scope.isActiveState = function(state) {
+
+    if($state.current.name.indexOf(state) >= 0) {
+      return 'white-back shadow-ninja right-light inset';
+    } else {
+      return
+    }
+  }
+
+
+  $scope.createMonster = function() {
+    // new up the model
+    $scope.masterDetailCtrl.collection.addMonster('Joe', 'exploding feces').then(function() {
+
+      alert('OMG you created a monster named: ' + $scope.masterDetailCtrl.collection.first().get('name'));
+
+    });
+
+  }
+
+  $scope.destroyMonster = function(monster) {
+    monster.destroyParse().then(function() {
+      alert('Destroyed model with destroyParse()')
+      $state.transitionTo('demo.crud');
+    });
+  }
+
+
+}]);

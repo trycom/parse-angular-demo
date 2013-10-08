@@ -1,0 +1,41 @@
+<div class="row-fluid">
+	<div class="navi-bar-title dark">
+		<h1 class="human title">About</h1>
+	</div>
+
+	<div class="row-fluid width-padding top-padding bottom-padding">
+
+		<div class="row-fluid center-align">
+			<div class="row-fluid">
+				<h1 class="punchy muted light-text-shadow"><i class="icon icon-info-sign small-right-margin"></i></h1>				
+			</div>
+			<div class="row-fluid bottom-margin">
+				<div class="row-fluid center-align machine">
+					<span class="muted">We love Parse and AngularJS. We hate servers.<br/><br/>Whilst building <a href="https://www.getbrandid.com">getbrandid.com</a> we developed some best practices around this stack, so we decided to open source it here. We even talked about it on the <a target="_blank" href="http://blog.parse.com/">Parse Blog</a>.<br/><br/>This boilerplate is great for launching complex database enabled apps really fast. Fork it, try it out, let us know what features you want!</span>
+				</div>	
+			</div>
+			
+		</div>
+		<div class="row-fluid white-back withShadow withRadius center-align">
+			
+
+			<a ng-click="goForwardToPath(item.path)"
+				class="block row-fluid top-padding bottom-padding relative light-border-bottom white-border-top line height-med"
+				ng-repeat="item in masterDetailCtrl.about"
+				style="cursor:pointer"
+			>
+				<div class="span11 muted left-align">
+					<div class="med-width-padding">
+						<div class="pull-left small-right-margin">
+							<i class="icon {{item.icon}} icon-large small-right-margin"></i><span class="small-left-margin machine">{{item.title}}</span> 
+						</div>
+					</div>
+				</div>
+				
+				<div class="span1 muted pull-right"><i class="icon icon-chevron-right"></i></div>
+			</a>
+
+		</div>
+	</div>
+	<div class="row-fluid" ng-include src="'app/views/footer.html'"></div>		
+</div>

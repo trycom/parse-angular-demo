@@ -1,0 +1,25 @@
+{
+  "author": {
+    "name": "Olivier Louvignes"
+  },
+  "name": "angular-strap",
+  "description": "AngularStrap - Twitter Bootstrap directives for AngularJS",
+  "version": "0.7.3",
+  "homepage": "http://mgcrea.github.com/angular-strap",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mgcrea/angular-strap.git"
+  },
+  "main": "./dist/angular-strap.min.js",
+  "dependencies": {
+    "jquery": ">= 1.8.0",
+    "bootstrap": ">= 2.2.0",
+    "bootstrap-datepicker": ">= 1.0.0",
+    "bootstrap-timepicker": ">= 0.2.2",
+    "bootstrap-select": "latest"
+  },
+  "gitHead": "776b5913051bb9521b9bf27a8ee8560859359852",
+  "readme": "# [AngularStrap](http://mgcrea.github.com/angular-strap) [![Build Status](https://secure.travis-ci.org/mgcrea/angular-strap.png?branch=master)](http://travis-ci.org/#!/mgcrea/angular-strap)\n\nAngularStrap is a set of directives that enables seamless integration of [Twitter Bootstrap](https://twitter.github.com/bootstrap) into your [AngularJS](https://github.com/angular/angular.js) app.\n\n\n\n## Documentation and examples\n\n+ Check the [documentation](http://mgcrea.github.com/angular-strap) and [changelog](https://github.com/mgcrea/angular-strap/wiki/Changelog).\n\n+ Use & fork the available [plunkers](https://github.com/mgcrea/angular-strap/wiki/Plunkers) to test a directive or report an issue.\n\n\n\n## Quick start\n\n+ Include the required libraries (cdn/local)\n\n>\n``` html\n<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>\n<script src=\"//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js\"></script>\n<script src=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js\"></script>\n<script src=\"//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.2/angular-strap.min.js\"></script>\n```\n\n+ Inject the `$strap.directives` into your app module\n\n>\n``` javascript\nvar app = angular.module('angularjs-starter', ['$strap.directives']);\n```\n\n\n## Developers\n\nClone the repo, `git clone git://github.com/mgcrea/angular-strap.git`, [download the latest release](https://github.com/mgcrea/angular-strap/zipball/master) or install with bower `bower install angular-strap`.\n\nAngularStrap is tested with `testacular` against the latest available release of jQuery & Bootstrap.\n\n>\n\t$ sudo npm install grunt-cli --global\n\t$ npm install --dev\n\t$ grunt test\n\nYou can build the latest version using `grunt`.\n\n>\n\t$ grunt build\n\n\n\n## Contributing\n\nPlease submit all pull requests the against master branch. If your unit test contains JavaScript patches or features, you should include relevant unit tests. Thanks!\n\n\n\n## Authors\n\n**Olivier Louvignes**\n\n+ http://olouv.com\n+ http://github.com/mgcrea\n\n\n\n## Copyright and license\n\n\tThe MIT License\n\n\tCopyright (c) 2012 Olivier Louvignes\n\n\tPermission is hereby granted, free of charge, to any person obtaining a copy\n\tof this software and associated documentation files (the \"Software\"), to deal\n\tin the Software without restriction, including without limitation the rights\n\tto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n\tcopies of the Software, and to permit persons to whom the Software is\n\tfurnished to do so, subject to the following conditions:\n\n\tThe above copyright notice and this permission notice shall be included in\n\tall copies or substantial portions of the Software.\n\n\tTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n\tIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n\tFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n\tAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n\tLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n\tOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n\tTHE SOFTWARE.\n",
+  "readmeFilename": "readme.md",
+  "_id": "angular-strap@0.7.3"
+}

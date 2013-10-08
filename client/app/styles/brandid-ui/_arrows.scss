@@ -1,0 +1,52 @@
+.arrow {
+	position: relative;
+}
+.arrow.right-arrow:after, .arrow.right-arrow:before {
+	border: solid transparent;
+	content: '';
+	height: 0;
+	left: 100%;
+	position: absolute;
+	width: 0;
+}
+
+.arrow.right-arrow:after {
+	border-width: 9px;
+	border-left-color: #FFF;
+	top: 10px;
+}
+
+.arrow.right-arrow.info-arrow:after {
+	border-left-color: $infoBackground;
+}
+
+.arrow.right-arrow:before {
+	border-width: 10px;
+	border-left-color: #DDD;
+	top: 10px;
+}
+
+.arrow.left-arrow:after, .arrow.left-arrow:before {
+	border: solid transparent;
+	content: '';
+	height: 0;
+	right: 100%;
+	position: absolute;
+	width: 0;
+}
+
+.arrow.left-arrow:after {
+	border-width: 9px;
+	border-right-color: #FFF;
+	top: 10px;
+}
+
+.arrow.left-arrow.success-arrow:after {
+	border-right-color: $successBackground;
+}
+
+.arrow.left-arrow:before {
+	border-width: 10px;
+	border-right-color: #DDD;
+	top: 10px;
+}

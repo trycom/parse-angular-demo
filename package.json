@@ -1,0 +1,50 @@
+{
+  "title": "Genesis Skeleton",
+  "name": "genesis-skeleton",
+  "description": "Modern application skeleton - HTML5 Boilerplate + Angular + Express + Grunt + LiveReload + Bootstrap + Bower",
+  "version": "0.0.1",
+  "author": {
+    "name": "Eric Clemmons",
+    "email": "eric@smarterspam"
+  },
+  "homepage": "https://github.com/ericclemmons/genesis-skeleton",
+  "bugs": "https://github.com/ericclemmons/genesis-skeleton/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/ericclemmons/genesis-skeleton/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/grunt build optimize && node server/server",
+    "install": "bower install",
+    "test": "./node_modules/.bin/grunt test"
+  },
+  "dependencies": {
+    "express": "3.0.5",
+    "grunt": "~0.4.0",
+    "grunt-cli": "~0.1.6",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-less": "~0.5.0",
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-livereload": "~0.1.1",
+    "grunt-contrib-mincss": "~0.4.0",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-express-server": "~0.3.1",
+    "grunt-karma": "~0.4.4",
+    "grunt-parallel": "0.0.2",
+    "grunt-regarde": "~0.1.1",
+    "grunt-usemin": "~0.1.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-rev": "~0.1.0"
+  }
+}

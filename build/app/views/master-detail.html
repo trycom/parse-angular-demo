@@ -1,0 +1,53 @@
+<div class="row-fluid">
+	
+	<div class="one-third light-dark-back shadow-ninja right-light inset" style="height: 1500px">
+
+	<div class="row-fluid top-padding bottom-padding width-padding light-border-top light-border-bottom">
+			<div ng-include src="'app/views/brandid-block.html'"></div>
+			<!-- <h3 class="punchy">Your Profile is {{profileCompletion | number:0 }}% Complete</h3> -->
+			<!-- <div class="row-fluid">
+				<div class="large center-align row-fluid">
+					<h1 class="power muted"><i class="icon icon-user icon-large small-right-margin"></i></h1>					
+				</div>
+			</div> -->
+
+			<!-- <div class="row-fluid tiny-top-margin progress progress-warning progress-striped active withShadow height-tiny"> -->
+			  <!-- <div class="bar bar-success" style="width: {{profileCompletion | number:0 }}%;"></div> -->
+			<!-- </div> -->
+			
+		</div>
+
+		<!-- <div class="horizontal-line full-fade"></div> -->
+
+		<a  ng-click="transitionTo(item.state)"
+			class="block light-back-hover width-padding row-fluid top-padding bottom-padding light-border-top light-border-bottom"
+			ng-class="isActiveState(item.state)"
+			ng-repeat="item in masterDetailCtrl.menu"
+		>
+			<div class="span3 center-align">
+				<h4 class="power muted no-height-margin line height-btn">
+					<i class="icon {{item.icon}} small-right-margin"></i>
+				</h4>
+			</div>
+			<div class="span7">
+				<h4 class="human muted no-height-margin line height-btn">
+					{{item.title}}
+				</h4>
+			</div>
+			<div class="span1 pull-right">
+				<h4 class="muted no-height-margin line height-btn"><i class="icon icon-chevron-right"></i></h4>
+			</div>
+		</a>
+		
+		<div class="row-fluid width-padding top-margin">
+			<!-- <div ui-view="tip"></div> -->
+			<div ng-include src="'app/views/debug.html'"></div>
+		</div>
+
+	</div>
+
+	<div class="two-thirds relative">
+		<div ng-class="masterDetailCtrl.animate" ui-view="detail" booty-shake></div>
+	</div>
+
+</div>

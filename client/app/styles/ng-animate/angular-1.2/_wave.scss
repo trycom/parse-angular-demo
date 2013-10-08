@@ -1,0 +1,22 @@
+.wave.ng-enter, .wave.ng-leave {
+  @include trans(300ms);
+}
+
+
+.wave.ng-enter {
+  position:absolute;
+  left:100%;
+}
+
+.wave.ng-enter-active {
+  left:0;
+}
+
+.wave.ng-leave {
+  position:absolute;
+  left:0;
+}
+
+.wave.ng-leave-active {
+  left:-100%;
+}
