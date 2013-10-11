@@ -1,7 +1,7 @@
 # A Quickstart Boilerplate for Big AngularJS x Parse apps
 
 
-An opinionated, battle-tested boilerplate for building large, powerful, serverless apps with AngularJS, Backbone and Parse.
+An opinionated, battle-tested boilerplate for building large, powerful, serverless apps with AngularJS and Parse.
 
 Built by guys who would rather be coding than [shopping](http://www.getbrandid.com)
 
@@ -37,7 +37,7 @@ This boilerplate is a quickstart for large, maintainable, database enabled Angul
 
 ------
 ### Performance
-[BRANDiD](https://www.getbrandid.com/) regularly gets over 100 concurrent connections, and we have no issues at all with this setup.
+[BRANDiD](https://www.getbrandid.com/) regularly gets over 100 concurrent connections, and we have had no issues at all with this setup.
 
 ------
 
@@ -79,4 +79,5 @@ Next time you think of clothes,  think BRANDiD - Shop. Like a Man.
 * Try clothes from any ecommerce store in the world before you buy them, no commitment
 * We ship and collect returns for free even if the retailer doesn't
 
+Watch our TechCrunch Disrupt Battlefield Video [here](http://techcrunch.com/2013/09/10/dude-friendly-e-commerce-site-brandid-rolls-out-personal-shopping-for-guys-at-techcrunch-disrupt/)
 
