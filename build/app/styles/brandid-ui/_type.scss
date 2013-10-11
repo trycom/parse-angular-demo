@@ -1,0 +1,533 @@
+/* BRANDiD fonts */
+
+$punchy: 'Gotham Cond SSm A', 'Gotham Cond SSm B';
+$human: "Whitney SSm A", "Whitney SSm B";
+$machine: "Forza SSm A", "Forza SSm B";
+$readable: 'Mercury SSm A', 'Mercury SSm B';
+
+.readable {
+  font-family: $readable;
+  font-weight: 400;
+}
+
+.punchy {
+  font-family: $punchy;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.punchy.punchy-smaller {
+  font-size: 38px;
+  line-height: 38px;
+}
+
+.human {
+  font-family: $human;
+}
+
+.machine {
+  font-family: $machine;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+span.highlight {
+  background-color: #FFFBCC;
+}
+
+span.font-size-med.readable {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+span.font-size-large.readable {
+  font-size: 22px;
+  line-height: 28px;
+}
+span.font-size-small.readable {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.font-size-very-small {
+  font-size: 12px;
+  line-height: 13px;
+}
+
+.readable.font-size-large {
+  letter-spacing: -1px;
+}
+
+.readable.font-size-large.muted.bold {
+  color: #999;
+  font-weight:bold;
+}
+
+.readable.bold {
+  font-weight: bold;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+} // ~38px
+h2 {
+  font-size: 32px;
+  line-height: 32px;
+} // ~32px
+h3 {
+  font-size: 24px;
+  line-height: 24px;
+} // ~24px
+h4 {
+  font-size: 18px;
+  line-height: 18px;
+} // ~18px
+h5 {
+    font-size: 15px;
+    line-height: 15px;
+}
+h6 {
+  font-size: 12px;
+  line-height: 12px;
+} // ~12px
+
+
+// h1.punchy,
+// h2.punchy,
+// h3.punchy,
+// h4.punchy,
+// h5.punchy,
+// h6.punchy {
+//   letter-spacing: -1px;
+//   font-weight:normal;
+//   font-style:normal;
+//   text-transform: uppercase;
+// }
+
+
+
+h1.punchy {
+  font-size: 60px;
+  line-height: 60px;
+} // ~38px
+h2.punchy {
+  font-size: 46px;
+  line-height: 46px;
+} // ~32px
+h3.punchy {
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 0;
+} // ~24px
+h4.punchy {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0;
+} // ~18px
+h5.punchy {
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0;
+} // ~38px
+h6.punchy {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0;
+}
+
+h1.human,
+h2.human,
+h3.human,
+h4.human,
+h5.human,
+h6.human, {
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+// homepage
+h1.homepage-title.punchy {
+	font-size: 90px;
+}
+
+h2.homepage-subtitle {
+	font-size: 40px;
+}
+// end homepage
+
+
+
+
+
+h4.readable {
+  line-height: 23px;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}
+
+.muted.light {
+  color: #b3b3b3;
+  font-weight: lighter;
+}
+
+.muted.dark {
+  color: #3a3a3a;
+}
+
+
+h1.no-height-margin,
+h2.no-height-margin,
+h3.no-height-margin,
+h4.no-height-margin,
+h5.no-height-margin,
+h6.no-height-margin,
+{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.line.height-large {
+  line-height: 60px;
+}
+
+.normalcase {
+  text-transform: none !important;
+}
+
+.info-text {
+	color: $infoText;
+}
+
+.success-text {
+	color: $successText;
+}
+
+.tooltip-inner {
+  font-family: $human;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 14px;
+}
+
+
+span.bold {
+  font-weight:bold;
+  color:#444;
+}
+
+span.bold.lightest-text {
+  color:#FFF;
+}
+
+span.red, .red {
+  color: #d2002b;
+}
+.crossed {
+  text-decoration: line-through;
+}
+
+span.blue {
+  color: $blueLight;
+}
+
+span.green, .green {
+  color: $green;
+}
+
+span.orange {
+  color: $orange;
+}
+
+span.underline {
+  text-decoration: underline;
+}
+
+.bold.muted {
+  color: #bbb;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.tichy {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.letter-spacing-1 {
+  letter-spacing: -1px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0 !important;
+}
+
+.font-size-large {
+  font-size: 26px;
+}
+
+.font-size-btn {
+  font-size: 14px;
+}
+
+.font-size-med {
+  font-size: 16px;
+}
+
+.font-size-tiny {
+  font-size: 10px;
+}
+
+.punchy.red {
+  color: #d2002b;
+}
+
+.darkest-text {
+  color: #000;
+}
+
+.dark-text {
+  color: #2f2f2f;
+}
+
+.male-talking.green {
+  color: #b8ff53;
+}
+
+
+.lightest-text {
+  color:#FFF;
+}
+
+.light-text {
+  color:#ECECEC;
+}
+
+.lightest-text.text-shadow, .text-drop-shadow {
+  text-shadow: 0px 1px 3px #000;
+}
+
+
+.light-text-shadow {
+  text-shadow: 0 1px 0 #FFF;
+}
+
+.dark-text.text-shadow {
+  text-shadow: 0 1px 0 #666;
+}
+
+.muted.text-shadow {
+  text-shadow: 0px 1px 1px #FFF;
+}
+
+.btn-text-shadow-light-text {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+// SUBNAV
+
+
+.active {
+  .dark-text, span.muted {
+    color: #FFF;
+  }
+  .dark-text.text-shadow {
+    text-shadow: 0px 1px 3px #000, 0 0 0.35em rgba(255,255,255,0.5), 0 0 0.3em rgba(255,255,255,0.5);
+  }
+}
+
+.menuItem:hover {
+  cursor: pointer;
+  .dark-text.text-shadow {
+    // text-shadow: 0 1px 0 #666, 0 0 0.35em rgba(255,255,255,0.5), 0 0 0.3em rgba(255,255,255,0.5);
+    color: #3a3a3a;
+  }
+  span.muted {
+    color: #FFF;
+  }
+}
+
+.active.menuItem:hover {
+  .dark-text.text-shadow {
+    // text-shadow: 0 1px 0 #666, 0 0 0.35em rgba(255,255,255,0.5), 0 0 0.3em rgba(255,255,255,0.5);
+    color: #FFF;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	h1.punchy {
+	  font-size: 40px;
+	  line-height: 40px;
+	} // ~38px
+	h2.punchy {
+	  font-size: 36px;
+	  line-height: 36px;
+	} // ~32px
+	h3.punchy {
+	  font-size: 28px;
+	  line-height: 28px;
+	  letter-spacing: 0;
+	} // ~24px
+	h4.punchy {
+	  font-size: 20px;
+	  line-height: 20px;
+	  letter-spacing: 0;
+	} // ~18px
+  .punchy.punchy-smaller {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0;
+  }
+
+	h5.punchy {
+	  font-size: 16px;
+	  line-height: 16px;
+	  letter-spacing: 0;
+	} // ~38px
+	h6.punchy {
+	  font-size: 10px;
+	  line-height: 10px;
+	  letter-spacing: 0;
+	}
+
+	.punchy.line.height-large {
+		line-height: 40px;
+		height: 40px;
+	}
+
+  .left-align-phone {
+    text-align: left;
+  }
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	h1 {
+	  font-size: 30px;
+	  line-height: 30px;
+	} // ~38px
+	h2 {
+	  font-size: 26px;
+	  line-height: 26px;
+	} // ~32px
+	h3 {
+	  font-size: 22px;
+	  line-height: 22px;
+	} // ~24px
+	h4 {
+    font-size : 20px;
+    line-height:20px;
+  }// ~18px
+  .punchy.punchy-smaller {
+    font-size: 28px;
+    line-height: 28px;
+  }
+	h5 {
+	    font-size: 14px;
+	    line-height: 14px;
+	}
+	h6 {
+	  font-size: 12px;
+	  line-height: 12px;
+	} // ~12px
+
+	h1.homepage-title.punchy {
+		font-size: 45px;
+	}
+
+	h2.homepage-subtitle {
+		font-size: 20px;
+	}
+  // .punchy-smaller {
+  //   font-size: 32px;
+  //   line-height: 32px;
+  // }
+
+	// h1.punchy {
+	//   font-size: 34px;
+	//   line-height: 34px;
+	// } // ~38px
+	// h2.punchy {
+	//   font-size: 30px;
+	//   line-height: 30px;
+	// } // ~32px
+	// h3.punchy {
+	//   font-size: 3px;
+	//   line-height: 20px;
+	//   letter-spacing: 0;
+	// } // ~24px
+	// h4.punchy {
+	//   font-size: 18px;
+	//   line-height: 18px;
+	//   letter-spacing: 0;
+	// } // ~18px
+	// h5.punchy {
+	//   font-size: 16px;
+	//   line-height: 16px;
+	//   letter-spacing: 0;
+	// } // ~38px
+	// h6.punchy {
+	//   font-size: 14px;
+	//   line-height: 14px;
+	//   letter-spacing: 0;
+	// }
+
+
+
+	// .punchy.line.height-large {
+	// 	line-height: 40px;
+	// 	height: 24px;
+	// }
+
+  .left-align-phone {
+    text-align: left;
+  }
+}
+
+.color-white {
+  color: white;
+}
+
+/* end BRANDiD fonts */

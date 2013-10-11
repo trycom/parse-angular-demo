@@ -1,0 +1,20 @@
+.my-show-hide-animation.ng-hide-add,
+.my-show-hide-animation.ng-hide-remove {
+  -webkit-transition:0.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+  transition:0.5s linear all;
+  display:block!important;
+}
+.my-show-hide-animation.ng-hide-remove {
+  opacity:0;
+}
+.my-show-hide-animation.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+}
+.my-show-hide-animation.ng-hide-add {
+  opacity:1;
+}
+.my-show-hide-animation.ng-hide-add.ng-hide-add-active {
+  opacity:0;
+}

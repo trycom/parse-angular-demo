@@ -1,0 +1,28 @@
+
+
+textarea, input {
+	border:none;
+	background:none;
+	font-size: 16px;
+	font-weight: 100;
+	@extend .muted;
+	@extend .trans;
+	@extend .width-padding;
+	resize: none;
+}
+
+textarea:hover, input:hover {
+	cursor: pointer;
+	@extend .light-back;
+}
+
+textarea:focus, input:focus {
+	@extend .light-back;
+	border: 1px solid #ddd;
+	color: #444;
+	font-style: none;
+}
+
+input {
+	@extend .human;
+}

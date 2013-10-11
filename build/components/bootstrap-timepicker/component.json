@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-timepicker",
+  "version": "0.2.3",
+  "description": "A timepicker component for Twitter Bootstrap 2.x",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jdewit/bootstrap-timepicker"
+  },
+  "main": [
+    "js/bootstrap-timepicker.min.js",
+    "css/bootstrap-timepicker.min.css"
+  ],
+  "dependencies": {
+    "bootstrap": ">=2.0.4 <3.0",
+    "jquery": ">=1.8.3",
+    "autotype": "https://raw.github.com/mmonteleone/jquery.autotype/master/jquery.autotype.js"
+  },
+  "gitHead": "14daa4c3533313491eb72292ffdfb655044a34b2",
+  "readme": "Timepicker for Twitter Bootstrap 2.x [![Build Status](https://secure.travis-ci.org/jdewit/bootstrap-timepicker.png)](http://travis-ci.org/jdewit/bootstrap-timepicker)\n------------------------------------\n\nA simple timepicker component for Twitter Bootstrap.\n\nDemos & Documentation\n=====================\n\nView <a href=\"http://jdewit.github.com/bootstrap-timepicker\">demos & documentation</a>.\n\nSupport\n=======\n\nIf you make money using this timepicker, please consider \nsupporting its development.\n\n<a href=\"http://www.pledgie.com/campaigns/19125\"><img alt=\"Click here to support bootstrap-timepicker!\" src=\"http://www.pledgie.com/campaigns/19125.png?skin_name=chrome\" border=\"0\" target=\"_blank\"/></a> <a class=\"FlattrButton\" style=\"display:none;\" rev=\"flattr;button:compact;\" href=\"http://jdewit.github.com/bootstrap-timepicker\"></a> <noscript><a href=\"http://flattr.com/thing/1116513/Bootstrap-Timepicker\" target=\"_blank\"> <img src=\"http://api.flattr.com/button/flattr-badge-large.png\" alt=\"Flattr this\" title=\"Flattr this\" border=\"0\" /></a></noscript>\n\nContributing\n============\n\n1. Install <a href=\"www.nodejs.org\">NodeJS</a> and <a href=\"www.npmjs.org\">Node Package Manager</a>.\n\n``` bash\n    npm install\n```\n\n2. Use <a href=\"https://github.com/twitter/bower\">Bower</a> to get the dev dependencies.\n\n``` bash \n$ bower install\n```\n\n3. Use <a href=\"www.gruntjs.com\">Grunt</a> to run tests, compress assets, etc. \n\n``` bash \n$ grunt jasmine // run the jasmine tests headless in the console\n$ grunt jasmine-server // run the tests and open in a browser\n$ grunt watch // run jsHint and Jasmine tests whenever the src file or spec file is changed\n$ grunt dump // minify the js and css files\n```\n\n- Please make it easy on me by covering any new features or issues \nwith <a href=\"http://pivotal.github.com/jasmine\">Jasmine</a> tests.\n- If your changes need documentation, please take the time to update the docs \nand copy the minified assets (<b>grunt copy</b>) in the <b>gh-pages</b> branch.\n\nAcknowledgements\n================\n\nThanks to everyone who have given feedback and submitted pull requests. A \nlist of all the contributors can be found <a href=\"https://github.com/jdewit/bootstrap-timepicker/graphs/contributors\">here</a>.\n\nSpecial thanks to @eternicode and his <a href=\"https://github.com/eternicode/bootstrap-datepicker\">Twitter Datepicker</a> for inspiration.    \n",
+  "readmeFilename": "README.md",
+  "_id": "bootstrap-timepicker@0.2.3"
+}

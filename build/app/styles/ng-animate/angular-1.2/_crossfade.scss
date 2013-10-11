@@ -1,0 +1,26 @@
+.crossfade.ng-enter, .crossfade.ng-leave {
+	@extend .ani;
+	@include ani-duration(500ms);
+}
+
+.crossfade.ng-enter.ng-enter-active {
+	@include ani-name(fadeIn);
+}
+
+.crossfade.ng-leave.ng-leave-active {
+	@include ani-name(fadeOut);
+}
+
+// .crossfade.ng-leave {
+// 	@include ani-duration(500ms);
+// }
+
+.crossfade.ng-enter {
+	position: absolute;
+	width: 100%;
+	top:0;
+	left:0;
+	// z-index: -1;
+	// @include transition-delay(1s);
+	@include ani-delay(500ms);
+}

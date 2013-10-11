@@ -1,0 +1,13 @@
+<div class="row-fluid">
+	<h5 class="punchy">How To Load Collections:</h5>
+</div>
+<pre class="muted white-back left-align ani flash">
+// get the collection from our data definitions
+var Monsters = Monsterservice.collection;
+
+// new up a collection
+$scope.masterDetailCtrl.collection = new Monsters;
+
+// use the extended Parse SDK to load the whole collection
+$scope.masterDetailCtrl.collection.load();
+</pre>

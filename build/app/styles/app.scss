@@ -1,0 +1,34 @@
+$iconSpritePath:          "/img/glyphicons-halflings.png";
+$iconWhiteSpritePath:     "/img/glyphicons-halflings-white.png";
+$blueLight: #0aa4f7 !default;
+
+@import "compass";
+@import "../../../components/sass-bootstrap/lib/_bootstrap.scss";
+@import "../../../components/sass-bootstrap/lib/_responsive.scss";
+@import "_animate-helpers.scss";
+@import "_animate.scss";
+@import "brandid-ui/_brandid-ui.scss";
+@import "ng-animate/angular-1.2/_ng-animate.scss";
+
+
+
+
+a.block {
+	display:block;
+}
+
+.withShadow {
+	@include box-shadow(rgba(100, 100, 100, 0.3) 0 1px 3px);
+}
+
+.withRadius {
+	@include border-radius(2px);
+}
+
+/**
+ * Angular
+ */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
