@@ -17,7 +17,7 @@ angular.module('forms', [])
 
       scope.editedMonster = {
         name: null,
-        scaryMove: null
+        reason: null
       }
 
       scope.$watch('monsterToSave.attributes.name', function(name) {
@@ -25,8 +25,8 @@ angular.module('forms', [])
 
       })
 
-      scope.$watch('monsterToSave.attributes.scaryMove', function(scaryMove) {
-        scope.editedMonster.scaryMove = scaryMove;
+      scope.$watch('monsterToSave.attributes.reason', function(reason) {
+        scope.editedMonster.reason = reason;
 
       })
       
@@ -37,13 +37,13 @@ angular.module('forms', [])
 
         // put the form in a loading state
         var loadingContainer = $('#loadingContainer');
-        addLoaderTo(loadingContainer, 'savingForm', 'Saving Monster');
+        addLoaderTo(loadingContainer, 'savingForm', 'Saving');
         element.find('button').attr('disabled','disabled');
 
 
         // set the new attributes
         scope.monsterToSave.setName(scope.editedMonster.name);
-        scope.monsterToSave.setScaryMove(scope.editedMonster.scaryMove);
+        scope.monsterToSave.setReason(scope.editedMonster.reason);
 
 
         // perform the save

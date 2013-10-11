@@ -16,9 +16,9 @@
 			<div class="row-fluid">
 				<h1 class="human muted light-text-shadow"><i class="icon icon-cloud small-right-margin"></i></h1>				
 			</div>
-			<div class="row-fluid bottom-margin">
+			<div class="row-fluid top-margin big-bottom-margin">
 				<div class="row-fluid center-align">
-					<span class="muted machine">Click the <i class="icon icon-plus-sign"></i> up top to create a new model!</span>
+					<span class="muted machine">Reasons why shopping online for clothes sucks</span>
 				</div>	
 			</div>
 			
@@ -27,31 +27,37 @@
 			
 
 			<a href="#/crud/{{item.id}}"
-				class="block row-fluid top-padding bottom-padding relative light-border-bottom white-border-top line height-med"
+				class="block row-fluid top-padding bottom-padding relative light-border-bottom white-border-top"
 				ng-repeat="item in masterDetailCtrl.collection.models"
 				ng-animate="{ enter: 'waveForward-enter', leave: 'waveForward-leave' }"
 			>
-				<div class="span4 muted left-align">
-					<div class="med-width-padding">
-						<div class="pull-left small-right-margin">
-							<span class="machine bold">Monster:</span> 
+				<div class="span90-10 muted">
+					<div class="row-fluid tiny-bottom-margin">
+						<div class="span20-80 right-align">
+							<span class="machine bold">Name:</span>	
 						</div>
-						<div class="pull-left small-left-margin">
-							<span class="machine">{{item.get('name')}}</span>
-						</div>		
+						<div class="span80-20 left-align">
+							<div class="small-left-margin machine">{{item.getName()}}</div>
+						</div>
+					</div>
+
+					<div class="row-fluid">
+						<div class="span20-80 right-align">
+							<span class="machine bold">Reason:</span>	
+						</div>
+						<div class="span80-20 left-align">
+							<span class="small-left-margin machine">{{item.getReason()}}</span>
+						</div>
+					</div>
+						
+				</div>
+
+				<div class="span10-90 muted center-align small-top-padding">
+					<div class="small-top-margin">
+						<i class="icon icon-chevron-right"></i>	
 					</div>
 				</div>
-				<div class="span7 muted left-align">
-					<div class="med-width-padding clearfix">
-						<div class="pull-left small-right-margin">
-							<span class="machine bold">Scary Move:</span> 
-						</div>
-						<div class="pull-left small-left-margin">
-							<span class="machine">{{item.get('scaryMove')}}</span>
-						</div>		
-					</div>
-				</div>
-				<div class="span1 muted pull-right"><i class="icon icon-chevron-right"></i></div>
+				
 			</a>
 
 		</div>
