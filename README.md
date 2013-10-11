@@ -36,8 +36,32 @@ This boilerplate is a quickstart for large, maintainable, database enabled Angul
     grunt server
 
 ------
+### Wire up your own Parse backend in seconds
+##### [client/app/scripts/services/ParseServices.js](https://github.com/brandid/parse-angular-demo/blob/master/client/app/scripts/services/ParseServices.js)
+
+    // pro-tip: swap these keys out for PROD keys automatically on deploy using grunt-replace
+    
+    ...
+    Parse.initialize("***APP ID***", "***JAVASCRIPT KEY***");
+    ...
+
+------
+### Features
+* AngularJS wrapper for the **Parse JS SDK**
+* AngularJS wrapper for **Cloud Code**
+* AngularJS wrapper for the **Facebook API**
+* Enhanced Parse.Object and Parse.Collection with `load()`, `saveParse()`, `destroyParse()`
+* State Manager using [ui-router](https://github.com/angular-ui/ui-router)
+* Resolve Parse Data Before State Changes for awesome UX e.g. `return collection.load()`
+* Easy Animations on State Change
+* Enhanced Load Performance of the Parse and Facebook SDKs
+* Data Modules for Parse Models and Collections
+* …and lots more
+
+
+------
 ### Performance
-[BRANDiD](https://www.getbrandid.com/) regularly gets over 100 concurrent connections, and we have had no issues at all with this setup.
+[BRANDiD](https://www.getbrandid.com/) regularly gets over 100 concurrent connections, and this architecture handles it with ease.
 
 ------
 
