@@ -79,6 +79,7 @@ Read about all the features [here](http://brandid.github.io/parse-angular-demo/#
 
 ### Contribute
 
+* Convert to [grunt-takana](https://github.com/mechio/grunt-takana) instead of grunt-contrib-compass (too slow)
 * Tests (help!?)
 * Upgrade to Bootstrap 3.0.x
 * Guidance on User object creation / ACL to protect against [this](https://www.webniraj.com/2013/08/01/using-the-parse-javascript-sdk-be-careful/) Parse API design decision. For those who need to retrospectively protect their database, read [this thread](https://www.parse.com/questions/cant-update-user-acl-on-the-dashboard-cloud-code-w-master-key)
