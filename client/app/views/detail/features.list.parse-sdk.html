@@ -32,7 +32,7 @@
       </div>
       <div class="row-fluid left-align muted">
         With the simple code below, we beefed up all our Parse objects and collections with enhanced functionality, allowing us to save and load any Parse.Object or Parse.Collection inside the AngularJS digest with finesse.<br/><br/>
-<strong><a target="_blank" href="https://github.com/brandid/parse-angular-demo/blob/master/app/scripts/services/ParseServices.js">ParseServices.js</a></strong>
+<strong><a target="_blank" href="https://github.com/brandid/parse-angular-demo/blob/master/client/app/scripts/services/ParseServices.js">ParseServices.js</a></strong>
 <pre>
   Parse.Object.extendAngular = function(options) {
     return ParseAbstractService.EnhanceObject(Parse.Object.extend(options));
@@ -44,7 +44,7 @@
 </pre>
 <br/>It doesn't take a genius to notice that this requires something we called ParseAbstractService, which is a simple bit of code that adds the Parse.Object and Parse.Collection methods.<br/><br/>
 
-<strong><a target="_blank" href="https://github.com/brandid/parse-angular-demo/blob/master/app/scripts/modules/data/_ParseObjects.js">_ParseObjects.js</a></strong>
+<strong><a target="_blank" href="https://github.com/brandid/parse-angular-demo/blob/master/client/app/scripts/modules/data/_ParseObjects.js">_ParseObjects.js</a></strong>
 
 <pre>angular.module('ExternalDataServices',[])
 .factory('ParseAbstractService', ['ParseQueryAngular', function(ParseQueryAngular) {

@@ -26,6 +26,22 @@ We love [Parse](http://parse.com) and AngularJS. We hate servers. Whilst buildin
 This boilerplate is a quickstart for large, maintainable, database enabled AngularJS apps. Let us know what we can improve via twitter [@spacenick](http://www.twitter.com/spacenick) and [@arush](http://www.twitter.com/arush)!
 
 ------
+### Features
+* AngularJS wrapper for the **Parse JS SDK**
+* AngularJS wrapper for **Cloud Code**
+* AngularJS wrapper for the **Facebook API**
+* Bootstrap 2.3.2 + HTML5BP
+* Enhanced Parse.Object and Parse.Collection with `load()`, `saveParse()`, `destroyParse()`
+* State Manager using [ui-router](https://github.com/angular-ui/ui-router)
+* Resolve Parse Data Before State Changes for awesome UX e.g. `return collection.load()`
+* Easy Animations on State Change
+* Enhanced Load Performance of the Parse and Facebook SDKs
+* Data Modules for Parse Models and Collections
+* …and lots more
+
+Read about all the features [here](http://brandid.github.io/parse-angular-demo/#/features)
+
+------
 
 ### Get Started
 ##### node v0.10.x, grunt v0.4.x
@@ -46,20 +62,6 @@ This boilerplate is a quickstart for large, maintainable, database enabled Angul
     ...
 
 ------
-### Features
-* AngularJS wrapper for the **Parse JS SDK**
-* AngularJS wrapper for **Cloud Code**
-* AngularJS wrapper for the **Facebook API**
-* Enhanced Parse.Object and Parse.Collection with `load()`, `saveParse()`, `destroyParse()`
-* State Manager using [ui-router](https://github.com/angular-ui/ui-router)
-* Resolve Parse Data Before State Changes for awesome UX e.g. `return collection.load()`
-* Easy Animations on State Change
-* Enhanced Load Performance of the Parse and Facebook SDKs
-* Data Modules for Parse Models and Collections
-* …and lots more
-
-
-------
 ### Performance
 [BRANDiD](https://www.getbrandid.com/) regularly gets over 100 concurrent connections, and this architecture handles it with ease.
 
@@ -78,6 +80,7 @@ This boilerplate is a quickstart for large, maintainable, database enabled Angul
 ### Contribute
 
 * Tests (help!?)
+* Upgrade to Bootstrap 3.0.x
 * Guidance on User object creation / ACL to protect against [this](https://www.webniraj.com/2013/08/01/using-the-parse-javascript-sdk-be-careful/) Parse API design decision. For those who need to retrospectively protect their database, read [this thread](https://www.parse.com/questions/cant-update-user-acl-on-the-dashboard-cloud-code-w-master-key)
 * Open source the BRANDiD [Customer.io](www.customer.io) Cloud Code module to securely trigger transactional emails with unlimited custom data (You cannot send large payloads with the Customer.io JS SDK)
 * Include [AngularFirebasePatch](https://github.com/spacenick/angular-firebase-patch) for real-time support, which is a simple alternative to [AngularFire](www.angularfire.com)

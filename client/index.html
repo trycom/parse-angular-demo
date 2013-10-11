@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible"  content="IE=edge,chrome=1">
     <meta name="viewport"               content="width=device-width, initial-scale=1.0">
     <meta name="description"            content="AngularJS Parse Boilerplate">
-    <meta name="author"                 content="@arush">
+    <meta name="author"                 content="@arush and @spacenick">
 
     <!-- build:css app/styles/app.min.css -->
     <link rel="stylesheet" href="app/styles/app.css">
@@ -124,7 +124,25 @@
       });
 
     </script>
-  
+    
+    <!-- real-time analytics - remember to remove this for your own site -->
+    <script type="text/javascript">
+      var GoSquared = {};
+      GoSquared.acct = "GSN-123809-O";
+      (function(w){
+        function gs(){
+          w._gstc_lt = +new Date;
+          var d = document, g = d.createElement("script");
+          g.type = "text/javascript";
+          g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+          var s = d.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(g, s);
+        }
+        w.addEventListener ?
+          w.addEventListener("load", gs, false) :
+          w.attachEvent("onload", gs);
+      })(window);
+    </script>  
 
   </body>
 </html>

@@ -33,14 +33,14 @@
         We really love AngularJS. However, you often hit the WTF ZONE of Angular, especially when you try to update scope variables outside of the "Angular Kingdom". Since all your data will be pulled in asynchronously from Parse, you'll run in to this issue pretty quickly.
 
         <br/><br/>
-        So we wrote <strong><a href="https://github.com/brandid/parse-angular-demo/blob/master/app/scripts/services/ParseCloudCodeAngular.js">ParseCloudCodeAngular</a></strong>, a simple AngularJS wrapper for the Parse.Cloud.run, saving even more boilerplate code. We're also using deferred promises, because they're awesome. This allows you to call Parse.Cloud.run, pass in any parameters, and it wraps the result in a promise <em>inside</em> the "Angular Kingdom".
+        So we wrote <strong><a href="https://github.com/brandid/parse-angular-demo/blob/master/client/app/scripts/services/ParseCloudCodeAngular.js">ParseCloudCodeAngular</a></strong>, a simple AngularJS wrapper for the Parse.Cloud.run, saving even more boilerplate code. We're also using deferred promises, because they're awesome. This allows you to call Parse.Cloud.run, pass in any parameters, and it wraps the result in a promise <em>inside</em> the "Angular Kingdom".
 
 Here's an example:<em></em><br/><br/>
 <pre>ParseCloudCodeAngular('customCloudCodeFunction',dataToSend);</pre>
         <br/>This single line of code calls Parse.Cloud.run, passes in your data and wraps the result in an AngularJS promise.
 
         <br/><br/>Here's how it works:<br/><br/>
-<strong><a href="https://github.com/brandid/parse-angular-demo/blob/master/app/scripts/services/ParseQueryAngular.js">ParseCloudCodeAngular.js</a></strong>
+<strong><a href="https://github.com/brandid/parse-angular-demo/blob/master/client/app/scripts/services/ParseQueryAngular.js">ParseCloudCodeAngular.js</a></strong>
 <pre>angular.module('ParseServices')
 
 .factory('ParseCloudCodeAngular',['$q','$timeout','ParseQueryAngular',function ($q, $timeout, ParseQueryAngular) { 
