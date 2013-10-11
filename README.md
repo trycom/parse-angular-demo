@@ -84,7 +84,7 @@ Read about all the features [here](http://brandid.github.io/parse-angular-demo/#
 * Upgrade to Bootstrap 3.0.x
 * Guidance on User object creation / ACL to protect against [this](https://www.webniraj.com/2013/08/01/using-the-parse-javascript-sdk-be-careful/) Parse API design decision. For those who need to retrospectively protect their database, read [this thread](https://www.parse.com/questions/cant-update-user-acl-on-the-dashboard-cloud-code-w-master-key)
 * Open source the BRANDiD [Customer.io](www.customer.io) Cloud Code module to securely trigger transactional emails with unlimited custom data (You cannot send large payloads with the Customer.io JS SDK)
-* Include [AngularFirebasePatch](https://github.com/spacenick/angular-firebase-patch) for real-time support, which is a simple alternative to [AngularFire](www.angularfire.com)
+* Include [AngularFirebasePatch](https://github.com/spacenick/angular-firebase-patch) for real-time support, which is our simple alternative to [AngularFire](www.angularfire.com)
 
 ------
 
