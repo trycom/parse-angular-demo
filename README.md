@@ -64,6 +64,7 @@ Read about all the features [here](http://brandid.github.io/parse-angular-demo/#
 1. Install bower `npm install -g bower`
 1. Clone this repo `git clone git@github.com:brandid/parse-angular-demo.git`
 1. Switch out your Parse keys in **ParseServices.js** (see below)
+1. Switch out your Facebook App ID in **ParseServices.js**
 1. Remove our [GoSquared](www.gosquared.com) tracking snippet from **index.html**
 1. `cd parse-angular-demo`
 1. `npm install`
