@@ -9,8 +9,6 @@
     "bootstrap": "~2.3.1",
     "html5shiv-dist": "~3.6.1",
     "modernizr": "~2.6.2",
-    "angular-ui-states.min": "http://angular-ui.github.com/ui-router/build/angular-ui-states.min.js",
-    "angular-ui-states": "http://angular-ui.github.com/ui-router/build/angular-ui-states.js",
     "sass-bootstrap": "~2.3.1"
   }
 }

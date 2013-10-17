@@ -45,10 +45,10 @@ Read about all the features [here](http://brandid.github.io/parse-angular-demo/#
 
 ### Get Started
 ##### node v0.10.x, grunt v0.4.x
+##### You will need bower installed as well (npm install -g bower)
 
     git clone git@github.com:brandid/parse-angular-demo.git
     npm install
-    bower install
     grunt server
 
 ------
