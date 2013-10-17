@@ -4,7 +4,10 @@ angular.module('demo')
     
   // this controller controls navigation, navigation animations, menu and master-detail layout
 
+  
 
+
+  // NB: there are a number of implementations for a menu. This one is not great, but simple enough to start with
   $scope.masterDetailCtrl = {
     // waiting on ui-router to support angular 1.2 dynamic animations properly, for now everything is 'crossfade'
     // https://github.com/angular-ui/ui-router/issues/320
@@ -109,35 +112,6 @@ angular.module('demo')
   };
 
   
-
-
-
-  // $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
-    
-  //   if(from.name == to.name) {
-  //       // same state
-  //       $scope.masterDetailCtrl.animate = "crossfade";
-
-  //     } else if (from.name.indexOf(to.name) >= 0) {
-
-  //       // going up the tree
-  //       $scope.masterDetailCtrl.animate = "moveleft";
-
-  //     } else if(to.name.indexOf(from.name) >= 0){
-
-  //       // going deep into the tree
-  //       $scope.masterDetailCtrl.animate = "moveright";  
-
-  //     } else {
-
-  //       // no relation, fade it
-  //       $scope.masterDetailCtrl.animate = "crossfade";
-  //     }
-
-  // })
-   
-    // return { enter: 'waveBackward-enter', leave: 'waveBackward-leave' };
-
 
   $scope.goBackTo = function(state) {
     
