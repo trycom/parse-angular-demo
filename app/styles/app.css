@@ -8347,7 +8347,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 /* line 73, ../../../client/app/styles/_animate-helpers.scss */
-.ani, .crossfade.ng-enter, .crossfade.ng-leave {
+.ani, .crossfade.ng-enter, .crossfade.ng-leave, .first-load.ng-enter {
   -webkit-animation-fill-mode: both;
   /* Safari and Chrome */
   -moz-animation-fill-mode: both;
@@ -8381,7 +8381,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 /* line 86, ../../../client/app/styles/_animate-helpers.scss */
-.ani.infinite, .infinite.crossfade.ng-enter, .infinite.crossfade.ng-leave {
+.ani.infinite, .infinite.crossfade.ng-enter, .infinite.crossfade.ng-leave, .infinite.first-load.ng-enter {
   animation-iteration-count: infinite !important;
   -webkit-animation-iteration-count: infinite !important;
   /*Safari and Chrome*/
@@ -13797,6 +13797,28 @@ form .red {
   -o-animation-delay: 500ms;
   /* Opera */
   animation-delay: 500ms;
+}
+
+/* line 30, ../../../client/app/styles/ng-animate/angular-1.2/_crossfade.scss */
+.first-load.ng-enter {
+  -webkit-animation-duration: 500ms;
+  /* Safari and Chrome */
+  -moz-animation-duration: 500ms;
+  /* Firefox */
+  -ms-animation-duration: 500ms;
+  /* Steve Ballmer */
+  -o-animation-duration: 500ms;
+  /* Opera */
+  animation-duration: 500ms;
+}
+
+/* line 35, ../../../client/app/styles/ng-animate/angular-1.2/_crossfade.scss */
+.first-load.ng-enter.ng-enter-active {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -ms-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
 /* line 3, ../../../client/app/styles/ng-animate/angular-1.2/_move.scss */

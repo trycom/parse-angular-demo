@@ -37,14 +37,11 @@
         Please enable Javascript to experience this site :)
     </noscript>
 
-    <div class="row-fluid med-grey-back dark-dust">
+    <div class="row-fluid med-grey-back dark-dust min-height-1500">
 
       <div ng-include src="'app/views/header.html'"></div>
-      <div view-loading ng-if="isViewLoading"></div>
-      <div ui-view class="crossfade"></div>
-      <div style="z-index:-1" ng-hide="contentLoaded" class="big-top-padding absolute top left row-fluid black-back fullHeight fullWidth top-padding bottom-padding">
-            <div class="row-fluid big-top-margin line height-large loading-dark"></div>
-        </div>
+      <div view-loading ng-show="isViewLoading"></div>
+      <div ui-view class="first-load"></div>
 
     </div>
 
