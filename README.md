@@ -84,6 +84,11 @@ Read about all the features [here](http://brandid.github.io/parse-angular-demo/#
     ...
 
 ------
+### Help / Knowledge base
+
+Feel free to open an issue if you need help, check the [Wiki](https://github.com/brandid/parse-angular-demo/wiki/Knowledge-base) before to check what has been answered already!
+
+------
 ### Performance
 [BRANDiD](https://www.getbrandid.com/) regularly gets over 100 concurrent connections, and this architecture handles it with ease.
 
