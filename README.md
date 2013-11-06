@@ -20,7 +20,7 @@ Built by guys who would rather be coding than [shopping](http://www.getbrandid.c
 Maybe you're already using Parse for mobile and you need a web presence now too.
 
 Maybe you’re an AngularJS beginner and you want to learn how big AngularJS apps are built.
-
+g
 Maybe you're already familiar with AngularJS or Backbone and you need a solid architecture that will scale nicely as your app scales.
 
 Maybe you're at a hackathon, and you need to quickly launch a dynamic web app that requires user sessions and data storage.
@@ -71,7 +71,7 @@ Read about all the features [here](http://brandid.github.io/parse-angular-demo/#
 1. `bower install`
 1. `grunt server` - builds and fires up the local node server on localhost:3000
 1. Visit http://localhost.com:3000 to develop your site
-1. `grunt build` to build a deployable version in the parse-angular-demo/build folder
+1. `grunt build` followed by `grunt optimize` to build a deployable version in the parse-angular-demo/build folder
 
 ------
 ### Wire up your own Parse backend in seconds
