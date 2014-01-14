@@ -1,18 +1,15 @@
 {
-  "title": "Genesis Skeleton",
-  "name": "genesis-skeleton",
+  "title": "BRANDiD's Parse x AngularJS Boilerplate",
+  "name": "parse-angular-demo",
   "description": "Modern application skeleton - HTML5 Boilerplate + Angular + Express + Grunt + LiveReload + Bootstrap + Bower",
-  "version": "0.0.1",
-  "author": {
-    "name": "Eric Clemmons",
-    "email": "eric@smarterspam"
-  },
-  "homepage": "https://github.com/ericclemmons/genesis-skeleton",
-  "bugs": "https://github.com/ericclemmons/genesis-skeleton/issues",
+  "version": "0.1.0",
+  "author": "BRANDiD help@getbrandid.com",
+  "homepage": "http://brandid.github.io/parse-angular-demo",
+  "bugs": "https://github.com/brandid/parse-angular-demo/issues",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/ericclemmons/genesis-skeleton/master/LICENSE"
+      "url": "https://github.com/brandid/parse-angular-demo/blob/master/LICENSE"
     }
   ],
   "engines": {
