@@ -1,7 +1,8 @@
 .DS_Store
 app/test/
 build/
-.sass-cache
 node_modules/
 .sass-cache/
 bower_components/
+components/
+app/components/

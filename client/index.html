@@ -19,10 +19,10 @@
     <!--[if lt IE 9]>
     <script src="components/html5shiv-dist/html5shiv.js"></script>
     <![endif]-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
     <!-- waiting for ui-router to support angular-1.2, hence some view animations are currently gracefully degrading -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-animate.js"></script>
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7370432/708202/css/fonts.css" />
@@ -46,14 +46,18 @@
     </div>
 
 
-    <script src="//www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.2.15.js"></script>
+    
     <!-- build:js app/scripts/all.min.js -->
     <script src="components/modernizr/modernizr.js"></script>
-    <script src="components/underscore/underscore.js"></script>
+    <script src="components/lodash/dist/lodash.js"></script>
+    <script src="app/scripts/libs/angular-1.2-ui-router.js"></script>
+
 
 
     <script src="app/scripts/app.js"></script>
-    <script src="app/scripts/libs/angular-1.2-ui-router.js"></script>
+    <script src="app/scripts/app.templates.js"></script>
+
     
     <script src="app/scripts/modules/states/demo.js"></script>
     <script src="app/scripts/modules/states/features.js"></script>

@@ -2,7 +2,7 @@
   <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-docs-readme.png" width="100px">
 </a>
 
-# [Bootstrap v2.3.1](http://twitter.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
+# [Bootstrap v2.3.2](http://twitter.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
 
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat).
 
@@ -14,9 +14,9 @@ To get started, checkout [http://getbootstrap.com](http://getbootstrap.com)!
 
 Three quick start options are available:
 
-* [Download the latest release](https://github.com/twitter/bootstrap/zipball/master).
-* Clone the repo: `git clone git://github.com/twitter/bootstrap.git`.
-* Install with Twitter's [Bower](http://twitter.github.com/bower): `bower install bootstrap`.
+* [Download the latest release](https://github.com/jlong/sass-twitter-bootstrap/zipball/master).
+* Clone the repo: `git clone git://github.com/jlong/sass-twitter-bootstrap.git`.
+* Install with [Bower](http://bower.io): `bower install --save sass-bootstrap`.
 
 
 
@@ -26,7 +26,7 @@ You can use the SASS Twitter Bootstrap by dropping the compiled CSS into any new
 
 Because SASS always outputs standard css, just link to the final output like normal:
 
-`<link rel="stylesheet" type="text/css" href="bootstrap-2.3.1.css">`
+`<link rel="stylesheet" type="text/css" href="bootstrap-2.3.2.css">`
 
 For more info, refer to the docs!
 
@@ -38,7 +38,7 @@ You can learn more about SASS at:
 
 [sass-lang.com](http://sass-lang.com)
 
-SASS runs as a local GEM on your system. You can run `sass --watch lib/bootstrap.scss:bootstrap-2.3.1.css`
+SASS runs as a local GEM on your system. You can run `sass --watch lib/bootstrap.scss:bootstrap-2.3.2.css`
 
 
 

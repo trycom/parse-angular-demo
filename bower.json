@@ -1,14 +1,11 @@
 {
-  "name": "genesis-skeleton",
-  "version": "0.0.1",
+  "name": "brandid-parse-angular",
+  "version": "0.1.0",
+  "directory": "components/",
   "dependencies": {
-    "angular": "~1.0.6",
-    "angular-mocks": "~1.0.6",
-    "angular-scenario": "~1.0.6",
-    "angular-strap": "~0.7.3",
-    "bootstrap": "~2.3.1",
     "html5shiv-dist": "~3.6.1",
     "modernizr": "~2.6.2",
-    "sass-bootstrap": "~2.3.1"
+    "sass-bootstrap": "2.3.2",
+    "lodash": "~2.4.1"
   }
 }

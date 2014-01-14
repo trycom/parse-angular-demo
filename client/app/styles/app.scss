@@ -3,8 +3,8 @@ $iconWhiteSpritePath:     "/img/glyphicons-halflings-white.png";
 $blueLight: #0aa4f7 !default;
 
 @import "compass";
-@import "../../../components/sass-bootstrap/lib/_bootstrap.scss";
-@import "../../../components/sass-bootstrap/lib/_responsive.scss";
+@import "../../../components/sass-bootstrap/lib/bootstrap.scss";
+@import "../../../components/sass-bootstrap/lib/responsive.scss";
 @import "_animate-helpers.scss";
 @import "_animate.scss";
 @import "brandid-ui/_brandid-ui.scss";

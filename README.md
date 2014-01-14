@@ -71,7 +71,7 @@ Read about all the features [here](http://brandid.github.io/parse-angular-demo/#
 1. `bower install`
 1. `grunt server` - builds and fires up the local node server on localhost:3000
 1. Visit http://localhost.com:3000 to develop your site
-1. `grunt build` followed by `grunt optimize` to build a deployable version in the parse-angular-demo/build folder
+1. `grunt prod` to build a deployable version in the parse-angular-demo/build folder (`grunt prod` is actually `build` followed by `optimize`)
 
 ------
 ### Wire up your own Parse backend in seconds
