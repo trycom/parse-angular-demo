@@ -1,7 +1,7 @@
 {
   "title": "BRANDiD's Parse x AngularJS Boilerplate",
   "name": "parse-angular-demo",
-  "description": "Modern application skeleton - HTML5 Boilerplate + Angular + Express + Grunt + LiveReload + Bootstrap + Bower",
+  "description": "An opinionated, battle-tested boilerplate for building large, powerful, serverless apps with AngularJS, Backbone and Parse. Based on genesis-skeleton by Eric Clemmons",
   "version": "0.1.0",
   "author": "BRANDiD help@getbrandid.com",
   "homepage": "http://brandid.github.io/parse-angular-demo",
