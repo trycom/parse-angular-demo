@@ -34,7 +34,7 @@ Thanks to [Mahmoud](https://twitter.com/mahmoudimus) from [Balanced](https://git
 
 -------
 
-We love [Parse](http://parse.com) and AngularJS. We hate servers. Whilst building [BRANDiD](http://www.getbrandid.com) we developed some best practices around this stack, so we decided to open source it here. We even talked about it on the [Parse Blog](http://blog.parse.com).
+We love [Parse](http://parse.com) and AngularJS. We hate servers. Whilst building [BRANDiD](http://www.getbrandid.com) we developed some best practices around this stack, so we decided to open source it here. We even talked about it on the [Parse Blog](http://blog.parse.com/2013/10/17/guest-post-parse-x-angular-js-boilerplate/).
 
 This boilerplate is a quickstart for large, maintainable, database enabled AngularJS apps. Let us know what we can improve via twitter [@spacenick](http://www.twitter.com/spacenick) and [@arush](http://www.twitter.com/arush)!
 
