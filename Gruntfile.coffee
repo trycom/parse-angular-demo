@@ -34,7 +34,6 @@ module.exports = (grunt)->
     IMG_FILES:      '**/*.{png,gif,jpg,jpeg}'
     JS_FILES:       '**/*.js'
     SASS_FILES:     '**/*.scss'
-    LESS_FILES:     '**/*.less'
 
 
     # Wipe the `build` directory
@@ -136,7 +135,6 @@ module.exports = (grunt)->
 
     # Ability to run `jshint` without errors terminating the development server
     parallel:
-      less:         [ grunt: true, args: [ 'less' ] ]
       compass:         [ grunt: true, args: [ 'compass' ] ]
       jshint:       [ grunt: true, args: [ 'jshint' ] ]
 
@@ -232,7 +230,6 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-jshint')
-  grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-compass')
   grunt.loadNpmTasks('grunt-contrib-mincss')
   grunt.loadNpmTasks('grunt-contrib-uglify')
