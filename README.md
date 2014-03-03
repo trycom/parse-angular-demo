@@ -62,6 +62,7 @@ Read about all the features [here](http://brandid.github.io/parse-angular-demo/#
 1. Install node - http://nodejs.org/
 1. Install grunt v0.4.x - http://gruntjs.com/getting-started
 1. Install bower `npm install -g bower`
+1. Install coffee-script `npm install -g coffee-script`
 1. Clone this repo `git clone git@github.com:brandid/parse-angular-demo.git`
 1. Switch out your Parse keys in **ParseServices.js** (see below)
 1. Switch out your Facebook App ID in **ParseServices.js**
