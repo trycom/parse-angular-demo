@@ -20,7 +20,7 @@ Built by guys who would rather be coding than [shopping](http://www.getbrandid.c
 Maybe you're already using Parse for mobile and you need a web presence now too.
 
 Maybe you’re an AngularJS beginner and you want to learn how big AngularJS apps are built.
-g
+
 Maybe you're already familiar with AngularJS or Backbone and you need a solid architecture that will scale nicely as your app scales.
 
 Maybe you're at a hackathon, and you need to quickly launch a dynamic web app that requires user sessions and data storage.
