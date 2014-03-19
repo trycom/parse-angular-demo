@@ -13,7 +13,7 @@ module.exports = (grunt)->
   grunt.registerTask('build', [ 'clean', 'copy', 'ngtemplates', 'compass:prod' ])
 
   # Optimize pre-built, web-accessible resources for production, primarily `usemin`
-  grunt.registerTask('optimize', [ 'useminPrepare', 'concat', 'replace:dist', 'uglify', 'compass:prod', 'mincss', 'rev', 'usemin' ])
+  grunt.registerTask('optimize', [ 'useminPrepare', 'concat', 'ngmin', 'replace:dist', 'uglify', 'compass:prod', 'mincss', 'rev', 'usemin' ])
 
   grunt.registerTask('prod', ['build', 'optimize']);
 
@@ -133,6 +133,11 @@ module.exports = (grunt)->
         ext:        '.min.css'
 
 
+    ngmin:
+      files:
+        src:  '<%= BUILD_DIR %>/app/scripts/all.min.js'
+        dest: '<%= BUILD_DIR %>/app/scripts/all.min.js'
+          
     # Ability to run `jshint` without errors terminating the development server
     parallel:
       compass:         [ grunt: true, args: [ 'compass' ] ]
@@ -226,6 +231,7 @@ module.exports = (grunt)->
 
 
   # Dependencies
+  grunt.loadNpmTasks('grunt-ngmin')
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-contrib-copy')
