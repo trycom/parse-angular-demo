@@ -2,7 +2,7 @@
   "title": "BRANDiD's Parse x AngularJS Boilerplate",
   "name": "parse-angular-demo",
   "description": "An opinionated, battle-tested boilerplate for building large, powerful, serverless apps with AngularJS, Backbone and Parse. Based on genesis-skeleton by Eric Clemmons",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "BRANDiD help@getbrandid.com",
   "homepage": "http://brandid.github.io/parse-angular-demo",
   "bugs": "https://github.com/brandid/parse-angular-demo/issues",
@@ -39,7 +39,7 @@
     "grunt-karma": "~0.4.4",
     "grunt-parallel": "0.0.2",
     "grunt-usemin": "~0.1.4",
-    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-watch": "^0.6.1",
     "grunt-angular-templates": "~0.5.1",
     "grunt-contrib-htmlmin": "~0.1.3",
     "grunt-text-replace": "~0.3.10"

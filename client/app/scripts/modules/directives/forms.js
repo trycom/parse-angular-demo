@@ -1,4 +1,4 @@
-angular.module('forms', [])
+angular.module('brandid.directives.forms', [])
 
 .directive('editMonsterForm', ['ParseQueryAngular', '$location', function(ParseQueryAngular, $location) {
 

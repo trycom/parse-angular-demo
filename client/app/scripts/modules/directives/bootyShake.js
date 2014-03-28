@@ -1,7 +1,5 @@
-'use strict'
 
 angular.module('app')
-
 .directive('bootyShake', ['$timeout', function($timeout) {
 	return {
 		link: function(scope, element, attrs) {

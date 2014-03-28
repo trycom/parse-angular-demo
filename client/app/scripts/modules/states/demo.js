@@ -1,4 +1,4 @@
-angular.module('demo', ['ParseServices', 'ExternalDataServices'])
+angular.module('brandid.states.demo', ['ParseServices'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 

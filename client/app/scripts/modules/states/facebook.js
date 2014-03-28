@@ -1,4 +1,4 @@
-angular.module('facebook', ['ParseServices', 'ExternalDataServices'])
+angular.module('brandid.states.facebook', ['ParseServices'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 

@@ -11,7 +11,6 @@ angular.module('demo')
     $scope.detailCtrl.current = $scope.masterDetailCtrl.collection.find(function(current) {
       return current.id == $stateParams.monsterId;
     })
-  // })
 
 
   $scope.transitionTo = function(state) {

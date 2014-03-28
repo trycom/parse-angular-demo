@@ -6,6 +6,8 @@
     "html5shiv-dist": "~3.6.1",
     "modernizr": "~2.6.2",
     "sass-bootstrap": "2.3.2",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "parse-angular-patch": "*",
+    "angular-ui-router": "~0.2.10"
   }
 }
