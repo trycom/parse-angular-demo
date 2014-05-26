@@ -5,10 +5,11 @@ angular.module('brandid.states.features', ['brandid.states.demo', 'ParseServices
 	$stateProvider
 
 	.state('demo.features', {
-		abstract: true
+		abstract: true,
+        url: '/features'
     })
     .state('demo.features.list', {
-    	url: '/features',
+        url: '',
     	views: {
     		'detail@demo' : {
     			templateUrl: 'app/views/detail/features.list.html'

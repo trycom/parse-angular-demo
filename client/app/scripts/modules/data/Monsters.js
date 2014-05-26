@@ -1,6 +1,6 @@
 // we isolate our data module so we can reuse them independently
-angular.module('brandid.models.Monsters', [])
-.factory('MonsterService', function() {
+angular.module('brandid.models.Monsters', ['parse-angular.enhance'])
+.run(function() {
 
 	// --------------------------
 	// Monster Object Definition

@@ -1,6 +1,8 @@
 angular.module('app', [
 	'ui.router',
 	'ngAnimate', 
+	'parse-angular',
+	'parse-angular.enhance',
 
 	/* models */
 	'brandid.models.Monsters',
@@ -14,7 +16,6 @@ angular.module('app', [
 	'brandid.directives.forms' /* an example directive */, 	
 	
 	'ParseServices' /* this is the Parse SDK */, 
-	'ExternalDataServices' /* this is where we define all our models and collections */, 
 
 	'FacebookPatch' /* our facebook angular wrapper so we can use FB.apiAngular instead of FB.api */
 ])
@@ -40,7 +41,7 @@ angular.module('app', [
 
 }])
 
-.run(['ParseSDK', 'ExtendParseSDK', '$rootScope', '$state', '$stateParams', function(ParseService, ExtendParseSDK, $rootScope,   $state,   $stateParams) {
+.run(['ParseSDK', '$rootScope', '$state', '$stateParams', function(ParseService, $rootScope,   $state,   $stateParams) {
 
 	// Parse is initialised by injecting the ParseService into the Angular app
 	$rootScope.$state = $state;
@@ -63,6 +64,10 @@ angular.module('app', [
 
 	$rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
 		$rootScope.unsetLoading();
+	});
+
+	$rootScope.$on('$stateChangeError', function (ev, to, toParams, from, fromParams, err) {
+		console.log(err);
 	});
 
 }]);

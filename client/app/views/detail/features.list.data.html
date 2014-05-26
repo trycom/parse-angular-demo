@@ -33,7 +33,8 @@
       <div class="row-fluid left-align muted">
         The awesome thing about the Parse Javascript SDK is that it's a fork of Backbone, so we can make use of the kickass Model and Collection architecture, but still use AngularJS for all UI events and views (this is where Backbone loses out to other frameworks).<br/><br/>
 
-The best way to stay organised is to separate each Parse Object definition into a separate file in a <strong>data</strong> folder. Each definition is a factory of an overall Angular module we have called 'ExternalDataServices' which you'll see is first declared above in #2. Extending the 'ExternalDataServices' module with new factories is easy, just leave out the square brackets. Here's what our folder structure looks like with this architecture.<br/><br/>
+The best way to stay organised is to separate each Parse Object definition into a separate file in a <strong>data</strong> folder. Each data module defines a new sub-module (that we label with dots to separate our app per different kind of modules). Here's what our folder structure looks like with this architecture.<br/><br/>
+NB: To understand what's happening here, please check our <a href="https://github.com/brandid/parse-angular-patch" target="new">parse-angular-patch repo</a>.<br/><br/>
 <pre>|-- app
   |-- scripts
     |-- modules
@@ -46,27 +47,21 @@ And this is what a Parse Object definition would look like:<br/><br/>
 
 <pre>// Monster.js
 
-// reference the module we declared earlier
-angular.module('ExternalDataServices')
+// create our new data submodule
+angular.module('brandid.data.Monster')
+// override models when the module is loaded
+.run(function() {
 
-// add a factory
-.factory('MonsterService', ['ParseQueryAngular', function(ParseQueryAngular) {
-
-  // use the extendAngular instead of just extend to gain enhanced Angular functionality
-
-  var Monster = Parse.Object.extendAngular({
+  // Define the Monster model
+  var Monster = Parse.Object.extend({
     className:"Monster",
-    setScaryMove: function(move) {
-      this.set('scaryMove',move);
-      return this;
-    }
+    attrs: ['scaryMove', 'anotherField'] // we can define getters & setters thanks to parse-angular-patch
   });
   
-
-  // use the extendAngular instead of just extend to gain enhanced Angular functionality
-
-  var Monsters = Parse.Collection.extendAngular({
+  // We define our collection methods here
+  var Monsters = Parse.Collection.extend({
     model: Monster,
+    className: "Monster",
     loadMonstersWithMove: function(move) {
       this.query = (new Parse.Query(Monster));
 
@@ -75,25 +70,19 @@ angular.module('ExternalDataServices')
     }
   });
 
-  // Return a simple API : model or collection.
-  return {
-    model: Monster,
-    collection: Monsters
-  }
-
 }])</pre><br/>
-Now wherever we need a Monster model or collection, like in the directive below, we can instantiate it using the MonsterService like this:<br/><br/>
+Now wherever we need a Monster model or collection, like in the directive below, we can instantiate it like this, thanks to the parse-angular-patch.<br/><br/>
 <pre>// SomeDirective.js
 
 // inject the MonsterService into your directive
 
-angular.module('foo',[]).directive('bar',['MonsterService',function(
+angular.module('foo',[]).directive('bar',function() {
 
   return {
     controller: ['$scope','$element','$attrs', function($scope, $element, $attrs) {
 
       // new up a collection so we can use it to perform a query
-      var monsters = new MonsterService.collection;
+      var monsters = new (Parse.Collection.getClass("Monster"));
 
       // perform the Parse.Query
       $scope.monsters = monsters.loadMonstersWithMove('fireBreath');
@@ -104,8 +93,6 @@ angular.module('foo',[]).directive('bar',['MonsterService',function(
   }]
 
 }])</pre><br/>
-A great side-effect of injecting your Parse data services only when you need it is that AngularJS's awesome dependency injection system knows when to remove this stuff from memory. Also, if you build your app in a modular way, in Angular 2.0 you will also be able to take advantage of lazy loading modules which will speed up the load-time of your app tremendously.
-
 
       </div>
         

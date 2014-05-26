@@ -1,6 +1,6 @@
-angular.module('facebook')
+angular.module('brandid.states.facebook')
 
-.controller('FacebookExampleController', ['$rootScope', '$scope', '$state', '$stateParams', 'FacebookAngularPatch', 'ParseQueryAngular', function($rootScope, $scope, $state, $stateParams, FacebookAngularPatch, ParseQueryAngular) {
+.controller('FacebookExampleController', ['$rootScope', '$scope', '$state', '$stateParams', 'FacebookAngularPatch', function($rootScope, $scope, $state, $stateParams, FacebookAngularPatch) {
   	
 
 
@@ -20,7 +20,7 @@ angular.module('facebook')
 
  	// normally you would define a User.js data module for all your user objects and the method below would be on the user, e.g. $rootScope.currentUser.fbConnect() 
 
-  	ParseQueryAngular(Parse.FacebookUtils,{functionToCall:"logIn", params:[Parse.User.current(), "user_likes"]}).then(function(user) {
+  	Parse.FacebookUtils.logIn("user_likes").then(function(user) {
   		alert('facebook connected!');
 
   		$scope.facebookCtrl.fbAuthData = user.get('authData');

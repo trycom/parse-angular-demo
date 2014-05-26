@@ -216,8 +216,8 @@ module.exports = (grunt)->
         src: ['<%= BUILD_DIR %>/index.html']
         dest: '<%= BUILD_DIR %>/index.html'
         replacements: [
-          from:'parse-1.2.15.js'
-          to:'parse-1.2.15.min.js'
+          from:'parse-1.2.18.js'
+          to:'parse-1.2.18.min.js'
         ,
           from:'jquery.js'
           to:'jquery.min.js'

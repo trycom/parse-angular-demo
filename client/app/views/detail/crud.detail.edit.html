@@ -21,26 +21,8 @@
 			<div class="row-fluid white-back withShadow withRadius width-padding top-padding bottom-padding center-align">
 		
 				<div class="row-fluid left-align">
-
-					<form edit-monster-form monster-to-save="detailCtrl.current" name="editForm" class="form-horizontal" ng-submit="saveMonster()" novalidate>
-					  <div class="control-group">
-					    <label class="control-label" for="inputEmail">Name</label>
-					    <div class="controls">
-					      <input style="width:97%" type="text" ng-model="editedMonster.name" placeholder="Email" required>
-					    </div>
-					  </div>
-					  <div class="control-group">
-					    <label class="control-label" for="inputPassword">Reason</label>
-					    <div class="controls">
-					      <input style="width:97%" type="text" ng-model="editedMonster.reason" required>
-					    </div>
-					  </div>
-					  <div class="control-group">
-					    <div class="controls">
-					      <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-block btn-large btn-success">Save To Parse</button>
-					    </div>
-					  </div>
-					</form>
+					<!-- Custom Directive here -->
+					<div edit-monster-form monster-to-save="detailCtrl.current"></div>
 
 				</div>
 					

@@ -1,6 +1,6 @@
-angular.module('demo')
+angular.module('brandid.states.demo')
 
-.controller('DetailController', ['$rootScope', '$scope', '$state', '$stateParams', 'MonsterService', function($rootScope, $scope, $state, $stateParams, MonsterService) {
+.controller('DetailController', ['$rootScope', '$scope', '$state', '$stateParams', function($rootScope, $scope, $state, $stateParams) {
   
   $scope.detailCtrl = {
     current : null
