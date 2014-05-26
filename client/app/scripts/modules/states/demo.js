@@ -1,4 +1,4 @@
-angular.module('demo', ['ParseServices', 'ExternalDataServices'])
+angular.module('brandid.states.demo', ['ParseServices'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -6,6 +6,7 @@ angular.module('demo', ['ParseServices', 'ExternalDataServices'])
 
 	.state('demo', {
 		abstract: true,
+        url: '',
         views: {
             '@': {
                 templateUrl: 'app/views/app-layout.html',
@@ -14,15 +15,12 @@ angular.module('demo', ['ParseServices', 'ExternalDataServices'])
                 templateUrl: 'app/views/master-detail.html',
                 controller: 'MasterDetailController',
                 resolve: {
-                    'monsters': ['MonsterService', function(MonsterService) {
-
+                    monsters: function() {
                         // get the collection from our data definitions
-                        var monsters = new MonsterService.collection;
-
+                        var monsters = new (Parse.Collection.getClass("Monster"));
                         // use the extended Parse SDK to load the whole collection
-                        return monsters.load();
-
-                    }]
+                        return monsters.fetch();
+                    }
                 }
 
             }

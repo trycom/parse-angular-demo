@@ -1,0 +1,19 @@
+<form name="editForm" class="form-horizontal" ng-submit="saveMonster()" novalidate>
+<div class="control-group">
+    <label class="control-label" for="inputEmail">Name</label>
+    <div class="controls">
+      <input style="width:97%" type="text" ng-model="editedMonster.name" placeholder="Name" required>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Reason</label>
+    <div class="controls">
+      <input style="width:97%" type="text" ng-model="editedMonster.reason" placeholder="Reason" required>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-block btn-large btn-success">Save To Parse</button>
+    </div>
+  </div>
+</form>

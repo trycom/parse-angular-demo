@@ -1,10 +1,10 @@
-angular.module('demo')
+angular.module('brandid.states.demo')
 
-.controller('MasterDetailController', ['$rootScope', '$location', '$scope', '$state', 'MonsterService', 'monsters', function($rootScope, $location, $scope, $state, MonsterService, monsters) {
+.controller('MasterDetailController', ['$rootScope', '$location', '$scope', '$state', 'monsters', function($rootScope, $location, $scope, $state, monsters) {
     
   // this controller controls navigation, navigation animations, menu and master-detail layout
 
-  
+
 
 
   // NB: there are a number of implementations for a menu. This one is not great, but simple enough to start with
@@ -50,16 +50,16 @@ angular.module('demo')
         icon: "icon-code",
         path: "#/features/data"
       },
-      {
-        title: "Angular Wrapper for Parse SDK",
-        icon: "icon-cloud",
-        path: "#/features/parse"
-      },
-      {
-        title: "Angular Wrapper for Parse Cloud Code",
-        icon: "icon-cloud",
-        path: "#/features/cloud-code"
-      },
+      // {
+      //   title: "Angular Wrapper for Parse SDK",
+      //   icon: "icon-cloud",
+      //   path: "#/features/parse"
+      // },
+      // {
+      //   title: "Angular Wrapper for Parse Cloud Code",
+      //   icon: "icon-cloud",
+      //   path: "#/features/cloud-code"
+      // },
       {
         title: "Angular Wrapper for Facebook SDK",
         icon: "icon-facebook-sign",
@@ -229,8 +229,8 @@ angular.module('demo')
   }
 
   $scope.destroyMonster = function(monster) {
-    monster.destroyParse().then(function() {
-      alert('Destroyed model with destroyParse()')
+    monster.destroy().then(function() {
+      alert('Destroyed model with destroy()')
       $state.transitionTo('demo.crud');
     });
   }

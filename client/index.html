@@ -51,33 +51,33 @@
     <!-- build:js app/scripts/all.min.js -->
     <script src="components/modernizr/modernizr.js"></script>
     <script src="components/lodash/dist/lodash.js"></script>
-    <script src="app/scripts/libs/angular-1.2-ui-router.js"></script>
+    <script src="components/parse-angular-patch/src/parse-angular.js"></script>
+    <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
 
+    <!-- Data Models -->
+    <script src="app/scripts/services/ParseServices.js"></script>
+    <script src="app/scripts/modules/data/Monsters.js"></script>
 
-
+    <!-- App core & templates -->
     <script src="app/scripts/app.js"></script>
     <script src="app/scripts/app.templates.js"></script>
 
-    
+    <!-- States -->
     <script src="app/scripts/modules/states/demo.js"></script>
     <script src="app/scripts/modules/states/features.js"></script>
     <script src="app/scripts/modules/states/facebook.js"></script>
     <script src="app/scripts/modules/states/about.js"></script>
     
+    <!-- Directives -->
     <script src="app/scripts/modules/directives/bootyShake.js"></script>
     <script src="app/scripts/modules/directives/forms.js"></script>
     <script src="app/scripts/modules/directives/loader.js"></script>
     
+    <!-- Controllers -->
     <script src="app/scripts/controllers/menu.js"></script>
     <script src="app/scripts/controllers/master-detail.js"></script>
     <script src="app/scripts/controllers/detail.js"></script>
     <script src="app/scripts/controllers/facebook-example.js"></script>
-  
-    <!-- Parse specific -->
-    <script src="app/scripts/services/ParseServices.js"></script>
-    <script src="app/scripts/services/ParseQueryAngular.js"></script>
-    <script src="app/scripts/modules/data/_ParseObjects.js"></script>
-    <script src="app/scripts/modules/data/Monsters.js"></script>
     
     <!-- Facebook angular bindings -->
     <script src="app/scripts/services/FacebookAngularPatch.js"></script>

@@ -1,17 +1,4 @@
 angular.module('ParseServices', [])
-
-.factory('ExtendParseSDK', ['ParseAbstractService', function(ParseAbstractService) {
-
-  Parse.Object.extendAngular = function(options) {
-    return ParseAbstractService.EnhanceObject(Parse.Object.extend(options));
-  };
-
-  Parse.Collection.extendAngular = function(options) {
-    return ParseAbstractService.EnhanceCollection(Parse.Collection.extend(options));
-  };
-
-}])
-
 .factory('ParseSDK', function() {
 
   // pro-tip: swap these keys out for PROD keys automatically on deploy using grunt-replace
