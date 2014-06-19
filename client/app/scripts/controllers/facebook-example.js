@@ -20,7 +20,7 @@ angular.module('brandid.states.facebook')
 
  	// normally you would define a User.js data module for all your user objects and the method below would be on the user, e.g. $rootScope.currentUser.fbConnect() 
 
-  	Parse.FacebookUtils.logIn("user_likes").then(function(user) {
+  	Parse.FacebookUtils.logIn("user_likes", {}).then(function(user) {
   		alert('facebook connected!');
 
   		$scope.facebookCtrl.fbAuthData = user.get('authData');
