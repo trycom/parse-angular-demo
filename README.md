@@ -124,22 +124,3 @@ Feel free to open an issue if you need help, check the [Wiki](https://github.com
 
 ### License
 parse-angular-demo is licensed under the &#9786; license. (http://licence.visualidiot.com/)
-
-
-------
-
-### If you found this useful
-
-
-![BRANDiD](https://d2asqqdjv2zbgw.cloudfront.net/logos/header-logo.png)
-
-Next time you think of clothes,  think [BRANDiD - Shop. Like a Man](https://www.getbrandid.com).
-
-
-
-* A dedicated expert shopper searches the ends of the earth just for you
-* Try clothes from any ecommerce store in the world before you buy them, no commitment
-* We ship and collect returns for free even if the retailer doesn't
-
-Watch our TechCrunch Disrupt Battlefield Video [here](http://techcrunch.com/2013/09/10/dude-friendly-e-commerce-site-brandid-rolls-out-personal-shopping-for-guys-at-techcrunch-disrupt/)
-
