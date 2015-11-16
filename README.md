@@ -1,3 +1,5 @@
+### Since we moved to React, this repo is no longer maintained
+
 # A Quickstart Boilerplate for Big AngularJS x Parse apps
 
 
@@ -5,7 +7,7 @@ An opinionated, battle-tested boilerplate for building large, powerful, serverle
 
 
 
-Built by guys who would rather be coding than [shopping](http://www.getbrandid.com)
+Built by [Try.com](http://www.try.com)
 
 ------
 
